@@ -1,13 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import App from './App'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <div className="p-4">
-      <h1 className="text-3xl font-bold">
-        Clean Slate
-      </h1>
-    </div>
+    <App />
   </React.StrictMode>,
 )
