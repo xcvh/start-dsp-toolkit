@@ -2,151 +2,94 @@
     "tools": [
         {
             "number": 1,
-            "name": "Waveform Generator Pro",
-            "challenge": "Creating complex test signals for audio analysis",
-            "purpose": "Generate precise waveforms for testing and analysis",
-            "description": "Professional-grade waveform generation tool with support for multiple wave types and modulation",
-            "user": "Expert",
-            "cost": "Paid",
-            "timeframe": "1-2 weeks",
-            "ease": "Complex",
-            "toolsInvolved": "MATLAB, Python",
-            "impact": "High",
-            "role": "DSP Engineer",
-            "type": "Signal Generation",
-            "maturity": "Stable",
-            "category": "Audio Processing",
-            "resources": "Comprehensive documentation and examples",
-            "outcomes": "High-quality test signals for system validation",
-            "instructions": "Detailed setup and usage guide",
+            "name": "Fostering an Entrepreneurial Culture: Printable Designs and AI Prompts",
+            "image": "https://picsum.photos/seed/entrepreneurial-culture/400/300",
+            "summary": "Ready-to-print designs and AI-guided templates to create motivational materials that foster entrepreneurial culture in university spaces",
+            "challenge": "The facilities at universities are not suitable and adapted for promoting and encouraging entrepreneurship",
+            "purpose": "To provide universities with customizable visual materials and AI-driven guidance to create materials that foster an entrepreneurial culture in their facilities",
+            "description": "The tool provides ready-to-print designs and templates featuring motivational quotes, practical tips, and action-oriented phrases to enhance university spaces. It includes a collection of quotes and resources that you can use to create your own designs. Additionally, an AI guide (such as ChatGPT) is available to help you generate prompts for personalized content tailored to the university's specific needs. Blank templates are also included for adding your custom phrases, making it easy to inspire entrepreneurial thinking in libraries, cafeterias, or co-working areas",
+            "user": "Universities/Departments or faculties",
+            "cost": "Low",
+            "timeframe": "1 week",
+            "ease": "Easy",
+            "toolsInvolved": "Canva, ChatGPT",
+            "impact": "Low",
+            "role": "Any department of the university",
+            "type": "Operational",
+            "maturity": "Beginner",
+            "category": "Education",
+            "resources": "Canva or any design tool, a generative AI tool like ChatGPT. Staff with knowledge of the previous digital tools, Printer and paper",
+            "outcomes": "University walls, co-working areas, and libraries showcase inspirational posters and quotes, creating a more entrepreneurial environment. Increased student participation in entrepreneurship events and workshops, with feedback indicating they feel encouraged and inspired by the new environment. Universities generate phrases or tips tailored to their specific mission. Students engage in informal brainstorming sessions in common areas, and academics incorporate the tool into lectures or entrepreneurial projects",
+            "instructions": "1. Browse the pre-designed templates included in the PDF. Select the ones that resonate most with your university's mission and goals.\n2. Print the chosen templates and place them in strategic locations around campus (libraries, cafeterias, classrooms, etc.).\n3. Use the AI guide to generate personalized phrases, tips, or quotes that reflect your university's values. Follow the step-by-step instructions to write effective prompts.\n4. Fill in the blank templates with your AI-generated or self-created content. You are also free to make your own designs with another tool.\n5. Use the materials as conversation starters in workshops, events, or entrepreneurship programs, and place them around the campus",
             "links": [
                 {
-                    "title": "Documentation",
-                    "url": "https://example.com/docs/waveform"
+                    "title": "Main PDF",
+                    "url": "https://www.canva.com/design/DAGW3ba_Pds/NqHtp7KiAu34J7JuvOcxIQ/edit?utm_content=DAGW3ba_Pds&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                },
+                {
+                    "title": "Editable templates",
+                    "url": "https://www.canva.com/design/DAGW5x5LNtI/WDQkR5rYLjlXvtjFj2lk-Q/edit"
+                },
+                {
+                    "title": "Ready to use posters",
+                    "url": "https://www.canva.com/design/DAGW3_HjlqA/_YDbpzhizlcluT9w_/xeoA/edit"
                 }
             ]
         },
         {
             "number": 2,
-            "name": "FilterCraft Basic",
-            "challenge": "Simple filter design for beginners",
-            "purpose": "Learn basic filter design concepts",
-            "description": "User-friendly tool for designing basic FIR and IIR filters",
-            "user": "Beginner",
-            "cost": "Free",
-            "timeframe": "2-3 days",
+            "name": "Entrepreneurial Dictionary",
+            "image": "https://picsum.photos/seed/entrepreneurial-dict/400/300",
+            "summary": "A simple and engaging dictionary that breaks down key entrepreneurial terms to make them more accessible and less intimidating",
+            "challenge": "Many in academia misunderstand or hold negative views about entrepreneurship",
+            "purpose": "To help universities and individuals better understand entrepreneurial concepts in a simple, funny way",
+            "description": "The Entrepreneurial Dictionary is designed to help universities and individuals better understand entrepreneurial concepts in a simple, funny way. It breaks down key terms often misunderstood or intimidating, helping reduce fear and misconceptions around entrepreneurship. It is designed for students, faculty members or university staff curious about the entrepreneurial mindset. This tool offers clear definitions, examples, and real-world context to make entrepreneurial language accessible to everyone",
+            "user": "Faculty members/Staff/Students",
+            "cost": "Low",
+            "timeframe": "1 day",
             "ease": "Easy",
-            "toolsInvolved": "Python",
+            "toolsInvolved": "Canva",
             "impact": "Medium",
-            "role": "Student",
-            "type": "Filter Design",
-            "maturity": "Stable",
+            "role": "Any department of the university",
+            "type": "Tactical",
+            "maturity": "Beginner",
             "category": "Education",
-            "resources": "Tutorial videos and examples",
-            "outcomes": "Basic understanding of filter design",
-            "instructions": "Step-by-step tutorial",
+            "resources": "An electronic device with WI-FI to visualize the dictionary",
+            "outcomes": "Students and faculty will develop a deeper comprehension of key entrepreneurial terms. A standardized language that ensures clarity and alignment across departments and stakeholders. Students will feel more confident to participate in entrepreneurship-related activities and courses. The tool can be incorporated into entrepreneurship courses, mentorship programs, and innovation hubs to support structured learning. The users can independently explore and expand their entrepreneurial vocabulary",
+            "instructions": "1. Open the PDF and review the list of entrepreneurial terms and definitions.\n2. Select the terms that are most relevant to your university's goals and educational programs.\n3. Print or share the dictionary digitally with students, faculty, and staff.\n4. Use the terms in lectures, workshops, and group discussions to enhance entrepreneurial learning.\n5. Incorporate the definitions into course materials, presentations, and assignments.\n6. Encourage students to refer to the dictionary when working on entrepreneurial projects",
             "links": [
                 {
-                    "title": "Tutorial",
-                    "url": "https://example.com/tutorial/filtercraft"
-                }
-            ]
-        },
-        {
-            "number": 3,
-            "name": "Spectrum Analyzer Suite",
-            "challenge": "Advanced spectral analysis",
-            "purpose": "Professional spectrum analysis tool",
-            "description": "Enterprise-grade spectrum analysis with advanced features",
-            "user": "Expert",
-            "cost": "Enterprise",
-            "timeframe": "1-2 months",
-            "ease": "Complex",
-            "toolsInvolved": "C++, CUDA",
-            "impact": "High",
-            "role": "Research Engineer",
-            "type": "Analysis",
-            "maturity": "Stable",
-            "category": "Spectral Analysis",
-            "resources": "Enterprise support and training",
-            "outcomes": "Detailed spectral analysis reports",
-            "instructions": "Professional training required",
-            "links": [
-                {
-                    "title": "Enterprise Portal",
-                    "url": "https://example.com/enterprise/spectrum"
-                }
-            ]
-        },
-        {
-            "number": 4,
-            "name": "SignalLab Learner",
-            "challenge": "Learning DSP fundamentals",
-            "purpose": "Educational tool for DSP basics",
-            "description": "Interactive learning environment for DSP concepts",
-            "user": "Beginner",
-            "cost": "Free",
-            "timeframe": "1-4 weeks",
-            "ease": "Easy",
-            "toolsInvolved": "Python, Jupyter",
-            "impact": "Medium",
-            "role": "Student",
-            "type": "Education",
-            "maturity": "Beta",
-            "category": "Education",
-            "resources": "Interactive notebooks",
-            "outcomes": "Understanding of DSP basics",
-            "instructions": "Self-paced learning modules",
-            "links": [
-                {
-                    "title": "Learning Portal",
-                    "url": "https://example.com/learn/signallab"
-                }
-            ]
-        },
-        {
-            "number": 5,
-            "name": "AudioFX Workshop",
-            "challenge": "Audio effect processing",
-            "purpose": "Create and test audio effects",
-            "description": "Professional audio effects development environment",
-            "user": "Intermediate",
-            "cost": "Paid",
-            "timeframe": "2-3 weeks",
-            "ease": "Medium",
-            "toolsInvolved": "C++, JUCE",
-            "impact": "High",
-            "role": "Audio Developer",
-            "type": "Audio Processing",
-            "maturity": "Stable",
-            "category": "Audio Processing",
-            "resources": "Effect templates and examples",
-            "outcomes": "Custom audio effects",
-            "instructions": "Developer documentation",
-            "links": [
-                {
-                    "title": "Developer Guide",
-                    "url": "https://example.com/dev/audiofx"
+                    "title": "Main PDF",
+                    "url": "https://www.canva.com/design/DAGapdBIntA/fcAjQ70B80k77BMRT2RSiQ/view?utm_content=DAGapdBIntA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlld=h43c88d1823"
                 }
             ]
         }
     ],
     "validOptions": {
-        "user": [
-            "Beginner",
-            "Intermediate",
-            "Expert",
-            "All"
-        ],
         "cost": [
-            "Free",
-            "Paid",
-            "Enterprise"
+            "Low",
+            "Medium",
+            "High"
         ],
         "ease": [
             "Easy",
             "Medium",
-            "Complex"
+            "Hard"
+        ],
+        "impact": [
+            "Low",
+            "Medium",
+            "High"
+        ],
+        "type": [
+            "Strategic",
+            "Tactical",
+            "Operational"
+        ],
+        "maturity": [
+            "Beginner",
+            "Intermediate",
+            "Advanced"
         ]
     }
 }

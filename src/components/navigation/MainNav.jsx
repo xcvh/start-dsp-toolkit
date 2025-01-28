@@ -1,7 +1,6 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { NavLink } from 'react-router'
-import UserMenu from './UserMenu'
 import MobileMenu from './MobileMenu'
 
 const navigation = [
@@ -48,8 +47,6 @@ export default function MainNav() {
                                     </div>
                                 </div>
                             </div>
-
-                            <UserMenu />
 
                             <div className="-mr-2 flex md:hidden">
                                 <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md bg-seafoam-800 p-2 text-seafoam-400 hover:bg-seafoam-700 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-seafoam-800 focus:outline-hidden">
