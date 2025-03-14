@@ -1,9 +1,9 @@
 import toolsData from '../data/tools.json'
 import { useState } from 'react'
 import { Link } from 'react-router'
-import { Listbox, ListboxButton, ListboxOptions, ListboxOption } from '@headlessui/react'
-import { ChevronUpDownIcon, CheckIcon } from '@heroicons/react/20/solid'
-import { Gauge, Zap, Target, GraduationCap } from 'lucide-react'
+import { CheckIcon } from '@heroicons/react/20/solid'
+import { Gauge, Zap, Target, GraduationCap, Info } from 'lucide-react'
+import ToolImage from '../components/ui/ToolImage'
 
 export default function Toolkit() {
     const [filters, setFilters] = useState({
@@ -11,6 +11,13 @@ export default function Toolkit() {
         impact: ['all'],
         type: ['all'],
         maturity: ['all']
+    })
+
+    const [showInfo, setShowInfo] = useState({
+        ease: false,
+        impact: false,
+        type: false,
+        maturity: false
     })
 
     // Use validOptions from tools.json as the source of truth
@@ -29,6 +36,13 @@ export default function Toolkit() {
         maturity: 'Maturity Level'
     }
 
+    const filterDescriptions = {
+        ease: 'Indicates how easily the tool can be implemented, ranging from Easy to Hard based on required resources and expertise.',
+        impact: 'Measures the potential effect of the tool on entrepreneurial education outcomes, from Low to High impact.',
+        type: 'Categorizes tools as Strategic (long-term planning), Tactical (medium-term), or Operational (day-to-day implementation).',
+        maturity: 'Indicates the level of expertise required to use the tool effectively, from Beginner to Advanced.'
+    }
+
     const filteredTools = toolsData.tools.filter(tool => {
         if (!filters.ease.includes('all') && !filters.ease.includes(tool.ease)) return false
         if (!filters.impact.includes('all') && !filters.impact.includes(tool.impact)) return false
@@ -37,9 +51,9 @@ export default function Toolkit() {
         return true
     })
 
-    const handleFilterChange = (filterType, values) => {
-        // If "all" is being added, make it the only selection
-        if (!filters[filterType].includes('all') && values.includes('all')) {
+    const handleFilterChange = (filterType, value) => {
+        // If clicking on 'all', make it the only selection
+        if (value === 'all') {
             setFilters(prev => ({
                 ...prev,
                 [filterType]: ['all']
@@ -47,20 +61,44 @@ export default function Toolkit() {
             return
         }
 
-        // If a non-"all" option is being added and "all" is currently selected,
-        // remove "all" from the selection
-        if (filters[filterType].includes('all') && values.length > 1) {
-            values = values.filter(v => v !== 'all')
+        // If 'all' is currently selected and clicking on another option, remove 'all'
+        if (filters[filterType].includes('all')) {
+            setFilters(prev => ({
+                ...prev,
+                [filterType]: [value]
+            }))
+            return
         }
 
-        // If no options are selected, default to "all"
-        if (values.length === 0) {
-            values = ['all']
+        // If value is already selected, remove it
+        if (filters[filterType].includes(value)) {
+            const newValues = filters[filterType].filter(v => v !== value)
+            // If removing the last non-'all' option, default to 'all'
+            if (newValues.length === 0) {
+                setFilters(prev => ({
+                    ...prev,
+                    [filterType]: ['all']
+                }))
+            } else {
+                setFilters(prev => ({
+                    ...prev,
+                    [filterType]: newValues
+                }))
+            }
+            return
         }
 
+        // Otherwise, add the value to the selection
         setFilters(prev => ({
             ...prev,
-            [filterType]: values
+            [filterType]: [...prev[filterType], value]
+        }))
+    }
+
+    const toggleInfo = (filterType) => {
+        setShowInfo(prev => ({
+            ...prev,
+            [filterType]: !prev[filterType]
         }))
     }
 
@@ -69,54 +107,44 @@ export default function Toolkit() {
             <h2 className="text-2xl font-display font-bold mb-4">DSP Toolkit</h2>
 
             {/* Filter Controls */}
-            <div className="mb-6 space-x-4 flex">
+            <div className="mb-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {Object.entries(options).map(([filterType, filterOptions]) => (
-                    <div key={filterType} className="w-72">
-                        <Listbox
-                            value={filters[filterType]}
-                            onChange={(values) => handleFilterChange(filterType, values)}
-                            multiple
-                        >
-                            <div className="relative">
-                                <ListboxButton className="relative w-full cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-seafoam-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-seafoam-300 sm:text-sm">
-                                    <span className="block truncate">
-                                        {filterLabels[filterType]}: {
-                                            filters[filterType].length === 1 && filters[filterType][0] === 'all'
-                                                ? 'All'
-                                                : filters[filterType].map(f => filterLabels[f] || f).join(', ')
-                                        }
-                                    </span>
-                                    <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
-                                        <ChevronUpDownIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
-                                    </span>
-                                </ListboxButton>
-                                <ListboxOptions className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm z-10">
-                                    {filterOptions.map((option) => (
-                                        <ListboxOption
-                                            key={option}
-                                            value={option}
-                                            className={({ active, selected }) =>
-                                                `relative cursor-default select-none py-2 pl-10 pr-4 ${active ? 'bg-seafoam-100 text-seafoam-900' : 'text-gray-900'
-                                                }`
-                                            }
-                                        >
-                                            {({ selected }) => (
-                                                <>
-                                                    <span className={`block truncate ${selected ? 'font-medium' : 'font-normal'}`}>
-                                                        {filterLabels[option] || option}
-                                                    </span>
-                                                    {selected ? (
-                                                        <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-seafoam-600">
-                                                            <CheckIcon className="h-5 w-5" aria-hidden="true" />
-                                                        </span>
-                                                    ) : null}
-                                                </>
-                                            )}
-                                        </ListboxOption>
-                                    ))}
-                                </ListboxOptions>
+                    <div key={filterType} className="bg-white rounded-lg shadow p-4">
+                        <div className="flex justify-between items-center mb-2">
+                            <h3 className="font-medium text-seafoam-800">{filterLabels[filterType]}</h3>
+                            <button 
+                                onClick={() => toggleInfo(filterType)}
+                                className="text-seafoam-600 hover:text-seafoam-800 transition-colors"
+                                aria-label={`Show information about ${filterLabels[filterType]}`}
+                            >
+                                <Info className="w-5 h-5" />
+                            </button>
+                        </div>
+                        
+                        {showInfo[filterType] && (
+                            <div className="mb-3 p-2 bg-seafoam-50 rounded-md text-sm text-gray-700">
+                                {filterDescriptions[filterType]}
                             </div>
-                        </Listbox>
+                        )}
+                        
+                        <div className="space-y-1">
+                            {filterOptions.map((option) => (
+                                <div 
+                                    key={option} 
+                                    className="flex items-center space-x-2 p-2 hover:bg-seafoam-50 rounded-md cursor-pointer"
+                                    onClick={() => handleFilterChange(filterType, option)}
+                                >
+                                    <div className={`w-5 h-5 flex-shrink-0 border rounded-md flex items-center justify-center ${filters[filterType].includes(option) ? 'bg-seafoam-600 border-seafoam-600' : 'border-gray-300'}`}>
+                                        {filters[filterType].includes(option) && (
+                                            <CheckIcon className="h-4 w-4 text-white" aria-hidden="true" />
+                                        )}
+                                    </div>
+                                    <span className={`${filters[filterType].includes(option) ? 'font-medium' : ''}`}>
+                                        {filterLabels[option] || option}
+                                    </span>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 ))}
             </div>
@@ -130,8 +158,8 @@ export default function Toolkit() {
                         className="block bg-white rounded-lg shadow p-6 transition-all duration-200 ease-in-out hover:shadow-lg hover:-translate-y-1 hover:bg-seafoam-50 h-full flex flex-col"
                     >
                         <div className="flex-1">
-                            <img
-                                src={tool.image}
+                            <ToolImage
+                                toolNumber={tool.number}
                                 alt={tool.name}
                                 className="w-full h-48 object-cover rounded-lg mb-4"
                             />
@@ -167,4 +195,4 @@ export default function Toolkit() {
             </div>
         </div>
     )
-} 
+}

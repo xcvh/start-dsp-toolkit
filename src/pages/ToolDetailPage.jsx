@@ -1,5 +1,6 @@
 import { useParams } from 'react-router'
 import toolsData from '../data/tools.json'
+import ToolImage from '../components/ui/ToolImage'
 
 export default function ToolDetail() {
     const { number } = useParams()
@@ -14,6 +15,11 @@ export default function ToolDetail() {
             <h2 className="text-3xl font-display font-bold mb-6">{tool.name}</h2>
 
             <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
+                <ToolImage
+                    toolNumber={tool.number}
+                    alt={tool.name}
+                    className="w-full h-64 object-cover rounded-lg mb-6"
+                />
                 <div className="grid grid-cols-3 gap-4 mb-6">
                     <div className="text-center p-3 bg-seafoam-50 rounded">
                         <div className="text-seafoam-600 font-medium">User Level</div>
