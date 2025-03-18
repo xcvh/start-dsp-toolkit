@@ -1,8 +1,7 @@
-import toolsData from '../data/tools.json'
 import { useState, useEffect } from 'react'
-import { Link, useLocation, useSearchParams } from 'react-router'
-import { CheckIcon } from '@heroicons/react/20/solid'
-import { Gauge, Zap, Target, GraduationCap, Info } from 'lucide-react'
+import { useNavigate, useSearchParams, useLocation, Link } from 'react-router'
+import { Info, CheckIcon, Gauge, Zap, Target, GraduationCap } from 'lucide-react'
+import toolsData from '../data/tools.json'
 import ToolImage from '../components/ui/ToolImage'
 
 export default function Toolkit() {
@@ -57,9 +56,15 @@ export default function Toolkit() {
     }
 
     const filteredTools = toolsData.tools.filter(tool => {
-        if (!filters.ease.includes('all') && !filters.ease.includes(tool.ease)) return false
-        if (!filters.impact.includes('all') && !filters.impact.includes(tool.impact)) return false
-        if (!filters.type.includes('all') && !filters.type.includes(tool.type)) return false
+        if (!filters.ease.includes('all')) {
+            const toolEase = Array.isArray(tool.ease) ? tool.ease : [tool.ease];
+            if (!toolEase.some(e => filters.ease.includes(e))) return false;
+        }
+        if (!filters.impact.includes('all')) {
+            const toolImpact = Array.isArray(tool.impact) ? tool.impact : [tool.impact];
+            if (!toolImpact.some(i => filters.impact.includes(i))) return false;
+        }
+        if (!filters.type.includes('all') && !tool.type.some(t => filters.type.includes(t))) return false
         if (!filters.maturity.includes('all') && !filters.maturity.includes(tool.maturity)) return false
         return true
     })
@@ -186,26 +191,133 @@ export default function Toolkit() {
 
                         {/* Filterable Attributes */}
                         <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm mt-4 pt-4 border-t border-seafoam-200">
-                            <div className="flex items-center">
-                                <Gauge className="w-4 h-4 text-seafoam-600 mr-1" />
-                                <span className="text-seafoam-600 font-medium">Ease:</span>
-                                <span className="ml-2 px-2 py-1 bg-seafoam-50 rounded">{tool.ease}</span>
-                            </div>
-                            <div className="flex items-center">
-                                <Zap className="w-4 h-4 text-seafoam-600 mr-1" />
-                                <span className="text-seafoam-600 font-medium">Impact:</span>
-                                <span className="ml-2 px-2 py-1 bg-seafoam-50 rounded">{tool.impact}</span>
-                            </div>
-                            <div className="flex items-center">
-                                <Target className="w-4 h-4 text-seafoam-600 mr-1" />
-                                <span className="text-seafoam-600 font-medium">Type:</span>
-                                <span className="ml-2 px-2 py-1 bg-seafoam-50 rounded">{tool.type}</span>
-                            </div>
-                            <div className="flex items-center">
-                                <GraduationCap className="w-4 h-4 text-seafoam-600 mr-1" />
-                                <span className="text-seafoam-600 font-medium">Maturity:</span>
-                                <span className="ml-2 px-2 py-1 bg-seafoam-50 rounded">{tool.maturity}</span>
-                            </div>
+                            {tool.ease && tool.ease !== "none" && (
+                                <div className="flex items-center group relative">
+                                    <Gauge className="w-4 h-4 text-seafoam-600 mr-1" />
+                                    <span className="text-seafoam-600 font-medium">Ease:</span>
+                                    <span
+                                        className="ml-2 px-2 py-1 bg-seafoam-50 rounded cursor-help"
+                                        onMouseEnter={(e) => {
+                                            const rect = e.currentTarget.getBoundingClientRect();
+                                            const tooltip = document.getElementById(`ease-tooltip-${tool.number}`);
+                                            if (tooltip) {
+                                                tooltip.style.left = `${rect.left}px`;
+                                                tooltip.style.top = `${rect.bottom + 5}px`;
+                                                tooltip.classList.remove('hidden');
+                                            }
+                                        }}
+                                        onMouseLeave={() => {
+                                            const tooltip = document.getElementById(`ease-tooltip-${tool.number}`);
+                                            if (tooltip) {
+                                                tooltip.classList.add('hidden');
+                                            }
+                                        }}
+                                    >
+                                        {Array.isArray(tool.ease) && tool.ease.length > 1 ? 'Multiple' : tool.ease}
+                                    </span>
+                                    {Array.isArray(tool.ease) && tool.ease.length > 1 && (
+                                        <div
+                                            id={`ease-tooltip-${tool.number}`}
+                                            className="fixed hidden bg-white p-2 rounded-lg shadow-lg border border-seafoam-200 z-50 min-w-[200px]"
+                                        >
+                                            <div className="text-sm text-gray-700">
+                                                {tool.ease.map((ease, index) => (
+                                                    <div key={index} className="py-1">
+                                                        {ease}
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                            )}
+                            {tool.impact && tool.impact !== "none" && (
+                                <div className="flex items-center group relative">
+                                    <Zap className="w-4 h-4 text-seafoam-600 mr-1" />
+                                    <span className="text-seafoam-600 font-medium">Impact:</span>
+                                    <span
+                                        className="ml-2 px-2 py-1 bg-seafoam-50 rounded cursor-help"
+                                        onMouseEnter={(e) => {
+                                            const rect = e.currentTarget.getBoundingClientRect();
+                                            const tooltip = document.getElementById(`impact-tooltip-${tool.number}`);
+                                            if (tooltip) {
+                                                tooltip.style.left = `${rect.left}px`;
+                                                tooltip.style.top = `${rect.bottom + 5}px`;
+                                                tooltip.classList.remove('hidden');
+                                            }
+                                        }}
+                                        onMouseLeave={() => {
+                                            const tooltip = document.getElementById(`impact-tooltip-${tool.number}`);
+                                            if (tooltip) {
+                                                tooltip.classList.add('hidden');
+                                            }
+                                        }}
+                                    >
+                                        {Array.isArray(tool.impact) && tool.impact.length > 1 ? 'Multiple' : tool.impact}
+                                    </span>
+                                    {Array.isArray(tool.impact) && tool.impact.length > 1 && (
+                                        <div
+                                            id={`impact-tooltip-${tool.number}`}
+                                            className="fixed hidden bg-white p-2 rounded-lg shadow-lg border border-seafoam-200 z-50 min-w-[200px]"
+                                        >
+                                            <div className="text-sm text-gray-700">
+                                                {tool.impact.map((impact, index) => (
+                                                    <div key={index} className="py-1">
+                                                        {impact}
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                            )}
+                            {tool.type && tool.type !== "none" && (
+                                <div className="flex items-center group relative">
+                                    <Target className="w-4 h-4 text-seafoam-600 mr-1" />
+                                    <span className="text-seafoam-600 font-medium">Type:</span>
+                                    <span
+                                        className="ml-2 px-2 py-1 bg-seafoam-50 rounded cursor-help"
+                                        onMouseEnter={(e) => {
+                                            const rect = e.currentTarget.getBoundingClientRect();
+                                            const tooltip = document.getElementById(`tooltip-${tool.number}`);
+                                            if (tooltip) {
+                                                tooltip.style.left = `${rect.left}px`;
+                                                tooltip.style.top = `${rect.bottom + 5}px`;
+                                                tooltip.classList.remove('hidden');
+                                            }
+                                        }}
+                                        onMouseLeave={() => {
+                                            const tooltip = document.getElementById(`tooltip-${tool.number}`);
+                                            if (tooltip) {
+                                                tooltip.classList.add('hidden');
+                                            }
+                                        }}
+                                    >
+                                        {tool.type.length > 1 ? 'Multiple' : tool.type[0]}
+                                    </span>
+                                    {tool.type.length > 1 && (
+                                        <div
+                                            id={`tooltip-${tool.number}`}
+                                            className="fixed hidden bg-white p-2 rounded-lg shadow-lg border border-seafoam-200 z-50 min-w-[200px]"
+                                        >
+                                            <div className="text-sm text-gray-700">
+                                                {tool.type.map((type, index) => (
+                                                    <div key={index} className="py-1">
+                                                        {type}
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                            )}
+                            {tool.maturity && tool.maturity !== "none" && (
+                                <div className="flex items-center">
+                                    <GraduationCap className="w-4 h-4 text-seafoam-600 mr-1" />
+                                    <span className="text-seafoam-600 font-medium">Maturity:</span>
+                                    <span className="ml-2 px-2 py-1 bg-seafoam-50 rounded">{tool.maturity}</span>
+                                </div>
+                            )}
                         </div>
                     </Link>
                 ))}
