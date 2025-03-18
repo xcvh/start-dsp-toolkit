@@ -1,7 +1,7 @@
 import { useParams, useNavigate, useLocation } from 'react-router'
 import toolsData from '../data/tools.json'
 import ToolImage from '../components/ui/ToolImage'
-import { Gauge, Zap, Target, GraduationCap } from 'lucide-react'
+import { Gauge, Zap, Target, GraduationCap, Users } from 'lucide-react'
 
 export default function ToolDetail() {
     const { number } = useParams()
@@ -42,23 +42,14 @@ export default function ToolDetail() {
                     alt={tool.name}
                     className="w-full h-64 object-cover rounded-lg mb-6"
                 />
-                {/* First row - 5 items with shorter content */}
-                <div className="grid grid-cols-4 gap-4 mb-6">
+                {/* First row - 3 items with shorter content */}
+                <div className="grid grid-cols-3 gap-4 mb-6">
                     {tool.ease && (
                         <div className="text-center p-3 bg-seafoam-100 rounded-lg shadow-md">
                             <div className="flex flex-col items-center">
                                 <Gauge className="w-5 h-5 text-seafoam-600 mb-1" />
                                 <div className="text-seafoam-700 text-sm font-medium">Ease</div>
                                 <div className="text-seafoam-900 text-sm">{tool.ease}</div>
-                            </div>
-                        </div>
-                    )}
-                    {tool.impact && (
-                        <div className="text-center p-3 bg-seafoam-100 rounded-lg shadow-md">
-                            <div className="flex flex-col items-center">
-                                <Zap className="w-5 h-5 text-seafoam-600 mb-1" />
-                                <div className="text-seafoam-700 text-sm font-medium">Impact</div>
-                                <div className="text-seafoam-900 text-sm">{tool.impact}</div>
                             </div>
                         </div>
                     )}
@@ -82,8 +73,8 @@ export default function ToolDetail() {
                     )}
                 </div>
 
-                {/* Challenge, Purpose, and Resources in a single row */}
-                <div className="grid grid-cols-3 gap-4 mb-6">
+                {/* Challenge, Purpose, Resources, and User Target Group in a single row */}
+                <div className="grid grid-cols-4 gap-4 mb-6">
                     {tool.challenge && (
                         <div className="p-3 bg-seafoam-100 rounded-lg shadow-md">
                             <div className="flex flex-col">
@@ -93,7 +84,9 @@ export default function ToolDetail() {
                                     </svg>
                                     <div className="text-seafoam-700 text-sm font-medium">Challenge</div>
                                 </div>
-                                <div className="text-seafoam-900 text-sm">{tool.challenge}</div>
+                                <div className="text-seafoam-900 text-sm whitespace-pre-line">
+                                    {tool.challenge.replace(/✔/g, '\n✔')}
+                                </div>
                             </div>
                         </div>
                     )}
@@ -107,7 +100,9 @@ export default function ToolDetail() {
                                     </svg>
                                     <div className="text-seafoam-700 text-sm font-medium">Purpose</div>
                                 </div>
-                                <div className="text-seafoam-900 text-sm">{tool.purpose}</div>
+                                <div className="text-seafoam-900 text-sm whitespace-pre-line">
+                                    {tool.purpose.replace(/✔/g, '\n✔')}
+                                </div>
                             </div>
                         </div>
                     )}
@@ -121,7 +116,23 @@ export default function ToolDetail() {
                                     </svg>
                                     <div className="text-seafoam-700 text-sm font-medium">Resources</div>
                                 </div>
-                                <div className="text-seafoam-900 text-sm">{tool.resources}</div>
+                                <div className="text-seafoam-900 text-sm whitespace-pre-line">
+                                    {tool.resources.replace(/✔/g, '\n✔')}
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    {tool.userTargetGroups && tool.userTargetGroups.length > 0 && (
+                        <div className="p-3 bg-seafoam-100 rounded-lg shadow-md">
+                            <div className="flex flex-col">
+                                <div className="flex items-center mb-1">
+                                    <Users className="w-5 h-5 text-seafoam-600 mr-2" />
+                                    <div className="text-seafoam-700 text-sm font-medium">User Target Groups</div>
+                                </div>
+                                <div className="text-seafoam-900 text-sm whitespace-pre-line">
+                                    {tool.userTargetGroups.join('\n')}
+                                </div>
                             </div>
                         </div>
                     )}
