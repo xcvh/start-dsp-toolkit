@@ -20,7 +20,7 @@ export default function App() {
             <Route path="/" element={<AboutPage />} />
             <Route path="/project" element={<ProjectPage />} />
             <Route path="/toolkit" element={<ToolkitPage />} />
-            <Route path="/toolkit/:number" element={<ToolDetailPage />} />
+            <Route path="/tool/:number" element={<ToolDetailPage />} />
           </Routes>
         </div>
       </main>

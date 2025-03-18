@@ -1,17 +1,30 @@
 import toolsData from '../data/tools.json'
-import { useState } from 'react'
-import { Link } from 'react-router'
+import { useState, useEffect } from 'react'
+import { Link, useLocation, useSearchParams } from 'react-router'
 import { CheckIcon } from '@heroicons/react/20/solid'
 import { Gauge, Zap, Target, GraduationCap, Info } from 'lucide-react'
 import ToolImage from '../components/ui/ToolImage'
 
 export default function Toolkit() {
+    const location = useLocation()
+    const [searchParams, setSearchParams] = useSearchParams()
     const [filters, setFilters] = useState({
         ease: ['all'],
         impact: ['all'],
         type: ['all'],
         maturity: ['all']
     })
+
+    // Initialize filters from URL params
+    useEffect(() => {
+        const newFilters = {
+            ease: searchParams.get('ease')?.split(',') || ['all'],
+            impact: searchParams.get('impact')?.split(',') || ['all'],
+            type: searchParams.get('type')?.split(',') || ['all'],
+            maturity: searchParams.get('maturity')?.split(',') || ['all']
+        }
+        setFilters(newFilters)
+    }, [searchParams])
 
     const [showInfo, setShowInfo] = useState({
         ease: false,
@@ -52,47 +65,50 @@ export default function Toolkit() {
     })
 
     const handleFilterChange = (filterType, value) => {
+        let newFilters
         // If clicking on 'all', make it the only selection
         if (value === 'all') {
-            setFilters(prev => ({
-                ...prev,
+            newFilters = {
+                ...filters,
                 [filterType]: ['all']
-            }))
-            return
+            }
         }
-
         // If 'all' is currently selected and clicking on another option, remove 'all'
-        if (filters[filterType].includes('all')) {
-            setFilters(prev => ({
-                ...prev,
+        else if (filters[filterType].includes('all')) {
+            newFilters = {
+                ...filters,
                 [filterType]: [value]
-            }))
-            return
+            }
         }
-
         // If value is already selected, remove it
-        if (filters[filterType].includes(value)) {
+        else if (filters[filterType].includes(value)) {
             const newValues = filters[filterType].filter(v => v !== value)
             // If removing the last non-'all' option, default to 'all'
-            if (newValues.length === 0) {
-                setFilters(prev => ({
-                    ...prev,
-                    [filterType]: ['all']
-                }))
-            } else {
-                setFilters(prev => ({
-                    ...prev,
-                    [filterType]: newValues
-                }))
+            newFilters = {
+                ...filters,
+                [filterType]: newValues.length === 0 ? ['all'] : newValues
             }
-            return
+        }
+        // Otherwise, add the value to the selection
+        else {
+            newFilters = {
+                ...filters,
+                [filterType]: [...filters[filterType], value]
+            }
         }
 
-        // Otherwise, add the value to the selection
-        setFilters(prev => ({
-            ...prev,
-            [filterType]: [...prev[filterType], value]
-        }))
+        setFilters(newFilters)
+
+        // Update URL params
+        const newParams = new URLSearchParams(searchParams)
+        Object.entries(newFilters).forEach(([key, values]) => {
+            if (values.includes('all')) {
+                newParams.delete(key)
+            } else {
+                newParams.set(key, values.join(','))
+            }
+        })
+        setSearchParams(newParams)
     }
 
     const toggleInfo = (filterType) => {
@@ -112,7 +128,7 @@ export default function Toolkit() {
                     <div key={filterType} className="bg-white rounded-lg shadow p-4">
                         <div className="flex justify-between items-center mb-2">
                             <h3 className="font-medium text-seafoam-800">{filterLabels[filterType]}</h3>
-                            <button 
+                            <button
                                 onClick={() => toggleInfo(filterType)}
                                 className="text-seafoam-600 hover:text-seafoam-800 transition-colors"
                                 aria-label={`Show information about ${filterLabels[filterType]}`}
@@ -120,17 +136,17 @@ export default function Toolkit() {
                                 <Info className="w-5 h-5" />
                             </button>
                         </div>
-                        
+
                         {showInfo[filterType] && (
                             <div className="mb-3 p-2 bg-seafoam-50 rounded-md text-sm text-gray-700">
                                 {filterDescriptions[filterType]}
                             </div>
                         )}
-                        
+
                         <div className="space-y-1">
                             {filterOptions.map((option) => (
-                                <div 
-                                    key={option} 
+                                <div
+                                    key={option}
                                     className="flex items-center space-x-2 p-2 hover:bg-seafoam-50 rounded-md cursor-pointer"
                                     onClick={() => handleFilterChange(filterType, option)}
                                 >
@@ -154,8 +170,9 @@ export default function Toolkit() {
                 {filteredTools.map(tool => (
                     <Link
                         key={tool.number}
-                        to={`/toolkit/${tool.number}`}
-                        className="block bg-white rounded-lg shadow p-6 transition-all duration-200 ease-in-out hover:shadow-lg hover:-translate-y-1 hover:bg-seafoam-50 h-full flex flex-col"
+                        to={`/tool/${tool.number}`}
+                        state={{ from: '/toolkit', search: location.search }}
+                        className="group relative overflow-hidden bg-gradient-to-br from-seafoam-50 to-white rounded-xl p-6 border border-seafoam-200 hover:border-seafoam-400 transition-all duration-200 flex flex-col h-full"
                     >
                         <div className="flex-1">
                             <ToolImage
@@ -168,7 +185,7 @@ export default function Toolkit() {
                         </div>
 
                         {/* Filterable Attributes */}
-                        <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm mt-4">
+                        <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm mt-4 pt-4 border-t border-seafoam-200">
                             <div className="flex items-center">
                                 <Gauge className="w-4 h-4 text-seafoam-600 mr-1" />
                                 <span className="text-seafoam-600 font-medium">Ease:</span>
