@@ -9,7 +9,9 @@
       "purpose": "To provide universities with customizable visual materials and AI-driven guidance to create materials that foster an entrepreneurial culture in their facilities",
       "description": "The tool provides ready-to-print designs and templates featuring motivational quotes, practical tips, and action-oriented phrases to enhance university spaces. It includes a collection of quotes and resources that you can use to create your own designs. Additionally, an AI guide (such as ChatGPT) is available to help you generate prompts for personalized content tailored to the university's specific needs. Blank templates are also included for adding your custom phrases, making it easy to inspire entrepreneurial thinking in libraries, cafeterias, or co-working areas",
       "ease": "Medium",
-      "type": ["Operational"],
+      "type": [
+        "Operational"
+      ],
       "maturity": "Emerging",
       "resources": "Canva or any design tool, a generative AI tool like ChatGPT. Staff with knowledge of the previous digital tools, Printer and paper",
       "outcomes": "University walls, co-working areas, and libraries showcase inspirational posters and quotes, creating a more entrepreneurial environment. Increased student participation in entrepreneurship events and workshops, with feedback indicating they feel encouraged and inspired by the new environment. Universities generate phrases or tips tailored to their specific mission. Students engage in informal brainstorming sessions in common areas, and academics incorporate the tool into lectures or entrepreneurial projects",
@@ -41,7 +43,9 @@
       "purpose": "To help universities and individuals better understand entrepreneurial concepts in a simple, funny way",
       "description": "The Entrepreneurial Dictionary is designed to help universities and individuals better understand entrepreneurial concepts in a simple, funny way. It breaks down key terms often misunderstood or intimidating, helping reduce fear and misconceptions around entrepreneurship. It is designed for students, faculty members or university staff curious about the entrepreneurial mindset. This tool offers clear definitions, examples, and real-world context to make entrepreneurial language accessible to everyone",
       "ease": "Medium",
-      "type": ["Tactical"],
+      "type": [
+        "Tactical"
+      ],
       "maturity": "Emerging",
       "resources": "An electronic device with WI-FI to visualize the dictionary",
       "outcomes": "Students and faculty will develop a deeper comprehension of key entrepreneurial terms. A standardized language that ensures clarity and alignment across departments and stakeholders. Students will feel more confident to participate in entrepreneurship-related activities and courses. The tool can be incorporated into entrepreneurship courses, mentorship programs, and innovation hubs to support structured learning. The users can independently explore and expand their entrepreneurial vocabulary",
@@ -66,7 +70,9 @@
       "purpose": "To help universities to determine and track their KPIs for entrepreneurship Education.",
       "description": "Is an Excel file designed to help universities in evaluating and enhancing their entrepreneurship education initiatives. It offers a structured yet adaptable framework, enabling institutions to establish and monitor their progress through relevant KPIs. Universities can adapt the tool to their specific needs by selecting the most relevant KPIs, setting their own targets, and even adding new indicators if required.",
       "ease": "Hard",
-      "type": ["Operational"],
+      "type": [
+        "Operational"
+      ],
       "maturity": "Established",
       "resources": "Excel with Macros activated",
       "outcomes": "Universities start using more established and complex KPIs on different aspects of the entrepreneurship education. A structured and data-driven approach to measuring entrepreneurship education performance. Improved accountability across departments with clear ownership of responsibilities. Strengthened decision-making through consistent and transparent reporting.",
@@ -94,7 +100,9 @@
       "purpose": "To help universities identify, optimize, and implement strategies to incentivize faculty/staff in fostering entrepreneurial activities",
       "description": "The tool is designed to support universities in identifying and implementing strategies to motivate faculty and staff to engage in entrepreneurial education. It presents an interactive pathway that helps institutions assess their current support landscape and guides them toward actionable incentive strategies. These may include financial incentives, professional development opportunities, public recognition, or other non-monetary rewards to encourage faculty participation in entrepreneurial initiatives.",
       "ease": "Medium",
-      "type": ["Operational"],
+      "type": [
+        "Operational"
+      ],
       "maturity": "Emerging",
       "resources": "Mural account. Stakeholders involvement",
       "outcomes": "Increased faculty engagement in entrepreneurship education through incentives that address their specific barriers. Enhanced resource utilization by identifying and implementing low-cost, effective strategies. Greater awareness among faculty about available entrepreneurship opportunities and support systems. Improved institutional culture that fosters entrepreneurship through recognition and reward systems.",
@@ -118,7 +126,9 @@
       "purpose": "To help universities identify, clarify, and optimise the support services available for entrepreneurial activities",
       "description": "The Entrepreneurial Resource Mapping Tool is an interactive Mural template designed to help universities visually organize and optimize their entrepreneurial resources. It provides a structured framework that guides faculty and staff through a step-by-step process to identify, categorize, and assess available resources, such as funding, facilities, and support programs. The tool allows universities to pinpoint gaps, clarify responsibilities, and develop action plans for better resource utilization.",
       "ease": "Medium",
-      "type": ["Operational"],
+      "type": [
+        "Operational"
+      ],
       "maturity": "Emerging",
       "resources": "Mural account",
       "outcomes": "Universities map their resources and know identify how to allocate them better",
@@ -142,7 +152,10 @@
       "purpose": "To help universities assess entrepreneurial competencies in a practical and structured way during recruitment and professional development processes",
       "description": "The tool provides ready-to-use templates and case scenarios that simplify the evaluation of entrepreneurial skills relevant to academic contexts, ensuring a consistent and insightful assessment process. The tool is based on the EntreComp Framework (The European Entrepreneurship Competence Framework), where 12 core competencies were selected. For each of these competencies, the tool has an individual template designed to assess entrepreneurial proficiency through realistic scenarios tailored for academia. Additionally, the tool includes general case scenarios that assess multiple competencies simultaneously.",
       "ease": "Easy",
-      "type": ["Operational", "Strategic"],
+      "type": [
+        "Operational",
+        "Strategic"
+      ],
       "maturity": "Emerging",
       "resources": "Word, PDF Viewer",
       "outcomes": "Universities can establish a standardized framework for evaluating entrepreneurial competencies in recruitment and staff development. Gain deeper insights into the entrepreneurial potential of faculty and staff, enabling better alignment with institutional goals. Improved selection and development of educators with entrepreneurial competencies. Faculty and staff become more aware of their entrepreneurial strengths and areas for development.",
@@ -166,7 +179,9 @@
       "purpose": "To help educators design courses where Entrecomp competencies are integrated in order to promote and assess the entrepreneurial competencies among the students.",
       "description": "The EntreComp Integration Canvas is a visualisation tool that provides a holistic overview of the components needed to create a course where entrepreneurial competencies are included. The Canvas includes a set of cards to guide educators on the filling out of the canvas by giving them trigger questions on each part of the canvas. By the end they will have all the necessary information an elements to implement and monitor a course.",
       "ease": "Hard",
-      "type": ["Strategic"],
+      "type": [
+        "Strategic"
+      ],
       "maturity": "Emerging",
       "resources": "Canvas and Cards (printed or not)",
       "outcomes": "Increased awareness and understanding of EntreComp competencies.Integration of EntreComp competencies into the courses of any field. Development of entrepreneurial competencies among the students. Assessment of the entrepreneurial competencies at the beginning and at the end of a course.",
@@ -198,7 +213,9 @@
       "purpose": "To help universities and educators integrate digital tools into entrepreneurship education, aligning with current trends and educational demands.",
       "description": "This guide is designed to help universities and educators integrate digital tools into entrepreneurship education, aligning with current trends and educational demands. Based on the EntreComp Framework, this resource recommends free, open-source AI and VR tools that can support different stages of the entrepreneurial journey that was adapted from the EntreComp Framework.",
       "ease": "Easy",
-      "type": ["Operational"],
+      "type": [
+        "Operational"
+      ],
       "maturity": "Emerging",
       "resources": "An electronic device to see the guide, and the selected tool",
       "outcomes": "Students and educators integrate AI and VR tools into their entrepreneurship programs and start considering them for their entrepreneurial journey. Universities foster a more technology-driven entrepreneurial culture, preparing students for modern business challenges. Improved ability to identify market trends, develop innovative business ideas, and create digital prototypes for entrepreneurial ventures.",
@@ -222,7 +239,9 @@
       "purpose": "To help applicants for funding opportunities by providing a clear roadmap for identifying, applying for, and successfully securing funding for entrepreneurship initiatives.",
       "description": "The Grant Application Guideline is a resource designed to help universities, professors, and students in navigating the landscape of funding opportunities for entrepreneurship education. It includes an overview of EU and regional funding opportunities, eligibility criteria, detailed instructions for preparing competitive grant proposals, and practical tips for success.",
       "ease": "Hard",
-      "type": ["Strategic"],
+      "type": [
+        "Strategic"
+      ],
       "maturity": "Emerging",
       "resources": "PDF reader",
       "outcomes": "Increased awareness and understanding of EU and regional funding opportunities for entrepreneurship and research.Development of competitive, high-quality grant proposals aligned with institutional goals.Enhanced ability to meet eligibility criteria and comply with EU funding guidelines.Improved access to financial resources that foster innovation, entrepreneurial initiatives, and academic development.",
@@ -247,7 +266,9 @@
       "purpose": "This tool provides a structured first step for universities to systematically identify and track financial investments in entrepreneurship education. By gathering input from key faculties and departments, the tool enables better resource allocation, improved planning, and stronger institutional alignment with entrepreneurship goals.",
       "description": "The \"Roadmap: Orientation Strategy\" is a university-wide assessment framework designed to offer a helicopter view of financial commitments to entrepreneurship education. This tool collects essential data across faculties, innovation centres, and administrative units, providing a structured approach to:\n✔ Map financial contributions to entrepreneurship education.\n✔ Understand funding sources and allocation patterns across departments.\n✔ Identify gaps and inefficiencies in resource distribution.\n✔ Support data-driven decision-making for strategic financial planning.",
       "ease": "Medium",
-      "type": ["Strategic"],
+      "type": [
+        "Strategic"
+      ],
       "maturity": "Emerging",
       "resources": "✔ Financial data on university budgets and entrepreneurship programmes\n✔ Input from faculty representatives, finance teams, and innovation leaders.\n✔ Staff familiar with budgeting and financial analysis to interpret results.\n✔ Access to the Google Form Survey",
       "outcomes": "Baseline financial overview — Universities gain a clear first insight into how much is being invested in entrepreneurship education. Better resource alignment — Identifies areas where funding is missing, duplicated, or under-utilised. Data-driven decision-making — Helps universities strategically allocate future investments based on real data. Improved accountability — Universities can demonstrate to leadership and stakeholders the financial value of entrepreneurship education.",
@@ -272,7 +293,9 @@
       "purpose": "This tool helps individuals assess their entrepreneurial mindset and competencies, focusing on key areas such as:\n✔ Emotional intelligence — Understanding and managing emotions in entrepreneurial decision-making\n✔ Social responsibility — Recognising the impact of business on society and the environment\n✔ Diversity and inclusion — Embracing different perspectives and fostering inclusive innovation",
       "description": "The Entrepreneurial Competence Self-Assessment Tool is an online evaluation that provides users with a personalised report on their entrepreneurial capabilities. It assesses competencies through a series of structured questions and offers feedback on: Strengths and areas for development, Practical recommendations for skill-building, Guidance on how to enhance entrepreneurial potential\nBuilt using Brilliant Assessments, this tool allows individuals to evaluate their readiness for entrepreneurship and take steps to enhance their skills and knowledge.",
       "ease": "Hard",
-      "type": ["Strategic"],
+      "type": [
+        "Strategic"
+      ],
       "maturity": "Emerging",
       "resources": "✔ Access to Brilliant Assessments platform\n✔ Basic understanding of entrepreneurial competencies\n✔ Time for users to complete the self-assessment",
       "outcomes": "Increased self-awareness — Users understand their entrepreneurial strengths and development areas. Better preparation for entrepreneurship — Individuals gain insights into the skills they need to develop. Stronger alignment with EntreComp framework — Users receive structured feedback to guide their growth. Actionable recommendations — Practical next steps for improving entrepreneurial readiness",
@@ -297,7 +320,9 @@
       "purpose": "This curated Entrepreneurial Mindset Video Toolkit helps individuals understand and develop key entrepreneurial skills beyond finance and operations. It highlights the importance of self-awareness, adaptability, ethical leadership, and inclusive innovation in modern entrepreneurship.",
       "description": "The Entrepreneurial Mindset Video Toolkit is a curated playlist of educational videos designed to support universities, educators, and students in exploring the mindset required for entrepreneurship. The videos showcase:\n• The role of emotional intelligence and adaptability in business success.\n• How entrepreneurs integrate ethical and sustainable practices into their ventures.\n• The impact of diverse perspectives and inclusion in driving innovation.\n• Practical advice and real-world insights from experienced entrepreneurs and educators.",
       "ease": "Hard",
-      "type": ["Tactical"],
+      "type": [
+        "Tactical"
+      ],
       "maturity": "Emerging",
       "resources": "Access to the curated video playlist, Engagement from educators, students, and entrepreneurs to discuss and reflect on the content.",
       "outcomes": "Greater awareness of essential entrepreneurial competencies beyond finance and operations. Stronger understanding of emotional intelligence, ethics, and diversity in business success. Enhanced engagement in entrepreneurship education through dynamic and relatable content. Better preparation for real-world entrepreneurship, ensuring a well-rounded entrepreneurial mindset.",
@@ -321,8 +346,15 @@
       "challenge": "Universities lack the proper linkages, frameworks, and alignment with SDGs in sustainable entrepreneurship.",
       "purpose": "The SDG framework is designed to assist universities, departments, and faculties in aligning their orientation strategies for sustainable entrepreneurship with the United Nations Sustainable Development Goals (SDGs). It provides a structured approach to integrating SDG-linked objectives into entrepreneurial education, research, and practice, ensuring relevance to global sustainability challenges. Users can integrate SDG-linked objectives into entrepreneurial education, research, and institutional practices. Its primary objective is to ensure relevance to global sustainability challenges in academic settings.",
       "description": "A structured framework that assists academic institutions in embedding sustainability principles into entrepreneurial education, research, and operational strategies. The SDG Framework provides guidelines, best practices, and methodologies for implementing SDG-driven initiatives. Helps in curriculum development, faculty training, and research alignment with sustainability goals and encourages interdisciplinary collaboration and multi-stakeholder engagement in sustainable entrepreneurship.",
-      "ease": ["Medium", "Hard"],
-      "type": ["Strategic", "Tactical", "Operational"],
+      "ease": [
+        "Medium",
+        "Hard"
+      ],
+      "type": [
+        "Strategic",
+        "Tactical",
+        "Operational"
+      ],
       "maturity": "Advanced",
       "resources": "Human Resources with knowledge in SDGs, sustainability and entrepreneurship. Financial Budget for training, curriculum redesign and digital tools. Funding for projects and implementation. Digital and Technical Resources as previously explained. Educational Materials such as Case Studies in SDG integration in entrepreneurship, guidelines for best practice and open access research.",
       "outcomes": "Short-Term: Awareness and understanding of how SDGs integrate into academic entrepreneurship. Faculty and student engagement in sustainability-driven projects. Medium-Term: Development of SDG-aligned entrepreneurship programs. Increased institutional participation in SDG-driven research. Establishment of sustainability-focused incubators or innovation hubs. Long-Term: Higher global ranking in sustainability for institutions. Growth in impactful, sustainability-focused startups. Strengthened partnerships with government, businesses, and NGOs.",
@@ -348,8 +380,15 @@
       "purpose": "To leverage AI in stakeholder mapping, engagement, and strategic decision-making, ensuring universities effectively integrate SDGs into their entrepreneurship, education, and research activities.",
       "description": "Stakeholders Radar/AI is an AI-powered tool that identifies key stakeholders within HEIs and broader communities. It provides data-driven insights into their interests, influence, and engagement potential, helping universities align their sustainability strategies with relevant partners.",
       "ease": "Moderate",
-      "type": ["Strategic", "Tactical"],
-      "maturity": ["Emerging", "Established", "Advanced"],
+      "type": [
+        "Strategic",
+        "Tactical"
+      ],
+      "maturity": [
+        "Emerging",
+        "Established",
+        "Advanced"
+      ],
       "resources": "AI and data analytics software. Institutional support and governance framework. Training for faculty, students, and administrators. Data integration and ethical AI compliance.",
       "outcomes": "Improved Stakeholder Engagement: Universities will have a clear understanding of key stakeholders in SDG-related initiatives. Enhanced Decision-Making: AI-generated insights will support better sustainability strategies. Increased Collaboration: Institutions can foster partnerships with industry, policymakers, and communities.",
       "instructions": "1. Access the Tool: Log into the AI-based platform using university credentials.\n2. Input Data: Provide information on stakeholders, including faculty, students, industry partners, and government entities.\n3. Run AI Analysis: The system will map out stakeholders based on influence, interest, and potential collaboration opportunities.\n4. Review Insights: Users can visualize stakeholder networks, engagement metrics, and strategic alignment with SDGs.\n5. Develop Strategies: Use AI-generated recommendations to improve collaboration, policies, and sustainability initiatives.\n6. Monitor & Evaluate: Continuously assess engagement and adjust strategies as needed.",
@@ -373,8 +412,13 @@
       "purpose": "To create a digital space for knowledge exchange, networking, and mentorship among students, faculty, and entrepreneurs.",
       "description": "A digital platform (online forum, discussion board, or collaborative workspace) where entrepreneurs can share insights, challenges, case studies, and best practices. It promotes engagement, mentorship, and learning from real-world experiences.",
       "ease": "Moderate",
-      "type": ["Strategic"],
-      "maturity": ["Emerging", "Established"],
+      "type": [
+        "Strategic"
+      ],
+      "maturity": [
+        "Emerging",
+        "Established"
+      ],
       "resources": "Technical Infrastructure: A hosting platform (self-hosted or SaaS-based).\nModerators: To ensure productive discussions and filter spam.\nContent Strategy: Guidelines, discussion topics, engagement plans.\nMarketing & Promotion: To onboard users and sustain activity.",
       "outcomes": "Increased peer-to-peer learning and collaboration. Better knowledge transfer of success and failure stories. Stronger entrepreneurial mindset among students and faculty. Higher participation in startup incubators and innovation challenges. Improved networking and mentorship connections.",
       "instructions": "1. Sign Up: Create an account on the platform.\n2. Join Relevant Topics: Browse categories such as startup funding, product development, failure stories, etc.\n3. Engage with the Community: Ask questions, share experiences, provide feedback.\n4. Connect with Mentors: Reach out to experienced entrepreneurs for guidance.\n5. Attend Virtual Events: Participate in webinars, discussion panels, and live Q&A sessions.\n6. Contribute & Learn: Post success stories, lessons learned, and industry insights.",
@@ -399,7 +443,9 @@
       "purpose": "This tool helps non-business academics discover their unique roles and pathways to engage in entrepreneurship education.",
       "description": "The Role Navigator is an assessment tool designed to explore the strengths, teaching styles, and interests of non-business academics in relation to entrepreneurship education. It identifies opportunities for engagement, such as mentoring, facilitating workshops, or contributing to curriculum innovation. Participants receive a personalized feedback report outlining actionable steps and tailored resources to align their expertise with entrepreneurship education initiatives.",
       "ease": "Easy",
-      "type": ["Strategic"],
+      "type": [
+        "Strategic"
+      ],
       "maturity": "Emerging",
       "resources": "Internet Connection / PDF Reader / 10-15 Minutes time",
       "outcomes": "Increased awareness among non-business academics about their potential contributions to entrepreneurship education. Broader involvement of diverse disciplines in entrepreneurship initiatives. Enhanced interdisciplinary collaboration within universities. Development of innovative and inclusive approaches to entrepreneurship education.",
@@ -423,7 +469,9 @@
       "purpose": "This tool helps assess their familiarity, interest, and readiness to implement diverse teaching formats, while identifying barriers and providing actionable recommendations.",
       "description": "The tool guides educators through an assessment that evaluates their current awareness, interest, and potential challenges in implementing entrepreneurship education formats such as experiential learning, problem-based learning, and simulation-based learning. Participants receive a personalized feedback report with tailored insights and practical suggestions to enhance their teaching practices and foster entrepreneurial skills in their students.",
       "ease": "Easy",
-      "type": ["Tactical"],
+      "type": [
+        "Tactical"
+      ],
       "maturity": "Emerging",
       "resources": "Internet Connection / PDF Reader / 10-15 Minutes time",
       "outcomes": "Increased educator awareness of diverse entrepreneurship education formats. Enhanced adoption of innovative teaching methods aligned with entrepreneurship education. Improved student engagement and skill development in entrepreneurial thinking. Expanded interdisciplinary collaboration among educators.",
@@ -447,7 +495,9 @@
       "purpose": "The Sustainable Business Model Canvas (SBMC) Guideline provides a structured framework to help educators teach business model innovation with a strong sustainability focus. It enables students to develop business models that align economic success with environmental and social responsibility.",
       "description": "The Sustainable Business Model Canvas (SBMC) Guideline is designed to support educators and trainers in integrating sustainability-driven business modeling into their courses, workshops, and training programs.It builds upon the Business Model Canvas by Osterwalder & Pigneur, expanding it to include sustainability aspects such as stakeholder impact, environmental responsibility, and long-term value creation. The guideline provides a structured methodology, facilitation strategies, and key questions to help educators guide students in systematically developing sustainable business models.Educators can use this guideline to facilitate interactive workshops, classroom discussions, and business modeling exercises, helping students and entrepreneurs understand how sustainability principles can be embedded into business strategy from the outset.",
       "ease": "Moderate",
-      "type": ["Operational"],
+      "type": [
+        "Operational"
+      ],
       "maturity": "Established",
       "resources": "Sustainable Business Model Canvas template (printable or digital).\nFacilitation guide with sustainability-focused discussion prompts and exercises.\nPost-its, pens, and whiteboards (for in-person workshops).\nDigital collaboration tools (optional) for hybrid/remote learning. Access to case studies on sustainable business models.",
       "outcomes": "Educators integrate sustainability-driven business modeling into their teaching. Students gain hands-on experience in developing sustainable business models. Entrepreneurship education aligns with real-world sustainability challenges. Workshops and courses become more interactive and practice-oriented. Universities and incubators foster sustainability-minded entrepreneurs.",
@@ -475,7 +525,9 @@
       "purpose": "Generate future financial information for decision making, based on the current information of an enterprise.",
       "description": "This Microsoft Excel Workbook is designed to provide those starting a business or already running a business with information that will allow them to make a \"go /no-go\" decision. It will help a potential entrepreneur project operating profit, develop a projected income statement, balance sheet and cash flow forecast.",
       "ease": "Easy",
-      "type": ["Operational"],
+      "type": [
+        "Operational"
+      ],
       "maturity": "Established",
       "resources": "Excel sheet and inicial finance information",
       "outcomes": "Make correct estimates of a venture's future financial performance, Make investment decisions in a venture, Perform financial analysis of a venture",
@@ -503,7 +555,9 @@
       "purpose": "Analyze the financial implications of acquiring an interest-bearing loan for entrepreneurship.",
       "description": "It is a financial calculator capable of calculating the total cost of a loan, the terms and other important considerations before making the decision to acquire it. Different scenarios on calculations and financial amounts can be found in the tool:\n- Amortized Loan: Paying Back a Fixed Amount Periodically\n- Deferred Payment Loan: Paying Back a Lump Sum Due at Maturity\n- Bond: Paying Back a Predetermined Amount Due at Loan Maturity",
       "ease": "Easy",
-      "type": ["Operational"],
+      "type": [
+        "Operational"
+      ],
       "maturity": "Emerging",
       "resources": "Financial data of the business project",
       "outcomes": "Adequate financial calculations for loans, Analysis for entrepreneur's decision making, Comparison of best sources of financing",
@@ -532,7 +586,9 @@
       "purpose": "Effectively control and manage the initial costs of a start-up to steer the business towards success.",
       "description": "Rigorous approach and planning in the follow elements:\nExpenses: The estimation of expenses begins with meticulous consideration of the costs essential to launching the business. What will it cost to get the business up and running?\nContingencies: It is important to add a reserve for contingencies. The narrative should explain how the amount allocated to this reserve was determined.\nWorking Capital: Maintaining a cash cushion to meet expenses while the business starts and grows is a crucial step in ensuring financial stability.\nCollateral: If this plan will be used to support a bank loan request, consider additional elements.",
       "ease": "Easy",
-      "type": ["Operational"],
+      "type": [
+        "Operational"
+      ],
       "maturity": "Advanced",
       "resources": "List of expenses and bills",
       "outcomes": "Better initial financial projections for entrepreneurs betting on a start-up. More financial literacy for students",
@@ -562,7 +618,10 @@
       "challenge": "Many students struggle to apply digital business concepts and understand decision impacts.",
       "purpose": "Provide a simulated environment to experiment with digital entrepreneurship strategies.",
       "description": "An AI-driven simulator guide allowing users to create virtual business models, test sustainability and profitability, and receive AI-generated insights.",
-      "type": ["Strategic", "Operational"],
+      "type": [
+        "Strategic",
+        "Operational"
+      ],
       "resources": "Dgital entrepreneurship datasets, case study repository",
       "outcomes": "Increased entrepreneurial mindset, ability to test and refine business ideas, and greater digital competency.",
       "instructions": "1. Log in to the AI simulator.\n2. Create or select a business model.\n3. Run simulations and receive AI feedback.",
@@ -586,7 +645,9 @@
       "challenge": "International entrepreneurs struggle with local and digital entrepreneurship ecosystems.",
       "purpose": "Provide a modular, interactive learning path for international entrepreneurs in the EU.",
       "description": "An interactive platform guiding users through legal, financial, and operational aspects of starting a business.",
-      "type": ["Strategic"],
+      "type": [
+        "Strategic"
+      ],
       "resources": "Multilingual digital platform, legal/business knowledge base.",
       "outcomes": "Improved international business skills, reduced barriers for international entrepreneurs",
       "instructions": "1. Select your country of interest.\n2. Follow the step-by-step guide for entrepreneurship.\n3. Engage with mentors and AI-based assistance.",
@@ -603,14 +664,17 @@
     },
     {
       "number": 24,
-      "name": "Green Business Model Decision Tree?",
+      "name": "Green Business Model Decision Tree",
       "image": "https://picsum.photos/seed/green-business/400/300",
       "summary": "A tool for entrepreneurial education in the Start-DSP project?",
       "challenge": "Entrepreneurs struggle to integrate green and digital aspects effectively.",
       "purpose": "Help navigate sustainable business decision-making with digital, economic, and environmental factors.",
       "description": "A step-by-step digital decision tree providing personalized recommendations based on business parameters.",
       "ease": "Easy",
-      "type": ["Strategic", "Tactical"],
+      "type": [
+        "Strategic",
+        "Tactical"
+      ],
       "resources": "Interactive software, sustainability research database, AI-based recommendations",
       "outcomes": "Clear guidance on sustainable entrepreneurship, enhanced entrepreneurial decision-making",
       "instructions": "1. Input business model parameters.\n2. Follow step-by-step guidance.\n3. Receive AI-driven recommendations.",
@@ -628,10 +692,26 @@
     }
   ],
   "validOptions": {
-    "cost": ["Low", "Medium", "High"],
-    "ease": ["Easy", "Medium", "Hard"],
-    "type": ["Operational", "Tactical", "Strategic"],
-    "maturity": ["Emerging", "Established", "Advanced"],
+    "cost": [
+      "Low",
+      "Medium",
+      "High"
+    ],
+    "ease": [
+      "Easy",
+      "Medium",
+      "Hard"
+    ],
+    "type": [
+      "Operational",
+      "Tactical",
+      "Strategic"
+    ],
+    "maturity": [
+      "Emerging",
+      "Established",
+      "Advanced"
+    ],
     "userTargetGroups": [
       "Students",
       "Educators & Faculty Members (including Coordinators and Researchers)",
