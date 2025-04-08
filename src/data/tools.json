@@ -19,15 +19,15 @@
       "links": [
         {
           "title": "Main PDF",
-          "url": "https://www.canva.com/design/DAGW3ba_Pds/NqHtp7KiAu34J7JuvOcxIQ/edit?utm_content=DAGW3ba_Pds&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+          "url": "public/assets/pdfs/tool_1.0.pdf"
         },
         {
           "title": "Editable templates",
-          "url": "https://www.canva.com/design/DAGW5x5LNtI/WDQkR5rYLjlXvtjFj2lk-Q/edit"
+          "url": "public/assets/pdfs/tool_1.1_editable_posters.pdf"
         },
         {
           "title": "Ready to use posters",
-          "url": "https://www.canva.com/design/DAGW3_HjIqA/_YDbpzhizlcIuT9w_IxeoA/edit"
+          "url": "public/assets/pdfs/tool_1.2_Ready_to_use_posters.pdf"
         }
       ],
       "userTargetGroups": [
@@ -53,7 +53,7 @@
       "links": [
         {
           "title": "Main PDF",
-          "url": "https://www.canva.com/design/DAGapdBIntA/fcAjQ70B80k77BMRT2RSiQ/view?utm_content=DAGapdBIntA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlld=h43c88d1823"
+          "url": "public/assets/pdfs/tool_2.0_entrepreneurial_dictionary.pdf"
         }
       ],
       "userTargetGroups": [
@@ -80,7 +80,7 @@
       "links": [
         {
           "title": "Instructions File",
-          "url": "https://aceeu.sharepoint.com/:w:/s/Projects/EQAJuGzchJhMpu0ziyTk1BEBQOrIc4eSl0Rcw6gqijP7mw?e=ehNRkE"
+          "url": "public/assets/pdfs/tool_3.0_KPI_Dashboard_Instructions.pdf"
         },
         {
           "title": "Excel Dashboard",
@@ -110,7 +110,7 @@
       "links": [
         {
           "title": "Interactive Tool",
-          "url": "https://app.mural.co/t/aceeu4992/m/aceeu4992/1737334513846/6f205829c45a9272ae9cda26222008b89dbdd768?sender=u33007655b058e0c372fb0249"
+          "url": "public/assets/pdfs/tool_4.0_Incentive_Decision_Tree_Tool.pdf"
         }
       ],
       "userTargetGroups": [
@@ -136,7 +136,7 @@
       "links": [
         {
           "title": "Interactive Tool",
-          "url": "https://app.mural.co/t/aceeu4992/m/aceeu4992/1736136067434/814655f17181758ecb09aba716774cd75ca9ee45?sender=u33007655b058e0c372fb0249"
+          "url": "public/assets/pdfs/tool_5.0_Discovery_Map.pdf"
         }
       ],
       "userTargetGroups": [
@@ -189,11 +189,11 @@
       "links": [
         {
           "title": "Cards 1",
-          "url": "https://www.canva.com/design/DAGc_1YG9-c/eU9FJJ5RtwplDBOK9QOO0Q/view?utm_content=DAGc_1YG9-c&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h64573a7e3e"
+          "url": "public/assets/pdfs/tool_7.0_Course_Design-Card.pdf"
         },
         {
           "title": "Cards 2",
-          "url": "https://www.canva.com/design/DAGc_yFvFmM/HwDaHNnrI9Zh8rEcCM1HLg/view?utm_content=DAGc_yFvFmM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h3474f92a23"
+          "url": "public/assets/pdfs/tool_7.1_Course_Design_Card_2.pdf"
         },
         {
           "title": "Canvas PPT",
@@ -223,7 +223,7 @@
       "links": [
         {
           "title": "Main PDF",
-          "url": "https://www.canva.com/design/DAGctE4vdM8/BYI_yk5S1gagpALufut2Yg/view?utm_content=DAGctE4vdM8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h37f7741c70"
+          "url": "public/assets/pdfs/tool_8.0_Digital_Entrepreneurship_Education_Guide.pdf"
         }
       ],
       "userTargetGroups": [
@@ -249,7 +249,7 @@
       "links": [
         {
           "title": "Main PDF",
-          "url": "https://www.canva.com/design/DAGdYPZ6lxo/0X1owCe6vHcw1iCYigYGtA/view?utm_content=DAGdYPZ6lxo&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf985aa65ed"
+          "url": "public/assets/pdfs/tool_9.0_Grant_Application_Guideline.pdf"
         }
       ],
       "userTargetGroups": [
@@ -362,7 +362,7 @@
       "links": [
         {
           "title": "Tool",
-          "url": "https://aceeu.sharepoint.com/:p:/s/Start-DSP/EX7HoKztAVNBkNVgrrGyzU0BAy7LNnigZ0eCCr7ZA6MgeA?e=JmdSe1"
+          "url": "public/assets/pdfs/tool_13.0_SDG_Framework.pdf"
         }
       ],
       "userTargetGroups": [
@@ -394,8 +394,16 @@
       "instructions": "1. Access the Tool: Log into the AI-based platform using university credentials.\n2. Input Data: Provide information on stakeholders, including faculty, students, industry partners, and government entities.\n3. Run AI Analysis: The system will map out stakeholders based on influence, interest, and potential collaboration opportunities.\n4. Review Insights: Users can visualize stakeholder networks, engagement metrics, and strategic alignment with SDGs.\n5. Develop Strategies: Use AI-generated recommendations to improve collaboration, policies, and sustainability initiatives.\n6. Monitor & Evaluate: Continuously assess engagement and adjust strategies as needed.",
       "links": [
         {
-          "title": "Tool",
-          "url": "https://aceeu.sharepoint.com/:p:/s/Start-DSP/EX7HoKztAVNBkNVgrrGyzU0BAy7LNnigZ0eCCr7ZA6MgeA?e=pkyQ0h"
+          "title": "Tool 1",
+          "url": "https://insight7.io/"
+        },
+        {
+          "title": "Tool 2",
+          "url": "https://www.taskade.com/generate/project-management/project-stakeholder-analysis"
+        },
+        {
+          "title": "Tool 3",
+          "url": "https://www.sap.com/products/technology-platform/cloud-analytics.html"
         }
       ],
       "userTargetGroups": [
@@ -424,8 +432,8 @@
       "instructions": "1. Sign Up: Create an account on the platform.\n2. Join Relevant Topics: Browse categories such as startup funding, product development, failure stories, etc.\n3. Engage with the Community: Ask questions, share experiences, provide feedback.\n4. Connect with Mentors: Reach out to experienced entrepreneurs for guidance.\n5. Attend Virtual Events: Participate in webinars, discussion panels, and live Q&A sessions.\n6. Contribute & Learn: Post success stories, lessons learned, and industry insights.",
       "links": [
         {
-          "title": "Tool",
-          "url": "https://aceeu.sharepoint.com/:p:/s/Start-DSP/EdWdViW139FDpEhryJKBIRoBsQs0Pi0UOYveywjA_jG4rg?e=WG41Wu"
+          "title": "Instructions",
+          "url": "public/assets/pdfs/tool_15_digital_knowledge_sharing_platforms.pdf"
         }
       ],
       "userTargetGroups": [
@@ -505,11 +513,11 @@
       "links": [
         {
           "title": "Link to the Sustainable Business Model Canvas Printable Template",
-          "url": "https://start-green.net/documents/8790/SBC_EN.pdf"
+          "url": "public/assets/pdfs/tool_18.0_business_canvas.pdf"
         },
         {
           "title": "Facilitator Instructions",
-          "url": "https://start-green.net/documents/8789/Tiemann-Fichter-Workshopkonzept-EN-RZ2_2018.pdf"
+          "url": "public/assets/pdfs/tool_18.1_facilitator_instructions.pdf"
         }
       ],
       "userTargetGroups": [
@@ -538,7 +546,7 @@
         },
         {
           "title": "Recommendations for using the tool",
-          "url": "https://aceeu.sharepoint.com/:p:/r/sites/Start-DSP/_layouts/15/Doc.aspx?sourcedoc=%7BE9E04F0B-17CC-4E47-8960-7BD9375FEE65%7D&file=Financial%20Projections%20Template.pptx&action=edit&mobileredirect=true"
+          "url": "public/assets/pdfs/tool_19.1_recommendations.pdf"
         }
       ],
       "userTargetGroups": [
@@ -569,7 +577,7 @@
         },
         {
           "title": "Recommendations for using the tool",
-          "url": "https://aceeu.sharepoint.com/:p:/r/sites/Start-DSP/_layouts/15/Doc.aspx?sourcedoc=%7B7D94E2B9-9D10-4EC7-8A58-A488EC8BB4B5%7D&file=Loan%20calculator.pptx&action=edit&mobileredirect=true"
+          "url": "public/assets/pdfs/tool_20.1_calculator_recommendations.pdf"
         }
       ],
       "userTargetGroups": [
@@ -627,8 +635,8 @@
       "instructions": "1. Log in to the AI simulator.\n2. Create or select a business model.\n3. Run simulations and receive AI feedback.",
       "links": [
         {
-          "title": "AI-Powered Digital Entrepreneurship Simulator Guide",
-          "url": "https://iekakmi449-my.sharepoint.com/personal/euprojects_akmi-international_com/Documents/Projects/23-13%20ACEEU01%20Start-DSP/Deliverables/WP2. %20Entrepreneurial%20University%20Educators%20Package%20&%20Toolbox/A7. %20Toolbox%20Development/AI-Powered%20Digital%20Entrepreneurship%20Simulator%20Guide.pdf?CT=1740592016560&OR=ItemsView"
+          "title": "Instructions",
+          "url": "public/assets/pdfs/tool_22_AI-Powered-Digital-Entrepreneurship-Guide-for-Teachers.pdf"
         }
       ],
       "userTargetGroups": [
@@ -653,8 +661,8 @@
       "instructions": "1. Select your country of interest.\n2. Follow the step-by-step guide for entrepreneurship.\n3. Engage with mentors and AI-based assistance.",
       "links": [
         {
-          "title": "Digital Learning Journey for International Entrepreneurs",
-          "url": "https://iekakmi449-my.sharepoint.com/personal/euprojects_akmi-international_com/Documents/Projects/23-13%20ACEEU01%20Start-DSP/Deliverables/WP2. %20Entrepreneurial%20University%20Educators%20Package%20&%20Toolbox/A7. %20Toolbox%20Development/Digital%20Learning%20Journey%20for%20International%20Entrepreneurs.pdf?CT=1740592028137&OR=ItemsView"
+          "title": "Instructions",
+          "url": "public/assets/pdfs/tool_23_digital_learning_journey.pdf"
         }
       ],
       "userTargetGroups": [
@@ -680,8 +688,8 @@
       "instructions": "1. Input business model parameters.\n2. Follow step-by-step guidance.\n3. Receive AI-driven recommendations.",
       "links": [
         {
-          "title": "Green Business Model Decision Tree",
-          "url": "https://iekakmi449-my.sharepoint.com/personal/euprojects_akmi-international_com/Documents/Projects/23-13%20ACEEU01%20Start-DSP/Deliverables/WP2. %20Entrepreneurial%20University%20Educators%20Package%20&%20Toolbox/A7. %20Toolbox%20Development/Green%20Business%20Model%20Decision%20Tree.pdf?CT=1740592035074&OR=ItemsView"
+          "title": "Instructions",
+          "url": "public/assets/pdfs/tool_24_Green-Business-Model-Decision-Tree-AI-and-GreenComp.pdf"
         }
       ],
       "userTargetGroups": [
