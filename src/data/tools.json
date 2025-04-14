@@ -19,15 +19,15 @@
       "links": [
         {
           "title": "Main PDF",
-          "url": "public/assets/pdfs/tool_1.0.pdf"
+          "url": "assets/pdfs/tool_1.0.pdf"
         },
         {
           "title": "Editable templates",
-          "url": "public/assets/pdfs/tool_1.1_editable_posters.pdf"
+          "url": "assets/pdfs/tool_1.1_editable_posters.pdf"
         },
         {
           "title": "Ready to use posters",
-          "url": "public/assets/pdfs/tool_1.2_Ready_to_use_posters.pdf"
+          "url": "assets/pdfs/tool_1.2_Ready_to_use_posters.pdf"
         }
       ],
       "userTargetGroups": [
@@ -53,7 +53,7 @@
       "links": [
         {
           "title": "Main PDF",
-          "url": "public/assets/pdfs/tool_2.0_entrepreneurial_dictionary.pdf"
+          "url": "assets/pdfs/tool_2.0_entrepreneurial_dictionary.pdf"
         }
       ],
       "userTargetGroups": [
@@ -80,7 +80,7 @@
       "links": [
         {
           "title": "Instructions File",
-          "url": "public/assets/pdfs/tool_3.0_KPI_Dashboard_Instructions.pdf"
+          "url": "assets/pdfs/tool_3.0_KPI_Dashboard_Instructions.pdf"
         },
         {
           "title": "Excel Dashboard",
@@ -110,7 +110,7 @@
       "links": [
         {
           "title": "Interactive Tool",
-          "url": "public/assets/pdfs/tool_4.0_Incentive_Decision_Tree_Tool.pdf"
+          "url": "assets/pdfs/tool_4.0_Incentive_Decision_Tree_Tool.pdf"
         }
       ],
       "userTargetGroups": [
@@ -136,7 +136,7 @@
       "links": [
         {
           "title": "Interactive Tool",
-          "url": "public/assets/pdfs/tool_5.0_Discovery_Map.pdf"
+          "url": "assets/pdfs/tool_5.0_Discovery_Map.pdf"
         }
       ],
       "userTargetGroups": [
@@ -189,11 +189,11 @@
       "links": [
         {
           "title": "Cards 1",
-          "url": "public/assets/pdfs/tool_7.0_Course_Design-Card.pdf"
+          "url": "assets/pdfs/tool_7.0_Course_Design-Card.pdf"
         },
         {
           "title": "Cards 2",
-          "url": "public/assets/pdfs/tool_7.1_Course_Design_Card_2.pdf"
+          "url": "assets/pdfs/tool_7.1_Course_Design_Card_2.pdf"
         },
         {
           "title": "Canvas PPT",
@@ -223,7 +223,7 @@
       "links": [
         {
           "title": "Main PDF",
-          "url": "public/assets/pdfs/tool_8.0_Digital_Entrepreneurship_Education_Guide.pdf"
+          "url": "assets/pdfs/tool_8.0_Digital_Entrepreneurship_Education_Guide.pdf"
         }
       ],
       "userTargetGroups": [
@@ -249,7 +249,7 @@
       "links": [
         {
           "title": "Main PDF",
-          "url": "public/assets/pdfs/tool_9.0_Grant_Application_Guideline.pdf"
+          "url": "assets/pdfs/tool_9.0_Grant_Application_Guideline.pdf"
         }
       ],
       "userTargetGroups": [
@@ -362,7 +362,7 @@
       "links": [
         {
           "title": "Tool",
-          "url": "public/assets/pdfs/tool_13.0_SDG_Framework.pdf"
+          "url": "assets/pdfs/tool_13.0_SDG_Framework.pdf"
         }
       ],
       "userTargetGroups": [
@@ -433,7 +433,7 @@
       "links": [
         {
           "title": "Instructions",
-          "url": "public/assets/pdfs/tool_15_digital_knowledge_sharing_platforms.pdf"
+          "url": "assets/pdfs/tool_15_digital_knowledge_sharing_platforms.pdf"
         }
       ],
       "userTargetGroups": [
@@ -513,11 +513,11 @@
       "links": [
         {
           "title": "Link to the Sustainable Business Model Canvas Printable Template",
-          "url": "public/assets/pdfs/tool_18.0_business_canvas.pdf"
+          "url": "assets/pdfs/tool_18.0_business_canvas.pdf"
         },
         {
           "title": "Facilitator Instructions",
-          "url": "public/assets/pdfs/tool_18.1_facilitator_instructions.pdf"
+          "url": "assets/pdfs/tool_18.1_facilitator_instructions.pdf"
         }
       ],
       "userTargetGroups": [
@@ -546,7 +546,7 @@
         },
         {
           "title": "Recommendations for using the tool",
-          "url": "public/assets/pdfs/tool_19.1_recommendations.pdf"
+          "url": "assets/pdfs/tool_19.1_recommendations.pdf"
         }
       ],
       "userTargetGroups": [
@@ -577,7 +577,7 @@
         },
         {
           "title": "Recommendations for using the tool",
-          "url": "public/assets/pdfs/tool_20.1_calculator_recommendations.pdf"
+          "url": "assets/pdfs/tool_20.1_calculator_recommendations.pdf"
         }
       ],
       "userTargetGroups": [
@@ -636,7 +636,7 @@
       "links": [
         {
           "title": "Instructions",
-          "url": "public/assets/pdfs/tool_22_AI-Powered-Digital-Entrepreneurship-Guide-for-Teachers.pdf"
+          "url": "assets/pdfs/tool_22_AI-Powered-Digital-Entrepreneurship-Guide-for-Teachers.pdf"
         }
       ],
       "userTargetGroups": [
@@ -662,7 +662,7 @@
       "links": [
         {
           "title": "Instructions",
-          "url": "public/assets/pdfs/tool_23_digital_learning_journey.pdf"
+          "url": "assets/pdfs/tool_23_digital_learning_journey.pdf"
         }
       ],
       "userTargetGroups": [
@@ -689,7 +689,7 @@
       "links": [
         {
           "title": "Instructions",
-          "url": "public/assets/pdfs/tool_24_Green-Business-Model-Decision-Tree-AI-and-GreenComp.pdf"
+          "url": "assets/pdfs/tool_24_Green-Business-Model-Decision-Tree-AI-and-GreenComp.pdf"
         }
       ],
       "userTargetGroups": [
