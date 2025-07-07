@@ -1,7 +1,7 @@
 import { useParams, useNavigate, useLocation } from 'react-router'
 import toolsData from '../data/tools.json'
 import ToolImage from '../components/ui/ToolImage'
-import { Gauge, Zap, Target, GraduationCap, Users } from 'lucide-react'
+import { Users } from 'lucide-react'
 
 export default function ToolDetail() {
     const { number } = useParams()
@@ -42,37 +42,6 @@ export default function ToolDetail() {
                     alt={tool.name}
                     className="w-full h-64 object-cover rounded-lg mb-6"
                 />
-                {/* First row - 3 items with shorter content */}
-                <div className="grid grid-cols-3 gap-4 mb-6">
-                    {tool.ease && (
-                        <div className="text-center p-3 bg-seafoam-100 rounded-lg shadow-md">
-                            <div className="flex flex-col items-center">
-                                <Gauge className="w-5 h-5 text-seafoam-600 mb-1" />
-                                <div className="text-seafoam-700 text-sm font-medium">Ease</div>
-                                <div className="text-seafoam-900 text-sm">{tool.ease}</div>
-                            </div>
-                        </div>
-                    )}
-                    {tool.type && (
-                        <div className="text-center p-3 bg-seafoam-100 rounded-lg shadow-md">
-                            <div className="flex flex-col items-center">
-                                <Target className="w-5 h-5 text-seafoam-600 mb-1" />
-                                <div className="text-seafoam-700 text-sm font-medium">Type</div>
-                                <div className="text-seafoam-900 text-sm">{tool.type.join(', ')}</div>
-                            </div>
-                        </div>
-                    )}
-                    {tool.maturity && (
-                        <div className="text-center p-3 bg-seafoam-100 rounded-lg shadow-md">
-                            <div className="flex flex-col items-center">
-                                <GraduationCap className="w-5 h-5 text-seafoam-600 mb-1" />
-                                <div className="text-seafoam-700 text-sm font-medium">Maturity</div>
-                                <div className="text-seafoam-900 text-sm">{tool.maturity}</div>
-                            </div>
-                        </div>
-                    )}
-                </div>
-
                 {/* Challenge, Purpose, Resources, and User Target Group in a single row */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
                     {tool.challenge && (
