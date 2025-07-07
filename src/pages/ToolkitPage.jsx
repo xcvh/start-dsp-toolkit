@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useSearchParams, useLocation, Link } from 'react-router'
-import { Search, Info } from 'lucide-react'
+import { Search, Info, ChevronDown } from 'lucide-react'
 import toolsData from '../data/tools.json'
 import ToolImage from '../components/ui/ToolImage'
 
@@ -8,11 +8,16 @@ export default function Toolkit() {
     const location = useLocation()
     const [searchParams, setSearchParams] = useSearchParams()
     const [searchQuery, setSearchQuery] = useState('')
+    const [filters, setFilters] = useState({
+        purpose: ['all']
+    })
 
     const [showInfo, setShowInfo] = useState({ banner: true })
 
-    // Initialize search query from URL params
+    // Initialize search query and filters from URL params
     useEffect(() => {
+        const purposeParam = searchParams.get('purpose')?.split(',') || ['all']
+        setFilters({ purpose: purposeParam })
         setSearchQuery(searchParams.get('search') || '')
     }, [searchParams])
 
@@ -27,6 +32,11 @@ export default function Toolkit() {
     };
 
     const filteredTools = toolsData.tools.filter(tool => {
+        // Apply purpose filter
+        if (!filters.purpose.includes('all')) {
+            if (!filters.purpose.includes(tool.purpose)) return false;
+        }
+
         // Apply search filter
         if (searchQuery) {
             const searchLower = searchQuery.toLowerCase();
@@ -54,11 +64,26 @@ export default function Toolkit() {
         setSearchParams(newParams);
     };
 
+    const handlePurposeChange = (e) => {
+        const value = e.target.value;
+        const newFilters = { purpose: value === 'all' ? ['all'] : [value] };
+        setFilters(newFilters);
+
+        // Update URL params
+        const newParams = new URLSearchParams(searchParams);
+        if (value === 'all') {
+            newParams.delete('purpose');
+        } else {
+            newParams.set('purpose', value);
+        }
+        setSearchParams(newParams);
+    };
+
 
     return (
         <div>
-            {/* Search Input */}
-            <div className="mb-6">
+            {/* Search Input and Purpose Filter */}
+            <div className="flex flex-col sm:flex-row gap-4 mb-6">
                 <div className="relative w-full">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                         <Search className="h-5 w-5 text-gray-400" />
@@ -70,6 +95,24 @@ export default function Toolkit() {
                         placeholder="Search tools by name or description..."
                         className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-seafoam-500 focus:border-seafoam-500"
                     />
+                </div>
+                <div className="w-full sm:w-1/3 relative">
+                    <select
+                        value={filters.purpose[0]}
+                        onChange={handlePurposeChange}
+                        className="block w-full pl-3 pr-10 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-seafoam-500 focus:border-seafoam-500 appearance-none bg-white"
+                    >
+                        <option value="all">All Purposes</option>
+                        {toolsData.validOptions.purpose.filter(p => p !== 'TBD').map(purpose => (
+                            <option key={purpose} value={purpose}>
+                                {purpose}
+                            </option>
+                        ))}
+                        <option value="TBD">To Be Determined</option>
+                    </select>
+                    <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                        <ChevronDown className="h-5 w-5 text-gray-400" />
+                    </div>
                 </div>
             </div>
 
@@ -113,9 +156,14 @@ export default function Toolkit() {
                             <h3 className="text-xl font-display font-bold mb-3">
                                 {highlightText(tool.name, searchQuery)}
                             </h3>
-                            <p className="text-gray-600">
+                            <p className="text-gray-600 mb-3">
                                 {highlightText(tool.summary, searchQuery)}
                             </p>
+                            <div className="mt-auto">
+                                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-seafoam-100 text-seafoam-800">
+                                    {tool.purpose === 'TBD' ? 'To Be Determined' : tool.purpose}
+                                </span>
+                            </div>
                         </div>
 
                     </Link>
