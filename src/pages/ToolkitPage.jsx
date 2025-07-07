@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import { useNavigate, useSearchParams, useLocation, Link } from 'react-router'
-import { Info, Search, Users, ChevronDown } from 'lucide-react'
+import { useSearchParams, useLocation, Link } from 'react-router'
+import { Search, Info } from 'lucide-react'
 import toolsData from '../data/tools.json'
 import ToolImage from '../components/ui/ToolImage'
 
@@ -8,37 +8,13 @@ export default function Toolkit() {
     const location = useLocation()
     const [searchParams, setSearchParams] = useSearchParams()
     const [searchQuery, setSearchQuery] = useState('')
-    const [filters, setFilters] = useState({
-        userTargetGroups: ['all']
-    })
 
-    // Initialize filters from URL params
+    const [showInfo, setShowInfo] = useState({ banner: true })
+
+    // Initialize search query from URL params
     useEffect(() => {
-        const newFilters = {
-            userTargetGroups: searchParams.get('userTargetGroups')?.split(',') || ['all']
-        }
-        setFilters(newFilters)
         setSearchQuery(searchParams.get('search') || '')
     }, [searchParams])
-
-    const [showInfo, setShowInfo] = useState({
-        userTargetGroups: false,
-        banner: true
-    })
-
-    // Use validOptions from tools.json as the source of truth
-    const options = {
-        userTargetGroups: ['all', ...toolsData.validOptions.userTargetGroups]
-    }
-
-    const filterLabels = {
-        all: 'All',
-        userTargetGroups: 'User Target Groups'
-    }
-
-    const filterDescriptions = {
-        userTargetGroups: 'Indicates the user target groups for which the tool is intended.'
-    }
 
     const highlightText = (text, query) => {
         if (!query) return text;
@@ -51,12 +27,6 @@ export default function Toolkit() {
     };
 
     const filteredTools = toolsData.tools.filter(tool => {
-        // Apply existing filters
-        if (!filters.userTargetGroups.includes('all')) {
-            const toolUserTargetGroups = Array.isArray(tool.userTargetGroups) ? tool.userTargetGroups : [tool.userTargetGroups];
-            if (!toolUserTargetGroups.includes(filters.userTargetGroups[0])) return false;
-        }
-
         // Apply search filter
         if (searchQuery) {
             const searchLower = searchQuery.toLowerCase();
@@ -69,59 +39,6 @@ export default function Toolkit() {
         return true;
     });
 
-    const handleFilterChange = (filterType, value) => {
-        let newFilters
-        // If clicking on 'all', make it the only selection
-        if (value === 'all') {
-            newFilters = {
-                ...filters,
-                [filterType]: ['all']
-            }
-        }
-        // If 'all' is currently selected and clicking on another option, remove 'all'
-        else if (filters[filterType].includes('all')) {
-            newFilters = {
-                ...filters,
-                [filterType]: [value]
-            }
-        }
-        // If value is already selected, remove it
-        else if (filters[filterType].includes(value)) {
-            const newValues = filters[filterType].filter(v => v !== value)
-            // If removing the last non-'all' option, default to 'all'
-            newFilters = {
-                ...filters,
-                [filterType]: newValues.length === 0 ? ['all'] : newValues
-            }
-        }
-        // Otherwise, add the value to the selection
-        else {
-            newFilters = {
-                ...filters,
-                [filterType]: [...filters[filterType], value]
-            }
-        }
-
-        setFilters(newFilters)
-
-        // Update URL params
-        const newParams = new URLSearchParams(searchParams)
-        Object.entries(newFilters).forEach(([key, values]) => {
-            if (values.includes('all')) {
-                newParams.delete(key)
-            } else {
-                newParams.set(key, values.join(','))
-            }
-        })
-        setSearchParams(newParams)
-    }
-
-    const toggleInfo = (filterType) => {
-        setShowInfo(prev => ({
-            ...prev,
-            [filterType]: !prev[filterType]
-        }))
-    }
 
     const handleSearch = (e) => {
         const query = e.target.value;
@@ -137,36 +54,11 @@ export default function Toolkit() {
         setSearchParams(newParams);
     };
 
-    const handleMultiSelectChange = (selectedOption) => {
-        // Update URL params
-        const newParams = new URLSearchParams(searchParams);
-        if (selectedOption) {
-            newParams.set('userTargetGroups', selectedOption.value);
-        } else {
-            newParams.delete('userTargetGroups');
-        }
-        setSearchParams(newParams);
-
-        // Update filters state
-        setFilters(prev => ({
-            ...prev,
-            userTargetGroups: selectedOption ? [selectedOption.value] : ['all']
-        }));
-    };
-
-    // Add this new constant for select options
-    const userTargetGroupOptions = [
-        { value: 'all', label: 'All Target Groups' },
-        ...toolsData.validOptions.userTargetGroups.map(group => ({
-            value: group,
-            label: group
-        }))
-    ];
 
     return (
         <div>
-            {/* Search Input and User Target Groups Dropdown */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-6">
+            {/* Search Input */}
+            <div className="mb-6">
                 <div className="relative w-full">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                         <Search className="h-5 w-5 text-gray-400" />
@@ -179,22 +71,6 @@ export default function Toolkit() {
                         className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-seafoam-500 focus:border-seafoam-500"
                     />
                 </div>
-                <div className="w-full sm:w-1/4 relative">
-                    <select
-                        value={filters.userTargetGroups[0]}
-                        onChange={(e) => handleMultiSelectChange({ value: e.target.value })}
-                        className="block w-full pl-3 pr-10 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-seafoam-500 focus:border-seafoam-500 appearance-none bg-white"
-                    >
-                        {userTargetGroupOptions.map(option => (
-                            <option key={option.value} value={option.value}>
-                                {option.label}
-                            </option>
-                        ))}
-                    </select>
-                    <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                        <ChevronDown className="h-5 w-5 text-gray-400" />
-                    </div>
-                </div>
             </div>
 
             {/* Alert Banner */}
@@ -203,7 +79,7 @@ export default function Toolkit() {
                     <div className="flex items-start">
                         <Info className="w-5 h-5 text-seafoam-600 mt-0.5 mr-3 flex-shrink-0" />
                         <p className="text-sm text-gray-700">
-                            <span className="font-medium">Pro tip:</span> Hover over any indicator value to see more details. For example, if a tool is marked as "Multiple", hover to see all the options.
+                            <span className="font-medium">Pro tip:</span> Hover over any indicator value to see more details. For example, if a tool is marked as &quot;Multiple&quot;, hover to see all the options.
                         </p>
                     </div>
                     <button

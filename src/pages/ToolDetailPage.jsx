@@ -1,7 +1,6 @@
 import { useParams, useNavigate, useLocation } from 'react-router'
 import toolsData from '../data/tools.json'
 import ToolImage from '../components/ui/ToolImage'
-import { Users } from 'lucide-react'
 
 export default function ToolDetail() {
     const { number } = useParams()
@@ -42,8 +41,8 @@ export default function ToolDetail() {
                     alt={tool.name}
                     className="w-full h-64 object-cover rounded-lg mb-6"
                 />
-                {/* Challenge, Purpose, Resources, and User Target Group in a single row */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                {/* Challenge, Purpose, and Resources in a single row */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
                     {tool.challenge && (
                         <div className="p-3 bg-seafoam-100 rounded-lg shadow-md">
                             <div className="flex flex-col">
@@ -87,20 +86,6 @@ export default function ToolDetail() {
                                 </div>
                                 <div className="text-seafoam-900 text-sm whitespace-pre-line">
                                     {tool.resources.replace(/✔/g, '\n✔')}
-                                </div>
-                            </div>
-                        </div>
-                    )}
-
-                    {tool.userTargetGroups && tool.userTargetGroups.length > 0 && (
-                        <div className="p-3 bg-seafoam-100 rounded-lg shadow-md">
-                            <div className="flex flex-col">
-                                <div className="flex items-center mb-1">
-                                    <Users className="w-5 h-5 text-seafoam-600 mr-2" />
-                                    <div className="text-seafoam-700 text-sm font-medium">User Target Groups</div>
-                                </div>
-                                <div className="text-seafoam-900 text-sm whitespace-pre-line">
-                                    {tool.userTargetGroups.join('\n')}
                                 </div>
                             </div>
                         </div>
