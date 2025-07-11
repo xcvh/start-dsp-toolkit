@@ -23,7 +23,7 @@ export default function ToolDetail() {
     }
 
     return (
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
             <button
                 onClick={handleBack}
                 className="flex items-center text-seafoam-600 hover:text-seafoam-800 mb-4 transition-colors"
@@ -41,53 +41,81 @@ export default function ToolDetail() {
                     alt={tool.name}
                     className="w-full h-64 object-cover rounded-lg mb-6"
                 />
-                {/* Purpose, Benefits and Prerequisite Tools in a single row */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-                    {tool.purpose && (
-                        <div className="p-3 bg-seafoam-100 rounded-lg shadow-md">
-                            <div className="flex flex-col">
-                                <div className="flex items-center mb-1">
-                                    <svg className="w-5 h-5 text-seafoam-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                    </svg>
-                                    <div className="text-seafoam-700 text-sm font-medium">Purpose</div>
-                                </div>
-                                <div className="text-seafoam-900 text-sm">
-                                    {tool.purpose === 'TBD' ? 'To Be Determined' : tool.purpose}
+                {/* Purpose, Benefits and Prerequisite Tools cards and Downloads section */}
+                <div className="flex flex-col lg:flex-row gap-6 mb-6">
+                    {/* Cards section */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 flex-1">
+                        {tool.purpose && (
+                            <div className="p-3 bg-seafoam-100 rounded-lg shadow-md">
+                                <div className="flex flex-col">
+                                    <div className="flex items-center mb-1">
+                                        <svg className="w-5 h-5 text-seafoam-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                        </svg>
+                                        <div className="text-seafoam-700 text-base font-medium">Purpose</div>
+                                    </div>
+                                    <div className="text-seafoam-900 text-base">
+                                        {tool.purpose === 'TBD' ? 'To Be Determined' : tool.purpose}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    )}
+                        )}
 
-                    {tool.benefits && (
-                        <div className="p-3 bg-seafoam-100 rounded-lg shadow-md">
-                            <div className="flex flex-col">
-                                <div className="flex items-center mb-1">
-                                    <svg className="w-5 h-5 text-seafoam-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                    <div className="text-seafoam-700 text-sm font-medium">Benefits</div>
-                                </div>
-                                <div className="text-seafoam-900 text-sm whitespace-pre-line">
-                                    {tool.benefits.replace(/✔/g, '\n✔')}
+                        {tool.benefits && (
+                            <div className="p-3 bg-seafoam-100 rounded-lg shadow-md">
+                                <div className="flex flex-col">
+                                    <div className="flex items-center mb-1">
+                                        <svg className="w-5 h-5 text-seafoam-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                        <div className="text-seafoam-700 text-base font-medium">Benefits</div>
+                                    </div>
+                                    <div className="text-seafoam-900 text-base whitespace-pre-line">
+                                        {tool.benefits.replace(/✔/g, '\n✔')}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    )}
+                        )}
 
-                    {tool.prerequisiteTools && (
-                        <div className="p-3 bg-seafoam-100 rounded-lg shadow-md">
-                            <div className="flex flex-col">
-                                <div className="flex items-center mb-1">
-                                    <svg className="w-5 h-5 text-seafoam-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                    </svg>
-                                    <div className="text-seafoam-700 text-sm font-medium">Prerequisite Tools</div>
-                                </div>
-                                <div className="text-seafoam-900 text-sm whitespace-pre-line">
-                                    {tool.prerequisiteTools.replace(/✔/g, '\n✔')}
+                        {tool.prerequisiteTools && (
+                            <div className="p-3 bg-seafoam-100 rounded-lg shadow-md">
+                                <div className="flex flex-col">
+                                    <div className="flex items-center mb-1">
+                                        <svg className="w-5 h-5 text-seafoam-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                        </svg>
+                                        <div className="text-seafoam-700 text-base font-medium">Prerequisite Tools</div>
+                                    </div>
+                                    <div className="text-seafoam-900 text-base whitespace-pre-line">
+                                        {tool.prerequisiteTools.replace(/✔/g, '\n✔')}
+                                    </div>
                                 </div>
                             </div>
+                        )}
+                    </div>
+
+                    {/* Downloads section */}
+                    {tool.links && tool.links.length > 0 && (
+                        <div className={`flex flex-col lg:w-64 ${tool.links.length === 1 ? 'justify-stretch' : 'space-y-4'}`}>
+                            {tool.links.map((link, index) => (
+                                <a
+                                    key={index}
+                                    href={link.url}
+                                    className={`group relative overflow-hidden bg-gradient-to-br from-seafoam-50 to-white rounded-xl p-6 border border-seafoam-200 hover:border-seafoam-400 transition-all duration-200 ${tool.links.length === 1 ? 'h-full flex items-center' : ''}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <div className="absolute top-0 right-0 w-24 h-24 bg-seafoam-100 rounded-bl-full transform translate-x-12 -translate-y-12 group-hover:bg-seafoam-200 transition-colors duration-200"></div>
+                                    <div className="relative">
+                                        <div className="flex items-center">
+                                            <svg className="w-6 h-6 text-seafoam-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                            </svg>
+                                            <span className="text-lg font-medium text-seafoam-800 group-hover:text-seafoam-900">{link.title}</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            ))}
                         </div>
                     )}
                 </div>
@@ -118,33 +146,6 @@ export default function ToolDetail() {
                         </section>
                     )}
 
-                    {tool.links && tool.links.length > 0 && (
-                        <section>
-                            <h3 className="text-xl font-display font-bold mb-2">Resources</h3>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                {tool.links.map((link, index) => (
-                                    <a
-                                        key={index}
-                                        href={link.url}
-                                        className="group relative overflow-hidden bg-gradient-to-br from-seafoam-50 to-white rounded-xl p-6 border border-seafoam-200 hover:border-seafoam-400 transition-all duration-200"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <div className="absolute top-0 right-0 w-24 h-24 bg-seafoam-100 rounded-bl-full transform translate-x-12 -translate-y-12 group-hover:bg-seafoam-200 transition-colors duration-200"></div>
-                                        <div className="relative">
-                                            <div className="flex items-center mb-2">
-                                                <svg className="w-6 h-6 text-seafoam-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                                                </svg>
-                                                <span className="text-lg font-medium text-seafoam-800 group-hover:text-seafoam-900">{link.title}</span>
-                                            </div>
-                                            <div className="text-sm text-seafoam-600 group-hover:text-seafoam-700">Click to download</div>
-                                        </div>
-                                    </a>
-                                ))}
-                            </div>
-                        </section>
-                    )}
                 </div>
             </div>
         </div>
