@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useSearchParams, useLocation, Link } from 'react-router'
-import { Search, Info, ChevronDown } from 'lucide-react'
+import { Search, ChevronDown } from 'lucide-react'
 import toolsData from '../data/tools.json'
 import ToolImage from '../components/ui/ToolImage'
 
@@ -12,7 +12,6 @@ export default function Toolkit() {
         purpose: ['all']
     })
 
-    const [showInfo, setShowInfo] = useState({ banner: true })
 
     // Initialize search query and filters from URL params
     useEffect(() => {
@@ -116,26 +115,6 @@ export default function Toolkit() {
                 </div>
             </div>
 
-            {/* Alert Banner */}
-            {showInfo.banner && (
-                <div className="mb-6 bg-seafoam-50 border border-seafoam-200 rounded-lg p-4 flex items-start justify-between">
-                    <div className="flex items-start">
-                        <Info className="w-5 h-5 text-seafoam-600 mt-0.5 mr-3 flex-shrink-0" />
-                        <p className="text-sm text-gray-700">
-                            <span className="font-medium">Pro tip:</span> Hover over any indicator value to see more details. For example, if a tool is marked as &quot;Multiple&quot;, hover to see all the options.
-                        </p>
-                    </div>
-                    <button
-                        onClick={() => setShowInfo(prev => ({ ...prev, banner: false }))}
-                        className="ml-4 text-gray-400 hover:text-gray-500"
-                        aria-label="Dismiss alert"
-                    >
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
-            )}
 
 
             {/* Tools Grid */}
