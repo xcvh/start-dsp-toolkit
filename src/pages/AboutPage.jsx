@@ -34,7 +34,6 @@ export default function About() {
             <li>Expert interviews and surveys</li>
             <li>Target group integration</li>
             <li>Best practices analysis</li>
-            <li>Scientific publication of findings</li>
           </ul>
         </div>
       </div>

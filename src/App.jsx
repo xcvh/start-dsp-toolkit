@@ -3,7 +3,6 @@ import MainNav from "./components/navigation/MainNav";
 import Footer from "./components/Footer";
 import PilotWarningBanner from "./components/ui/PilotWarningBanner";
 import AboutPage from "./pages/AboutPage";
-import ProjectPage from "./pages/ProjectPage";
 import ToolboxPage from "./pages/ToolboxPage";
 import ToolDetailPage from "./pages/ToolDetailPage";
 
@@ -28,7 +27,6 @@ export default function App() {
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
           <Routes>
             <Route path="/" element={<AboutPage />} />
-            <Route path="/project" element={<ProjectPage />} />
             <Route path="/toolbox" element={<ToolboxPage />} />
             <Route path="/tool/:number" element={<ToolDetailPage />} />
           </Routes>

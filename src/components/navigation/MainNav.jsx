@@ -9,7 +9,6 @@ import MobileMenu from "./MobileMenu";
 
 const navigation = [
   { name: "About", to: "/", current: true },
-  { name: "Project", to: "/project", current: false },
   { name: "Toolbox", to: "/toolbox", current: false },
 ];
 

@@ -24,7 +24,7 @@ This is a React application for the Start DSP Toolbox - a digital entrepreneursh
 **Main Application Flow**:
 - `App.jsx` - Main app component with routing setup
 - Navigation components in `src/components/navigation/`
-- Page components in `src/pages/` (AboutPage, ProjectPage, ToolboxPage, ToolDetailPage)
+- Page components in `src/pages/` (AboutPage, ToolboxPage, ToolDetailPage)
 
 **Data Management**:
 - Tool data stored in `src/data/tools.json` - contains comprehensive information about each educational tool including metadata, resources, and PDF links
