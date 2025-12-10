@@ -7,7 +7,14 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router";
 import MobileMenu from "./MobileMenu";
 
-const navigation = [{ name: "Toolbox", to: "/", current: true }];
+const navigation = [
+  { name: "Toolbox", to: "/", current: true },
+  {
+    name: "Start-DSP Project Website",
+    to: "https://start-dsp.eu",
+    current: false,
+  },
+];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
