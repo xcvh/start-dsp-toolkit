@@ -1,6 +1,7 @@
 import { useParams, useNavigate, useLocation } from "react-router";
 import toolsData from "../data/tools.json";
 import ToolImage from "../components/ui/ToolImage";
+import { trackDownload } from "../utils/analytics";
 
 export default function ToolDetail() {
   const { number } = useParams();
@@ -20,6 +21,14 @@ export default function ToolDetail() {
       // Fallback to browser back if we didn't come from toolbox
       navigate(-1);
     }
+  };
+
+  const handleDownloadClick = (link) => {
+    // Extract filename from URL (e.g., "assets/pdfs/tool_1.1_File.pdf" -> "tool_1.1_File.pdf")
+    const fileName = link.url.split("/").pop();
+
+    // Track the download event
+    trackDownload(fileName, tool.number, tool.name, link.title);
   };
 
   return (
@@ -152,6 +161,7 @@ export default function ToolDetail() {
                   className={`group relative overflow-hidden bg-gradient-to-br from-seafoam-50 to-white rounded-xl p-6 border border-seafoam-200 hover:border-seafoam-400 transition-all duration-200 ${tool.links.length === 1 ? "h-full flex items-center" : ""}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => handleDownloadClick(link)}
                 >
                   <div className="absolute top-0 right-0 w-24 h-24 bg-seafoam-100 rounded-bl-full transform translate-x-12 -translate-y-12 group-hover:bg-seafoam-200 transition-colors duration-200"></div>
                   <div className="relative">

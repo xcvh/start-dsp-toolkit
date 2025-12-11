@@ -1,12 +1,36 @@
-import { Routes, Route } from "react-router";
+import { Routes, Route, useLocation } from "react-router";
+import { useEffect } from "react";
 import MainNav from "./components/navigation/MainNav";
 import Footer from "./components/Footer";
-import PilotWarningBanner from "./components/ui/PilotWarningBanner";
-import AboutPage from "./pages/AboutPage";
+import CookieConsent from "./components/CookieConsent";
 import ToolboxPage from "./pages/ToolboxPage";
 import ToolDetailPage from "./pages/ToolDetailPage";
+import { initializeAnalytics, trackPageView } from "./utils/analytics";
 
 export default function App() {
+  const location = useLocation();
+
+  // Initialize analytics on mount
+  useEffect(() => {
+    initializeAnalytics();
+  }, []);
+
+  // Track page views on route changes
+  useEffect(() => {
+    const path = location.pathname + location.search;
+    let title = "Start-DSP Toolbox";
+
+    // Set page title based on route
+    if (location.pathname === "/" || location.pathname === "/toolbox") {
+      title = "Toolbox - Start-DSP Toolbox";
+    } else if (location.pathname.startsWith("/tool/")) {
+      const toolNumber = location.pathname.split("/")[2];
+      title = `Tool ${toolNumber} - Start-DSP Toolbox`;
+    }
+
+    trackPageView(path, title);
+  }, [location]);
+
   return (
     <div className="min-h-screen flex flex-col">
       <MainNav />
@@ -28,6 +52,7 @@ export default function App() {
         </div>
       </main>
       <Footer />
+      <CookieConsent />
     </div>
   );
 }
