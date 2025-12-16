@@ -1,53 +1,45 @@
-/**
- * Greek (EL) UI Translations
- * Start-DSP Entrepreneurial University Toolbox
- *
- * TODO: USER MUST PROVIDE GREEK TRANSLATIONS
- * Copy the structure from en.js and translate all values
- */
-
 export default {
   // Header
-  "header.title": "[EL] Start-DSP Entrepreneurial University Toolbox",
+  "header.title": "Εργαλειοθήκη Επιχειρηματικού Πανεπιστημίου Start-DSP",
 
   // Navigation
-  "nav.toolbox": "[EL] Toolbox",
-  "nav.projectWebsite": "[EL] Start-DSP Project Website",
+  "nav.toolbox": "Εργαλειοθήκη",
+  "nav.projectWebsite": "Ιστοσελίδα Έργου Start-DSP",
 
   // Search and Filters
-  "search.placeholder": "[EL] Search tools by name or description...",
-  "filter.allPurposes": "[EL] All Purposes",
+  "search.placeholder": "Αναζήτηση εργαλείων με όνομα ή περιγραφή...",
+  "filter.allPurposes": "Όλοι οι Σκοποί",
 
   // Tool Detail Page
-  "toolDetail.backToToolbox": "[EL] Back to Toolbox",
-  "toolDetail.purpose": "[EL] Purpose",
-  "toolDetail.benefits": "[EL] Benefits",
-  "toolDetail.prerequisiteTools": "[EL] Prerequisite Tools",
-  "toolDetail.description": "[EL] Description",
-  "toolDetail.instructions": "[EL] Instructions",
-  "toolDetail.outcomes": "[EL] Outcomes",
-  "toolDetail.responsiblePartner": "[EL] Responsible Partner:",
+  "toolDetail.backToToolbox": "Πίσω στην Εργαλειοθήκη",
+  "toolDetail.purpose": "Σκοπός",
+  "toolDetail.benefits": "Οφέλη",
+  "toolDetail.prerequisiteTools": "Προαπαιτούμενα Εργαλεία",
+  "toolDetail.description": "Περιγραφή",
+  "toolDetail.instructions": "Οδηγίες",
+  "toolDetail.outcomes": "Αποτελέσματα",
+  "toolDetail.responsiblePartner": "Υπεύθυνος Εταίρος:",
 
   // Badges
   "badge.fallbackLanguage": "Διαθέσιμο στα Αγγλικά",
-  "badge.externalLink": "[EL] External - English only",
+  "badge.externalLink": "Εξωτερικός σύνδεσμος - Μόνο στα Αγγλικά",
 
   // Translation Disclaimer
-  "disclaimer.translationTitle": "Μεταφράσεις σε εξέλιξη",
+  "disclaimer.translationTitle": "Μετάφραση σε εξέλιξη",
   "disclaimer.translationMessage":
-    "Αυτή τη στιγμή μεταφράζουμε το περιεχόμενο του εργαλειοθήκης. Ορισμένα εργαλεία και υλικά ενδέχεται να είναι διαθέσιμα μόνο στα Αγγλικά.",
+    "Αυτή τη στιγμή μεταφράζουμε το περιεχόμενο της εργαλειοθήκης. Ορισμένα εργαλεία και υλικά ενδέχεται να είναι διαθέσιμα μόνο στα Αγγλικά.",
 
   // Cookie Consent
-  "cookie.title": "[EL] Cookie Consent",
+  "cookie.title": "Συγκατάθεση Cookies",
   "cookie.message":
-    '[EL] We use Google Analytics to understand how visitors use our site and to improve your experience. This helps us measure which educational tools are most useful. We anonymize IP addresses and do not collect personal information. By clicking "Accept", you consent to our use of cookies for analytics purposes.',
-  "cookie.accept": "[EL] Accept",
-  "cookie.decline": "[EL] Decline",
+    'Χρησιμοποιούμε Google Analytics για να κατανοήσουμε πώς οι επισκέπτες χρησιμοποιούν τον ιστότοπό μας και να βελτιώσουμε την εμπειρία σας. Αυτό μας βοηθά να μετρήσουμε ποια εκπαιδευτικά εργαλεία είναι τα πιο χρήσιμα. Ανωνυμοποιούμε τις διευθύνσεις IP και δεν συλλέγουμε προσωπικά δεδομένα. Κάνοντας κλικ στο "Αποδοχή", συναινείτε στη χρήση των cookies για σκοπούς ανάλυσης.',
+  "cookie.accept": "Αποδοχή",
+  "cookie.decline": "Απόρριψη",
 
   // Footer
   "footer.euDisclaimer":
-    "[EL] This project has been funded with support from the European Commission. The author is solely responsible for this publication (communication) and the Commission accepts no responsibility for any use may be made of the information contained therein. In compliance of the new GDPR framework, please note that the Partnership will only process your personal data in the sole interest and purpose of the project and without any prejudice to your rights.",
-  "footer.euLogoAlt": "[EL] Co-funded by the European Union",
+    "Το έργο αυτό χρηματοδοτήθηκε με την υποστήριξη της Ευρωπαϊκής Επιτροπής. Ο συντάκτης είναι αποκλειστικά υπεύθυνος για την παρούσα έκδοση (ανακοίνωση) και η Επιτροπή δεν φέρει καμία ευθύνη για οποιαδήποτε χρήση των πληροφοριών που περιέχονται σε αυτήν. Σύμφωνα με το νέο πλαίσιο GDPR, σημειώστε ότι η Σύμπραξη θα επεξεργαστεί τα προσωπικά σας δεδομένα αποκλειστικά για το συμφέρον και το σκοπό του έργου και χωρίς καμία επιφύλαξη των δικαιωμάτων σας.",
+  "footer.euLogoAlt": "Με τη συγχρηματοδότηση της Ευρωπαϊκής Ένωσης",
 
   // Language Selector
   "language.en": "English",
