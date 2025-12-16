@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useSearchParams, useLocation, Link } from "react-router";
 import { Search, ChevronDown } from "lucide-react";
 import { loadTools } from "../data/tools";
-import { useLanguage } from "../i18n/I18nContext";
+import { useLanguage, useTranslation } from "../i18n/I18nContext";
 import ToolImage from "../components/ui/ToolImage";
 
 export default function Toolbox() {
@@ -13,6 +13,7 @@ export default function Toolbox() {
     purpose: ["all"],
   });
   const { language } = useLanguage();
+  const { t } = useTranslation();
   const [toolsData, setToolsData] = useState(null);
 
   // Load tools data when language changes
@@ -101,7 +102,7 @@ export default function Toolbox() {
             type="text"
             value={searchQuery}
             onChange={handleSearch}
-            placeholder="Search tools by name or description..."
+            placeholder={t("search.placeholder")}
             className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-seafoam-500 focus:border-seafoam-500"
           />
         </div>
@@ -111,7 +112,7 @@ export default function Toolbox() {
             onChange={handlePurposeChange}
             className="block w-full pl-3 pr-10 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-seafoam-500 focus:border-seafoam-500 appearance-none bg-white"
           >
-            <option value="all">All Purposes</option>
+            <option value="all">{t("filter.allPurposes")}</option>
             {toolsData?.validOptions.purpose
               .filter((p) => p !== "TBD")
               .map((purpose) => (

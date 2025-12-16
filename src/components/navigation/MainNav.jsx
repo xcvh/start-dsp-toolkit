@@ -7,21 +7,23 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router";
 import MobileMenu from "./MobileMenu";
 import LanguageSelector from "../LanguageSelector";
-
-const navigation = [
-  { name: "Toolbox", to: "/", current: true },
-  {
-    name: "Start-DSP Project Website",
-    to: "https://start-dsp.eu",
-    current: false,
-  },
-];
+import { useTranslation } from "../../i18n/I18nContext";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 export default function MainNav() {
+  const { t } = useTranslation();
+
+  const navigation = [
+    { name: t("nav.toolbox"), to: "/", current: true },
+    {
+      name: t("nav.projectWebsite"),
+      to: "https://start-dsp.eu",
+      current: false,
+    },
+  ];
   return (
     <Disclosure as="nav" className="bg-seafoam-800">
       {({ open }) => (

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate, useLocation } from "react-router";
 import { loadTools } from "../data/tools";
-import { useLanguage } from "../i18n/I18nContext";
+import { useLanguage, useTranslation } from "../i18n/I18nContext";
 import ToolImage from "../components/ui/ToolImage";
 import { trackDownload } from "../utils/analytics";
 
@@ -10,6 +10,7 @@ export default function ToolDetail() {
   const navigate = useNavigate();
   const location = useLocation();
   const { language } = useLanguage();
+  const { t } = useTranslation();
   const [toolsData, setToolsData] = useState(null);
   const [tool, setTool] = useState(null);
 
@@ -63,7 +64,7 @@ export default function ToolDetail() {
             d="M10 19l-7-7m0 0l7-7m-7 7h18"
           />
         </svg>
-        Back to Toolbox
+        {t("toolDetail.backToToolbox")}
       </button>
 
       <div className="bg-white rounded-lg shadow-xl p-6 mb-6">
@@ -95,7 +96,7 @@ export default function ToolDetail() {
                       />
                     </svg>
                     <div className="text-seafoam-700 text-base font-medium">
-                      Purpose
+                      {t("toolDetail.purpose")}
                     </div>
                   </div>
                   <div className="text-seafoam-900 text-base">
@@ -123,7 +124,7 @@ export default function ToolDetail() {
                       />
                     </svg>
                     <div className="text-seafoam-700 text-base font-medium">
-                      Benefits
+                      {t("toolDetail.benefits")}
                     </div>
                   </div>
                   <div className="text-seafoam-900 text-base whitespace-pre-line">
@@ -151,7 +152,7 @@ export default function ToolDetail() {
                       />
                     </svg>
                     <div className="text-seafoam-700 text-base font-medium">
-                      Prerequisite Tools
+                      {t("toolDetail.prerequisiteTools")}
                     </div>
                   </div>
                   <div className="text-seafoam-900 text-base whitespace-pre-line">
@@ -207,7 +208,7 @@ export default function ToolDetail() {
           {tool.description && (
             <section>
               <h3 className="text-xl font-display font-bold mb-2">
-                Description
+                {t("toolDetail.description")}
               </h3>
               <p className="text-gray-600">{tool.description}</p>
             </section>
@@ -216,7 +217,7 @@ export default function ToolDetail() {
           {tool.instructions && (
             <section>
               <h3 className="text-xl font-display font-bold mb-2">
-                Instructions
+                {t("toolDetail.instructions")}
               </h3>
               <div className="text-gray-600">
                 {tool.instructions.split("\n").map((instruction, index) => (
@@ -230,7 +231,9 @@ export default function ToolDetail() {
 
           {tool.outcomes && (
             <section>
-              <h3 className="text-xl font-display font-bold mb-2">Outcomes</h3>
+              <h3 className="text-xl font-display font-bold mb-2">
+                {t("toolDetail.outcomes")}
+              </h3>
               <p className="text-gray-600">{tool.outcomes}</p>
             </section>
           )}
@@ -255,7 +258,7 @@ export default function ToolDetail() {
                   />
                 </svg>
                 <span className="text-sm text-gray-500">
-                  Responsible Partner:{" "}
+                  {t("toolDetail.responsiblePartner")}{" "}
                   <span className="font-medium text-gray-700">
                     {tool.partner}
                   </span>

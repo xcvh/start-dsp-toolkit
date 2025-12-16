@@ -6,9 +6,11 @@ import CookieConsent from "./components/CookieConsent";
 import ToolboxPage from "./pages/ToolboxPage";
 import ToolDetailPage from "./pages/ToolDetailPage";
 import { initializeAnalytics, trackPageView } from "./utils/analytics";
+import { useTranslation } from "./i18n/I18nContext";
 
 export default function App() {
   const location = useLocation();
+  const { t } = useTranslation();
 
   // Initialize analytics on mount
   useEffect(() => {
@@ -37,7 +39,7 @@ export default function App() {
       <header className="bg-white shadow-sm">
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
           <h1 className="text-3xl font-display font-bold tracking-tight text-seafoam-900">
-            Start-DSP Entrepreneurial University Toolbox
+            {t("header.title")}
           </h1>
         </div>
       </header>
