@@ -8,39 +8,39 @@
 
 export default {
   // Header
-  "header.title": "[DE] Start-DSP Entrepreneurial University Toolbox",
+  "header.title": "Start-DSP Toolbox für unternehmerische Hochschulen",
 
   // Navigation
-  "nav.toolbox": "[DE] Toolbox",
-  "nav.projectWebsite": "[DE] Start-DSP Project Website",
+  "nav.toolbox": "Toolbox",
+  "nav.projectWebsite": "Start-DSP Projekt Website",
 
   // Search and Filters
-  "search.placeholder": "[DE] Search tools by name or description...",
-  "filter.allPurposes": "[DE] All Purposes",
+  "search.placeholder": "Suche nach Tools anhand von Namen oder Beschreibung...",
+  "filter.allPurposes": "Alle Zwecke",
 
   // Tool Detail Page
-  "toolDetail.backToToolbox": "[DE] Back to Toolbox",
-  "toolDetail.purpose": "[DE] Purpose",
-  "toolDetail.benefits": "[DE] Benefits",
-  "toolDetail.prerequisiteTools": "[DE] Prerequisite Tools",
-  "toolDetail.description": "[DE] Description",
-  "toolDetail.instructions": "[DE] Instructions",
-  "toolDetail.outcomes": "[DE] Outcomes",
-  "toolDetail.responsiblePartner": "[DE] Responsible Partner:",
+  "toolDetail.backToToolbox": "Zurück zur Toolbox",
+  "toolDetail.purpose": "Zweck",
+  "toolDetail.benefits": "Vorteil",
+  "toolDetail.prerequisiteTools": "Erforderliche Tools",
+  "toolDetail.description": "Beschreibung",
+  "toolDetail.instructions": "Instruktionen",
+  "toolDetail.outcomes": "Ergebnisse",
+  "toolDetail.responsiblePartner": "Verantwortlicher Partner:",
 
   // Badges
   "badge.fallbackLanguage": "EN",
-  "badge.externalLink": "[DE] External - English only",
+  "badge.externalLink": "Englisch",
 
   // Cookie Consent
-  "cookie.title": "[DE] Cookie Consent",
-  "cookie.message": "[DE] We use Google Analytics to understand how visitors use our site and to improve your experience. This helps us measure which educational tools are most useful. We anonymize IP addresses and do not collect personal information. By clicking \"Accept\", you consent to our use of cookies for analytics purposes.",
-  "cookie.accept": "[DE] Accept",
-  "cookie.decline": "[DE] Decline",
+  "cookie.title": "Cookie-Zustimmung",
+  "cookie.message": "Wir verwenden Google Analytics, um zu verstehen, wie Besucher unsere Website nutzen, und um Ihre Erfahrung zu verbessern. Dies hilft uns zu messen, welche Bildungsinstrumente am nützlichsten sind. Wir anonymisieren IP-Adressen und sammeln keine personenbezogenen Daten. Durch Klicken auf „Akzeptieren“ stimmen Sie der Verwendung von Cookies zu Analysezwecken zu.",
+  "cookie.accept": "Accept",
+  "cookie.decline": "Decline",
 
   // Footer
-  "footer.euDisclaimer": "[DE] This project has been funded with support from the European Commission. The author is solely responsible for this publication (communication) and the Commission accepts no responsibility for any use may be made of the information contained therein. In compliance of the new GDPR framework, please note that the Partnership will only process your personal data in the sole interest and purpose of the project and without any prejudice to your rights.",
-  "footer.euLogoAlt": "[DE] Co-funded by the European Union",
+  "footer.euDisclaimer": "This project has been funded with support from the European Commission. The author is solely responsible for this publication (communication) and the Commission accepts no responsibility for any use may be made of the information contained therein. In compliance of the new GDPR framework, please note that the Partnership will only process your personal data in the sole interest and purpose of the project and without any prejudice to your rights.",
+  "footer.euLogoAlt": "Kofinanziert durch die Europäische Union",
 
   // Language Selector
   "language.en": "English",
