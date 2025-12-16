@@ -10,14 +10,17 @@
  * @param {string} language - Language code (en, es, de, el)
  * @returns {Promise<Object>} Tools data object
  */
-export const loadTools = async (language = 'en') => {
+export const loadTools = async (language = "en") => {
   try {
-    const data = await import(`./${language}.json`);
+    const data = await import(`./languages/${language}.json`);
     return data.default || data;
   } catch (error) {
-    console.warn(`Failed to load tools for language "${language}", falling back to English`, error);
+    console.warn(
+      `Failed to load tools for language "${language}", falling back to English`,
+      error,
+    );
     // Fallback to English if language file missing
-    const data = await import('./en.json');
+    const data = await import("./languages/en.json");
     return data.default || data;
   }
 };
