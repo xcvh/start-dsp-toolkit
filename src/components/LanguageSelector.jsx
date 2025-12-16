@@ -1,12 +1,12 @@
-import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
-import { ChevronDown, Globe } from 'lucide-react';
-import { useLanguage } from '../i18n/I18nContext';
+import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
+import { ChevronDown } from "lucide-react";
+import { useLanguage } from "../i18n/I18nContext";
 
 const languages = [
-  { code: 'en', name: 'English', flag: '🇬🇧' },
-  { code: 'es', name: 'Español', flag: '🇪🇸' },
-  { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-  { code: 'el', name: 'Ελληνικά', flag: '🇬🇷' },
+  { code: "en", name: "English", flag: "🇬🇧" },
+  { code: "es", name: "Español", flag: "🇪🇸" },
+  { code: "de", name: "Deutsch", flag: "🇩🇪" },
+  { code: "el", name: "Ελληνικά", flag: "🇬🇷" },
 ];
 
 /**
@@ -18,13 +18,14 @@ const languages = [
  */
 export default function LanguageSelector() {
   const { language, setLanguage } = useLanguage();
-  const current = languages.find(l => l.code === language) || languages[0];
+  const current = languages.find((l) => l.code === language) || languages[0];
 
   return (
     <Menu as="div" className="relative">
-      <MenuButton className="flex items-center gap-2 px-3 py-2 text-sm text-gray-700 hover:bg-seafoam-50 rounded-lg transition-colors duration-200">
-        <Globe className="h-4 w-4" />
-        <span className="hidden sm:inline">{current.flag} {current.name}</span>
+      <MenuButton className="flex items-center gap-2 px-3 py-2 text-sm text-seafoam-300 hover:bg-seafoam-700 hover:text-white rounded-md transition-colors duration-200">
+        <span className="hidden sm:inline">
+          {current.flag} {current.name}
+        </span>
         <span className="sm:hidden">{current.flag}</span>
         <ChevronDown className="h-4 w-4" />
       </MenuButton>
@@ -35,10 +36,8 @@ export default function LanguageSelector() {
             {({ focus }) => (
               <button
                 onClick={() => setLanguage(lang.code)}
-                className={`${
-                  focus ? 'bg-seafoam-50' : ''
-                } ${
-                  language === lang.code ? 'bg-seafoam-100 font-semibold' : ''
+                className={`${focus ? "bg-seafoam-50" : ""} ${
+                  language === lang.code ? "bg-seafoam-100 font-semibold" : ""
                 } w-full text-left px-4 py-2 flex items-center gap-3 text-sm text-gray-900 transition-colors duration-150`}
               >
                 <span className="text-lg">{lang.flag}</span>
