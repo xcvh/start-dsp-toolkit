@@ -32,7 +32,7 @@
         }
       ],
       "benefits": "This tool makes entrepreneurship approachable and engaging for academic audiences by simplifying key concepts with clarity and humor. It helps faculty and staff connect with entrepreneurial thinking in a way that feels relevant, accessible—and even fun",
-      "purpose": "Entrepreneurial Vision and Institutional Commitment",
+      "purpose": "Entrepreneurial Vision & Institutional Commitment",
       "prerequisiteTools": "1. An electronic device with WI-FI to visualize the dictionary",
       "partner": "ACEEU"
     },
@@ -54,7 +54,7 @@
         }
       ],
       "benefits": "This tool enables universities to effectively define and monitor a comprehensive set of key performance indicators (KPIs) for entrepreneurship education, supporting data-driven insights and continuous enhancement of their Entrepreneurial Education.",
-      "purpose": "Entrepreneurial Vision and Institutional Commitment",
+      "purpose": "Entrepreneurial Vision & Institutional Commitment",
       "prerequisiteTools": "1. Excel with Macros activated",
       "partner": "ACEEU"
     },
@@ -512,6 +512,7 @@
   "validOptions": {
     "purpose": [
       "Entrepreneurship Education Planning & Financing",
+      "Entrepreneurial Vision & Institutional Commitment",
       "Fostering an Entrepreneurial Mindset & Culture",
       "Entrepreneurial Awareness & Sensitization",
       "Sustainable & Impact-Driven Entrepreneurship",
