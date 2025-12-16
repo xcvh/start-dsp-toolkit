@@ -3,7 +3,6 @@ import { useParams, useNavigate, useLocation } from "react-router";
 import { loadTools } from "../data/tools";
 import { useLanguage, useTranslation } from "../i18n/hooks";
 import ToolImage from "../components/ui/ToolImage";
-import ExternalLinkBadge from "../components/ui/ExternalLinkBadge";
 import LanguageFallbackBadge from "../components/ui/LanguageFallbackBadge";
 import { trackDownload } from "../utils/analytics";
 import { getPdfUrlWithFallback } from "../utils/pdfFallback";
@@ -14,14 +13,12 @@ export default function ToolDetail() {
   const location = useLocation();
   const { language } = useLanguage();
   const { t } = useTranslation();
-  const [toolsData, setToolsData] = useState(null);
   const [tool, setTool] = useState(null);
   const [pdfUrls, setPdfUrls] = useState({});
 
   // Load tools data when language changes
   useEffect(() => {
     loadTools(language).then((data) => {
-      setToolsData(data);
       const foundTool = data.tools.find((t) => t.number === parseInt(number));
       setTool(foundTool);
     });
