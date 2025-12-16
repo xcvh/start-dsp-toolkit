@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useLanguage, useTranslation } from "../../i18n/hooks";
 
 /**
@@ -40,3 +41,7 @@ export default function ExternalLinkBadge({ url }) {
     </span>
   );
 }
+
+ExternalLinkBadge.propTypes = {
+  url: PropTypes.string,
+};
