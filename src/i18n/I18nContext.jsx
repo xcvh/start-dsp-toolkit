@@ -1,12 +1,11 @@
-import { createContext, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import { I18nContext } from "./context";
 import en from "./translations/en";
 import es from "./translations/es";
 import de from "./translations/de";
 import el from "./translations/el";
 
 const translations = { en, es, de, el };
-
-export const I18nContext = createContext();
 
 /**
  * I18n Provider Component
