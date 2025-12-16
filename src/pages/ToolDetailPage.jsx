@@ -1,5 +1,7 @@
+import { useState, useEffect } from "react";
 import { useParams, useNavigate, useLocation } from "react-router";
-import toolsData from "../data/tools.json";
+import { loadTools } from "../data/tools";
+import { useLanguage } from "../i18n/I18nContext";
 import ToolImage from "../components/ui/ToolImage";
 import { trackDownload } from "../utils/analytics";
 
@@ -7,7 +9,18 @@ export default function ToolDetail() {
   const { number } = useParams();
   const navigate = useNavigate();
   const location = useLocation();
-  const tool = toolsData.tools.find((t) => t.number === parseInt(number));
+  const { language } = useLanguage();
+  const [toolsData, setToolsData] = useState(null);
+  const [tool, setTool] = useState(null);
+
+  // Load tools data when language changes
+  useEffect(() => {
+    loadTools(language).then((data) => {
+      setToolsData(data);
+      const foundTool = data.tools.find((t) => t.number === parseInt(number));
+      setTool(foundTool);
+    });
+  }, [language, number]);
 
   if (!tool) {
     return <div>Tool not found</div>;
@@ -250,12 +263,12 @@ export default function ToolDetail() {
               </div>
               {(() => {
                 const logoMap = {
-                  ACEEU: "aceeu.jpg",
-                  EUEI: "euei.jpg",
-                  TVW: "tvw.png",
-                  MMS: "mms.jpg",
-                  UNEAT: "uneat.png",
-                  MC: "mc.png",
+                  ACEEU: "assets/logos/aceeu.jpg",
+                  EUEI: "assets/logos/euei.jpg",
+                  TVW: "assets/logos/tvw.png",
+                  MMS: "assets/logos/mms.jpg",
+                  UNEAT: "assets/logos/uneat.png",
+                  MC: "assets/logos/mc.png",
                 };
                 const logoFile = logoMap[tool.partner];
 

@@ -1,0 +1,8 @@
+{
+  "_comment": "TODO: USER MUST PROVIDE SPANISH TRANSLATIONS",
+  "_instructions": "Copy the structure from en.json and translate all text fields. Keep 'number' and 'partner' unchanged. Update PDF URLs to use /es/ subdirectory.",
+  "tools": [],
+  "validOptions": {
+    "purpose": []
+  }
+}
