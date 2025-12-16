@@ -3,6 +3,7 @@ import { useParams, useNavigate, useLocation } from "react-router";
 import { loadTools } from "../data/tools";
 import { useLanguage, useTranslation } from "../i18n/I18nContext";
 import ToolImage from "../components/ui/ToolImage";
+import ExternalLinkBadge from "../components/ui/ExternalLinkBadge";
 import { trackDownload } from "../utils/analytics";
 
 export default function ToolDetail() {
@@ -179,23 +180,26 @@ export default function ToolDetail() {
                 >
                   <div className="absolute top-0 right-0 w-24 h-24 bg-seafoam-100 rounded-bl-full transform translate-x-12 -translate-y-12 group-hover:bg-seafoam-200 transition-colors duration-200"></div>
                   <div className="relative">
-                    <div className="flex items-center">
-                      <svg
-                        className="w-6 h-6 text-seafoam-600 mr-2"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-                        />
-                      </svg>
-                      <span className="text-lg font-medium text-seafoam-800 group-hover:text-seafoam-900">
-                        {link.title}
-                      </span>
+                    <div className="flex flex-col gap-2">
+                      <div className="flex items-center">
+                        <svg
+                          className="w-6 h-6 text-seafoam-600 mr-2"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                          />
+                        </svg>
+                        <span className="text-lg font-medium text-seafoam-800 group-hover:text-seafoam-900">
+                          {link.title}
+                        </span>
+                      </div>
+                      <ExternalLinkBadge url={link.url} />
                     </div>
                   </div>
                 </a>
