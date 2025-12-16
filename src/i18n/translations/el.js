@@ -29,17 +29,24 @@ export default {
   "toolDetail.responsiblePartner": "[EL] Responsible Partner:",
 
   // Badges
-  "badge.fallbackLanguage": "EN",
+  "badge.fallbackLanguage": "Διαθέσιμο στα Αγγλικά",
   "badge.externalLink": "[EL] External - English only",
+
+  // Translation Disclaimer
+  "disclaimer.translationTitle": "Μεταφράσεις σε εξέλιξη",
+  "disclaimer.translationMessage":
+    "Αυτή τη στιγμή μεταφράζουμε το περιεχόμενο του εργαλειοθήκης. Ορισμένα εργαλεία και υλικά ενδέχεται να είναι διαθέσιμα μόνο στα Αγγλικά.",
 
   // Cookie Consent
   "cookie.title": "[EL] Cookie Consent",
-  "cookie.message": "[EL] We use Google Analytics to understand how visitors use our site and to improve your experience. This helps us measure which educational tools are most useful. We anonymize IP addresses and do not collect personal information. By clicking \"Accept\", you consent to our use of cookies for analytics purposes.",
+  "cookie.message":
+    '[EL] We use Google Analytics to understand how visitors use our site and to improve your experience. This helps us measure which educational tools are most useful. We anonymize IP addresses and do not collect personal information. By clicking "Accept", you consent to our use of cookies for analytics purposes.',
   "cookie.accept": "[EL] Accept",
   "cookie.decline": "[EL] Decline",
 
   // Footer
-  "footer.euDisclaimer": "[EL] This project has been funded with support from the European Commission. The author is solely responsible for this publication (communication) and the Commission accepts no responsibility for any use may be made of the information contained therein. In compliance of the new GDPR framework, please note that the Partnership will only process your personal data in the sole interest and purpose of the project and without any prejudice to your rights.",
+  "footer.euDisclaimer":
+    "[EL] This project has been funded with support from the European Commission. The author is solely responsible for this publication (communication) and the Commission accepts no responsibility for any use may be made of the information contained therein. In compliance of the new GDPR framework, please note that the Partnership will only process your personal data in the sole interest and purpose of the project and without any prejudice to your rights.",
   "footer.euLogoAlt": "[EL] Co-funded by the European Union",
 
   // Language Selector

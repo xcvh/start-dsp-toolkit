@@ -4,7 +4,9 @@ import { loadTools } from "../data/tools";
 import { useLanguage, useTranslation } from "../i18n/I18nContext";
 import ToolImage from "../components/ui/ToolImage";
 import ExternalLinkBadge from "../components/ui/ExternalLinkBadge";
+import LanguageFallbackBadge from "../components/ui/LanguageFallbackBadge";
 import { trackDownload } from "../utils/analytics";
+import { getPdfUrlWithFallback } from "../utils/pdfFallback";
 
 export default function ToolDetail() {
   const { number } = useParams();
@@ -14,6 +16,7 @@ export default function ToolDetail() {
   const { t } = useTranslation();
   const [toolsData, setToolsData] = useState(null);
   const [tool, setTool] = useState(null);
+  const [pdfUrls, setPdfUrls] = useState({});
 
   // Load tools data when language changes
   useEffect(() => {
@@ -23,6 +26,22 @@ export default function ToolDetail() {
       setTool(foundTool);
     });
   }, [language, number]);
+
+  // Check PDF availability and set up fallbacks
+  useEffect(() => {
+    if (!tool || !tool.links) return;
+
+    const checkPdfs = async () => {
+      const urlMap = {};
+      for (const link of tool.links) {
+        const result = await getPdfUrlWithFallback(link.url, language);
+        urlMap[link.url] = result;
+      }
+      setPdfUrls(urlMap);
+    };
+
+    checkPdfs();
+  }, [tool, language]);
 
   if (!tool) {
     return <div>Tool not found</div>;
@@ -167,43 +186,52 @@ export default function ToolDetail() {
           {/* Downloads section */}
           {tool.links && tool.links.length > 0 && (
             <div
-              className={`flex flex-col lg:w-64 ${tool.links.length === 1 ? "justify-stretch" : "space-y-4"}`}
+              className={`flex flex-col lg:w-64 gap-4 ${tool.links.length === 1 ? "" : "justify-between"}`}
             >
-              {tool.links.map((link, index) => (
-                <a
-                  key={index}
-                  href={link.url}
-                  className={`group relative overflow-hidden bg-gradient-to-br from-seafoam-50 to-white rounded-xl p-6 border border-seafoam-200 hover:border-seafoam-400 transition-all duration-200 ${tool.links.length === 1 ? "h-full flex items-center" : ""}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => handleDownloadClick(link)}
-                >
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-seafoam-100 rounded-bl-full transform translate-x-12 -translate-y-12 group-hover:bg-seafoam-200 transition-colors duration-200"></div>
-                  <div className="relative">
-                    <div className="flex flex-col gap-2">
-                      <div className="flex items-center">
-                        <svg
-                          className="w-6 h-6 text-seafoam-600 mr-2"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-                          />
-                        </svg>
-                        <span className="text-lg font-medium text-seafoam-800 group-hover:text-seafoam-900">
-                          {link.title}
-                        </span>
+              {tool.links.map((link, index) => {
+                const pdfInfo = pdfUrls[link.url] || {
+                  url: link.url,
+                  isFallback: false,
+                };
+                return (
+                  <a
+                    key={index}
+                    href={pdfInfo.url}
+                    className={`group relative overflow-hidden bg-gradient-to-br from-seafoam-50 to-white rounded-xl p-6 border border-seafoam-200 hover:border-seafoam-400 transition-all duration-200 ${tool.links.length === 1 ? "h-full" : "flex-1"} flex items-center`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => handleDownloadClick(link)}
+                  >
+                    <div className="absolute top-0 right-0 w-24 h-24 bg-seafoam-100 rounded-bl-full transform translate-x-12 -translate-y-12 group-hover:bg-seafoam-200 transition-colors duration-200"></div>
+                    <div className="relative">
+                      <div className="flex flex-col gap-2">
+                        <div className="flex items-center">
+                          <svg
+                            className="w-6 h-6 text-seafoam-600 mr-2"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                            />
+                          </svg>
+                          <span className="text-lg font-medium text-seafoam-800 group-hover:text-seafoam-900">
+                            {link.title}
+                          </span>
+                        </div>
+                        <div className="flex gap-2">
+                          <ExternalLinkBadge url={link.url} />
+                          {pdfInfo.isFallback && <LanguageFallbackBadge />}
+                        </div>
                       </div>
-                      <ExternalLinkBadge url={link.url} />
                     </div>
-                  </div>
-                </a>
-              ))}
+                  </a>
+                );
+              })}
             </div>
           )}
         </div>

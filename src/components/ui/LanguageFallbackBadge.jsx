@@ -1,9 +1,9 @@
-import { useLanguage, useTranslation } from '../../i18n/I18nContext';
+import { useLanguage, useTranslation } from "../../i18n/I18nContext";
 
 /**
  * LanguageFallbackBadge Component
  *
- * Displays a small "[EN]" badge to indicate that content is shown in English
+ * Displays a badge with English flag to indicate that content is shown in English
  * as a fallback when the selected language version is not available.
  * Only shown when the current site language is not English.
  */
@@ -12,13 +12,17 @@ export default function LanguageFallbackBadge() {
   const { t } = useTranslation();
 
   // Only show when language is not English
-  if (language === 'en') {
+  if (language === "en") {
     return null;
   }
 
   return (
-    <span className="inline-flex items-center px-1.5 py-0.5 text-xs font-semibold bg-gray-100 text-gray-700 rounded border border-gray-300">
-      {t('badge.fallbackLanguage')}
+    <span className="inline-flex items-center gap-1.5 px-2 py-1 text-xs font-medium bg-seafoam-50 text-seafoam-700 rounded border border-seafoam-200">
+      <span
+        className="fi fi-gb rounded-sm"
+        style={{ width: "16px", height: "12px" }}
+      ></span>
+      {t("badge.fallbackLanguage")}
     </span>
   );
 }

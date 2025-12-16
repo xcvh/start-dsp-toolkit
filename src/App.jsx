@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import MainNav from "./components/navigation/MainNav";
 import Footer from "./components/Footer";
 import CookieConsent from "./components/CookieConsent";
+import TranslationDisclaimer from "./components/TranslationDisclaimer";
 import ToolboxPage from "./pages/ToolboxPage";
 import ToolDetailPage from "./pages/ToolDetailPage";
 import { initializeAnalytics, trackPageView } from "./utils/analytics";
@@ -36,6 +37,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <TranslationDisclaimer />
       <MainNav />
       <header className="bg-white shadow-sm">
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
