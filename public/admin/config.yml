@@ -32,27 +32,59 @@ collections:
                 name: "purpose"
                 widget: "list"
                 allow_add: true
-                field: {label: "Category", name: "category", widget: "string"}
+                field: { label: "Category", name: "category", widget: "string" }
 
           - label: "Tools"
             name: "tools"
             widget: "list"
             summary: "{{fields.number}}. {{fields.name}}"
             fields:
-              - {label: "Number", name: "number", widget: "number", value_type: "int", min: 1, max: 100}
-              - {label: "Name", name: "name", widget: "string"}
-              - {label: "Summary", name: "summary", widget: "text", required: true}
-              - {label: "Description", name: "description", widget: "text", required: true}
-              - {label: "Outcomes", name: "outcomes", widget: "text", required: true}
-              - {label: "Instructions", name: "instructions", widget: "text", required: true}
+              - {
+                  label: "Number",
+                  name: "number",
+                  widget: "number",
+                  value_type: "int",
+                  min: 1,
+                  max: 100,
+                }
+              - { label: "Name", name: "name", widget: "string" }
+              - {
+                  label: "Summary",
+                  name: "summary",
+                  widget: "text",
+                  required: true,
+                }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "text",
+                  required: true,
+                }
+              - {
+                  label: "Outcomes",
+                  name: "outcomes",
+                  widget: "text",
+                  required: true,
+                }
+              - {
+                  label: "Instructions",
+                  name: "instructions",
+                  widget: "text",
+                  required: true,
+                }
               - label: "Links"
                 name: "links"
                 widget: "list"
                 summary: "{{fields.title}}"
                 fields:
-                  - {label: "Title", name: "title", widget: "string"}
-                  - {label: "URL", name: "url", widget: "string"}
-              - {label: "Benefits", name: "benefits", widget: "text", required: true}
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+              - {
+                  label: "Benefits",
+                  name: "benefits",
+                  widget: "text",
+                  required: true,
+                }
               - label: "Purpose"
                 name: "purpose"
                 widget: "select"
@@ -64,7 +96,12 @@ collections:
                   - "Sustainable & Impact-Driven Entrepreneurship"
                   - "Staff & Faculty Motivation, Incentives & Recognition"
                   - "Continuous Innovation in Entrepreneurship Education"
-              - {label: "Prerequisite Tools", name: "prerequisiteTools", widget: "text", required: false}
+              - {
+                  label: "Prerequisite Tools",
+                  name: "prerequisiteTools",
+                  widget: "text",
+                  required: false,
+                }
               - label: "Partner"
                 name: "partner"
                 widget: "select"
@@ -91,33 +128,116 @@ collections:
                 name: "purpose"
                 widget: "list"
                 allow_add: true
-                field: {label: "Category", name: "category", widget: "string"}
+                field: { label: "Category", name: "category", widget: "string" }
 
           - label: "Tools"
             name: "tools"
             widget: "list"
             summary: "{{fields.number}}. {{fields.name}}"
             fields:
-              - {label: "Number", name: "number", widget: "number", value_type: "int", min: 1, max: 100}
-              - {label: "Name", name: "name", widget: "string"}
-              - {label: "Summary", name: "summary", widget: "text", required: true}
-              - {label: "Description", name: "description", widget: "text", required: true}
-              - {label: "Outcomes", name: "outcomes", widget: "text", required: true}
-              - {label: "Instructions", name: "instructions", widget: "text", required: true}
+              - {
+                  label: "Number",
+                  name: "number",
+                  widget: "number",
+                  value_type: "int",
+                  min: 1,
+                  max: 100,
+                }
+              - { label: "Name", name: "name", widget: "string" }
+              - {
+                  label: "Summary",
+                  name: "summary",
+                  widget: "text",
+                  required: true,
+                }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "text",
+                  required: true,
+                }
+              - {
+                  label: "Outcomes",
+                  name: "outcomes",
+                  widget: "text",
+                  required: true,
+                }
+              - {
+                  label: "Instructions",
+                  name: "instructions",
+                  widget: "text",
+                  required: true,
+                }
               - label: "Links"
                 name: "links"
                 widget: "list"
                 summary: "{{fields.title}}"
                 fields:
-                  - {label: "Title", name: "title", widget: "string"}
-                  - {label: "URL", name: "url", widget: "string"}
-              - {label: "Benefits", name: "benefits", widget: "text", required: true}
-              - {label: "Purpose", name: "purpose", widget: "string"}
-              - {label: "Prerequisite Tools", name: "prerequisiteTools", widget: "text", required: false}
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+              - {
+                  label: "Benefits",
+                  name: "benefits",
+                  widget: "text",
+                  required: true,
+                }
+              - { label: "Purpose", name: "purpose", widget: "string" }
+              - {
+                  label: "Prerequisite Tools",
+                  name: "prerequisiteTools",
+                  widget: "text",
+                  required: false,
+                }
               - label: "Partner"
                 name: "partner"
                 widget: "select"
                 options: ["ACEEU", "EUEI", "TVW", "MMS", "UNEAT", "MC"]
+
+  # ===== MARKDOWN-BASED TOOLS (IMPROVED EDITING EXPERIENCE) =====
+  # Tool #1: Entrepreneurial Wall Pack (Markdown Format)
+  - name: "tool_01_md"
+    label: "📝 Tool #1 - Entrepreneurial Wall Pack (Markdown)"
+    label_singular: "Language Version"
+    description: "Edit Tool #1 in Markdown format with rich text editor - MUCH BETTER EXPERIENCE!"
+    folder: "content/tools/01-entrepreneurial-wall-pack"
+    extension: "md"
+    format: "frontmatter"
+    create: false
+    editor:
+      preview: true
+    fields:
+      - {
+          label: "Tool Number",
+          name: "number",
+          widget: "number",
+          value_type: "int",
+          default: 1,
+        }
+      - { label: "Tool Name", name: "name", widget: "string", required: true }
+      - label: "Purpose Category"
+        name: "purpose"
+        widget: "select"
+        required: true
+        options:
+          - "Entrepreneurship Education Planning & Financing"
+          - "Entrepreneurial Vision & Institutional Commitment"
+          - "Fostering an Entrepreneurial Mindset & Culture"
+          - "Entrepreneurial Awareness & Sensitization"
+          - "Sustainable & Impact-Driven Entrepreneurship"
+          - "Staff & Faculty Motivation, Incentives & Recognition"
+          - "Continuous Innovation in Entrepreneurship Education"
+      - label: "Partner Organization"
+        name: "partner"
+        widget: "select"
+        required: true
+        options: ["ACEEU", "EUEI", "TVW", "MMS", "UNEAT", "MC"]
+      - {
+          label: "Summary",
+          name: "body",
+          widget: "markdown",
+          required: true,
+          hint: "Full tool content in Markdown format - use headings, lists, bold, etc.",
+        }
 
   # German Tools
   - name: "tools_de"
@@ -140,29 +260,66 @@ collections:
                 name: "purpose"
                 widget: "list"
                 allow_add: true
-                field: {label: "Category", name: "category", widget: "string"}
+                field: { label: "Category", name: "category", widget: "string" }
 
           - label: "Tools"
             name: "tools"
             widget: "list"
             summary: "{{fields.number}}. {{fields.name}}"
             fields:
-              - {label: "Number", name: "number", widget: "number", value_type: "int", min: 1, max: 100}
-              - {label: "Name", name: "name", widget: "string"}
-              - {label: "Summary", name: "summary", widget: "text", required: true}
-              - {label: "Description", name: "description", widget: "text", required: true}
-              - {label: "Outcomes", name: "outcomes", widget: "text", required: true}
-              - {label: "Instructions", name: "instructions", widget: "text", required: true}
+              - {
+                  label: "Number",
+                  name: "number",
+                  widget: "number",
+                  value_type: "int",
+                  min: 1,
+                  max: 100,
+                }
+              - { label: "Name", name: "name", widget: "string" }
+              - {
+                  label: "Summary",
+                  name: "summary",
+                  widget: "text",
+                  required: true,
+                }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "text",
+                  required: true,
+                }
+              - {
+                  label: "Outcomes",
+                  name: "outcomes",
+                  widget: "text",
+                  required: true,
+                }
+              - {
+                  label: "Instructions",
+                  name: "instructions",
+                  widget: "text",
+                  required: true,
+                }
               - label: "Links"
                 name: "links"
                 widget: "list"
                 summary: "{{fields.title}}"
                 fields:
-                  - {label: "Title", name: "title", widget: "string"}
-                  - {label: "URL", name: "url", widget: "string"}
-              - {label: "Benefits", name: "benefits", widget: "text", required: true}
-              - {label: "Purpose", name: "purpose", widget: "string"}
-              - {label: "Prerequisite Tools", name: "prerequisiteTools", widget: "text", required: false}
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+              - {
+                  label: "Benefits",
+                  name: "benefits",
+                  widget: "text",
+                  required: true,
+                }
+              - { label: "Purpose", name: "purpose", widget: "string" }
+              - {
+                  label: "Prerequisite Tools",
+                  name: "prerequisiteTools",
+                  widget: "text",
+                  required: false,
+                }
               - label: "Partner"
                 name: "partner"
                 widget: "select"
@@ -189,29 +346,66 @@ collections:
                 name: "purpose"
                 widget: "list"
                 allow_add: true
-                field: {label: "Category", name: "category", widget: "string"}
+                field: { label: "Category", name: "category", widget: "string" }
 
           - label: "Tools"
             name: "tools"
             widget: "list"
             summary: "{{fields.number}}. {{fields.name}}"
             fields:
-              - {label: "Number", name: "number", widget: "number", value_type: "int", min: 1, max: 100}
-              - {label: "Name", name: "name", widget: "string"}
-              - {label: "Summary", name: "summary", widget: "text", required: true}
-              - {label: "Description", name: "description", widget: "text", required: true}
-              - {label: "Outcomes", name: "outcomes", widget: "text", required: true}
-              - {label: "Instructions", name: "instructions", widget: "text", required: true}
+              - {
+                  label: "Number",
+                  name: "number",
+                  widget: "number",
+                  value_type: "int",
+                  min: 1,
+                  max: 100,
+                }
+              - { label: "Name", name: "name", widget: "string" }
+              - {
+                  label: "Summary",
+                  name: "summary",
+                  widget: "text",
+                  required: true,
+                }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "text",
+                  required: true,
+                }
+              - {
+                  label: "Outcomes",
+                  name: "outcomes",
+                  widget: "text",
+                  required: true,
+                }
+              - {
+                  label: "Instructions",
+                  name: "instructions",
+                  widget: "text",
+                  required: true,
+                }
               - label: "Links"
                 name: "links"
                 widget: "list"
                 summary: "{{fields.title}}"
                 fields:
-                  - {label: "Title", name: "title", widget: "string"}
-                  - {label: "URL", name: "url", widget: "string"}
-              - {label: "Benefits", name: "benefits", widget: "text", required: true}
-              - {label: "Purpose", name: "purpose", widget: "string"}
-              - {label: "Prerequisite Tools", name: "prerequisiteTools", widget: "text", required: false}
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+              - {
+                  label: "Benefits",
+                  name: "benefits",
+                  widget: "text",
+                  required: true,
+                }
+              - { label: "Purpose", name: "purpose", widget: "string" }
+              - {
+                  label: "Prerequisite Tools",
+                  name: "prerequisiteTools",
+                  widget: "text",
+                  required: false,
+                }
               - label: "Partner"
                 name: "partner"
                 widget: "select"
