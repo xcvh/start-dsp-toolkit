@@ -197,47 +197,164 @@ collections:
   # Tool #1: Entrepreneurial Wall Pack (Markdown Format)
   - name: "tool_01_md"
     label: "📝 Tool #1 - Entrepreneurial Wall Pack (Markdown)"
-    label_singular: "Language Version"
+    label_singular: "Tool Language"
     description: "Edit Tool #1 in Markdown format with rich text editor - MUCH BETTER EXPERIENCE!"
-    folder: "content/tools/01-entrepreneurial-wall-pack"
-    extension: "md"
-    format: "frontmatter"
-    create: false
     editor:
       preview: true
-    fields:
-      - {
-          label: "Tool Number",
-          name: "number",
-          widget: "number",
-          value_type: "int",
-          default: 1,
-        }
-      - { label: "Tool Name", name: "name", widget: "string", required: true }
-      - label: "Purpose Category"
-        name: "purpose"
-        widget: "select"
-        required: true
-        options:
-          - "Entrepreneurship Education Planning & Financing"
-          - "Entrepreneurial Vision & Institutional Commitment"
-          - "Fostering an Entrepreneurial Mindset & Culture"
-          - "Entrepreneurial Awareness & Sensitization"
-          - "Sustainable & Impact-Driven Entrepreneurship"
-          - "Staff & Faculty Motivation, Incentives & Recognition"
-          - "Continuous Innovation in Entrepreneurship Education"
-      - label: "Partner Organization"
-        name: "partner"
-        widget: "select"
-        required: true
-        options: ["ACEEU", "EUEI", "TVW", "MMS", "UNEAT", "MC"]
-      - {
-          label: "Summary",
-          name: "body",
-          widget: "markdown",
-          required: true,
-          hint: "Full tool content in Markdown format - use headings, lists, bold, etc.",
-        }
+    files:
+      - label: "English"
+        name: "tool_01_en"
+        file: "content/tools/01-entrepreneurial-wall-pack/en.md"
+        fields:
+          - {
+              label: "Tool Number",
+              name: "number",
+              widget: "number",
+              value_type: "int",
+              default: 1,
+            }
+          - {
+              label: "Tool Name",
+              name: "name",
+              widget: "string",
+              required: true,
+            }
+          - label: "Purpose Category"
+            name: "purpose"
+            widget: "select"
+            required: true
+            options:
+              - "Entrepreneurship Education Planning & Financing"
+              - "Entrepreneurial Vision & Institutional Commitment"
+              - "Fostering an Entrepreneurial Mindset & Culture"
+              - "Entrepreneurial Awareness & Sensitization"
+              - "Sustainable & Impact-Driven Entrepreneurship"
+              - "Staff & Faculty Motivation, Incentives & Recognition"
+              - "Continuous Innovation in Entrepreneurship Education"
+          - {
+              label: "Partner",
+              name: "partner",
+              widget: "select",
+              required: true,
+              options: ["ACEEU", "EUEI", "TVW", "MMS", "UNEAT", "MC"],
+            }
+          - {
+              label: "Content",
+              name: "body",
+              widget: "markdown",
+              required: true,
+            }
+
+      - label: "Spanish"
+        name: "tool_01_es"
+        file: "content/tools/01-entrepreneurial-wall-pack/es.md"
+        fields:
+          - {
+              label: "Tool Number",
+              name: "number",
+              widget: "number",
+              value_type: "int",
+              default: 1,
+            }
+          - {
+              label: "Tool Name",
+              name: "name",
+              widget: "string",
+              required: true,
+            }
+          - {
+              label: "Purpose Category",
+              name: "purpose",
+              widget: "string",
+              required: true,
+            }
+          - {
+              label: "Partner",
+              name: "partner",
+              widget: "select",
+              required: true,
+              options: ["ACEEU", "EUEI", "TVW", "MMS", "UNEAT", "MC"],
+            }
+          - {
+              label: "Content",
+              name: "body",
+              widget: "markdown",
+              required: true,
+            }
+
+      - label: "German"
+        name: "tool_01_de"
+        file: "content/tools/01-entrepreneurial-wall-pack/de.md"
+        fields:
+          - {
+              label: "Tool Number",
+              name: "number",
+              widget: "number",
+              value_type: "int",
+              default: 1,
+            }
+          - {
+              label: "Tool Name",
+              name: "name",
+              widget: "string",
+              required: true,
+            }
+          - {
+              label: "Purpose Category",
+              name: "purpose",
+              widget: "string",
+              required: true,
+            }
+          - {
+              label: "Partner",
+              name: "partner",
+              widget: "select",
+              required: true,
+              options: ["ACEEU", "EUEI", "TVW", "MMS", "UNEAT", "MC"],
+            }
+          - {
+              label: "Content",
+              name: "body",
+              widget: "markdown",
+              required: true,
+            }
+
+      - label: "Greek"
+        name: "tool_01_el"
+        file: "content/tools/01-entrepreneurial-wall-pack/el.md"
+        fields:
+          - {
+              label: "Tool Number",
+              name: "number",
+              widget: "number",
+              value_type: "int",
+              default: 1,
+            }
+          - {
+              label: "Tool Name",
+              name: "name",
+              widget: "string",
+              required: true,
+            }
+          - {
+              label: "Purpose Category",
+              name: "purpose",
+              widget: "string",
+              required: true,
+            }
+          - {
+              label: "Partner",
+              name: "partner",
+              widget: "select",
+              required: true,
+              options: ["ACEEU", "EUEI", "TVW", "MMS", "UNEAT", "MC"],
+            }
+          - {
+              label: "Content",
+              name: "body",
+              widget: "markdown",
+              required: true,
+            }
 
   # German Tools
   - name: "tools_de"
