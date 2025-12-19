@@ -7,7 +7,7 @@ summary: The Entrepreneurial Wall Pack offers ready-to-print quotes and
   university to spark entrepreneurial thinking in cafés, co-working spaces and
   other campus areas.
 description: >
-  Entrepreneurial Wall Pack is designed for faculty and university staff aiming
+  Entrepreneurial Wall Pack is designed for faculty and university staff, aiming
   to foster a culture of entrepreneurship through inspiring campus visuals. It
   includes ready-to-print designs with motivational quotes, practical tips, and
   action-oriented messages.
