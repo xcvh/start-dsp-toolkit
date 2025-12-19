@@ -203,7 +203,30 @@ export default function ToolDetail() {
                     <div className="absolute top-0 right-0 w-24 h-24 bg-seafoam-100 rounded-bl-full transform translate-x-12 -translate-y-12 group-hover:bg-seafoam-200 transition-colors duration-200"></div>
                     <div className="relative w-full h-full flex flex-col justify-between">
                       <span className="text-lg font-medium text-seafoam-800 group-hover:text-seafoam-900">
-                        {link.title}
+                        {link.title}{" "}
+                        {(() => {
+                          const ext = link.url.split(".").pop()?.toLowerCase();
+                          if (ext === "pdf") {
+                            return (
+                              <span className="px-1.5 py-0.5 text-[10px] font-bold bg-red-100 text-red-700 rounded relative -top-1">
+                                PDF
+                              </span>
+                            );
+                          } else if (["xls", "xlsx", "xlsm"].includes(ext)) {
+                            return (
+                              <span className="px-1.5 py-0.5 text-[10px] font-bold bg-green-100 text-green-700 rounded relative -top-1">
+                                XLS
+                              </span>
+                            );
+                          } else if (["doc", "docx"].includes(ext)) {
+                            return (
+                              <span className="px-1.5 py-0.5 text-[10px] font-bold bg-blue-100 text-blue-700 rounded relative -top-1">
+                                DOC
+                              </span>
+                            );
+                          }
+                          return null;
+                        })()}
                       </span>
                       <div className="flex items-center gap-2 mt-4">
                         {link.url.startsWith("http://") ||
@@ -236,29 +259,6 @@ export default function ToolDetail() {
                             />
                           </svg>
                         )}
-                        {(() => {
-                          const ext = link.url.split(".").pop()?.toLowerCase();
-                          if (ext === "pdf") {
-                            return (
-                              <span className="px-1.5 py-0.5 text-[10px] font-bold bg-red-100 text-red-700 rounded">
-                                PDF
-                              </span>
-                            );
-                          } else if (["xls", "xlsx", "xlsm"].includes(ext)) {
-                            return (
-                              <span className="px-1.5 py-0.5 text-[10px] font-bold bg-green-100 text-green-700 rounded">
-                                XLS
-                              </span>
-                            );
-                          } else if (["doc", "docx"].includes(ext)) {
-                            return (
-                              <span className="px-1.5 py-0.5 text-[10px] font-bold bg-blue-100 text-blue-700 rounded">
-                                DOC
-                              </span>
-                            );
-                          }
-                          return null;
-                        })()}
                         <div className="flex flex-wrap gap-2">
                           {((link.url.startsWith("http://") ||
                             link.url.startsWith("https://")) &&
