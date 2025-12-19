@@ -6,18 +6,24 @@
  * TO:   content/tools/en/01-tool-1.md
  */
 
-import { readFileSync, writeFileSync, mkdirSync, readdirSync, statSync } from 'fs';
-import { join, dirname } from 'path';
-import { fileURLToPath } from 'url';
+import {
+  readFileSync,
+  writeFileSync,
+  mkdirSync,
+  readdirSync,
+  statSync,
+} from "fs";
+import { join, dirname } from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const rootDir = join(__dirname, '..');
+const rootDir = join(__dirname, "..");
 
-const languages = ['en', 'es', 'de', 'el'];
-const toolsDir = join(rootDir, 'content/tools');
+const languages = ["en", "es", "de", "el"];
+const toolsDir = join(rootDir, "content/tools");
 
-console.log('Reorganizing tools by language...\n');
+console.log("Reorganizing tools by language...\n");
 
 // Create language directories
 for (const lang of languages) {
@@ -28,7 +34,7 @@ for (const lang of languages) {
 
 // Get all tool directories
 const toolDirs = readdirSync(toolsDir)
-  .filter(name => {
+  .filter((name) => {
     const path = join(toolsDir, name);
     return statSync(path).isDirectory() && !languages.includes(name);
   })
@@ -46,14 +52,14 @@ for (const toolDir of toolDirs) {
     const targetPath = join(toolsDir, lang, `${toolDir}.md`);
 
     try {
-      const content = readFileSync(sourcePath, 'utf-8');
-      writeFileSync(targetPath, content, 'utf-8');
+      const content = readFileSync(sourcePath, "utf-8");
+      writeFileSync(targetPath, content, "utf-8");
       console.log(`  Moved ${lang}.md -> ${lang}/${toolDir}.md`);
-    } catch (error) {
+    } catch {
       console.log(`  Skipped ${lang}.md (not found)`);
     }
   }
 }
 
-console.log('\nReorganization complete!');
-console.log('Old tool directories can now be deleted.');
+console.log("\nReorganization complete!");
+console.log("Old tool directories can now be deleted.");

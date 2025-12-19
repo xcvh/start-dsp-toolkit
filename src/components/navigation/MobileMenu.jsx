@@ -1,5 +1,6 @@
 import { DisclosureButton, DisclosurePanel } from "@headlessui/react";
 import { Link } from "react-router";
+import PropTypes from "prop-types";
 import LanguageSelector from "../LanguageSelector";
 
 function classNames(...classes) {
@@ -34,3 +35,13 @@ export default function MobileMenu({ navigation }) {
     </DisclosurePanel>
   );
 }
+
+MobileMenu.propTypes = {
+  navigation: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      to: PropTypes.string.isRequired,
+      current: PropTypes.bool,
+    }),
+  ).isRequired,
+};

@@ -1,8 +1,4 @@
-import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-} from "@headlessui/react";
+import { Disclosure, DisclosureButton } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router";
 import MobileMenu from "./MobileMenu";
@@ -26,7 +22,7 @@ export default function MainNav() {
   ];
   return (
     <Disclosure as="nav" className="bg-seafoam-800">
-      {({ open }) => (
+      {() => (
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 items-center justify-between">

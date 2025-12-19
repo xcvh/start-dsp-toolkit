@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
 export default function ToolImage({ toolNumber, customImage, alt, className }) {
   const [imageSrc, setImageSrc] = useState(null);
@@ -63,3 +64,10 @@ export default function ToolImage({ toolNumber, customImage, alt, className }) {
     />
   );
 }
+
+ToolImage.propTypes = {
+  toolNumber: PropTypes.string.isRequired,
+  customImage: PropTypes.string,
+  alt: PropTypes.string.isRequired,
+  className: PropTypes.string,
+};

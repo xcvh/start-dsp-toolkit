@@ -85,7 +85,7 @@ export const checkPdfExists = async (url) => {
   try {
     const response = await fetch(url, { method: "HEAD" });
     return response.ok;
-  } catch (error) {
+  } catch {
     return false;
   }
 };

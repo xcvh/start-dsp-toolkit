@@ -24,6 +24,7 @@ export default function Toolbox() {
     setSearchParams({});
     setFilters({ purpose: ["all"] });
     setSearchQuery("");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [language]);
 
   // Initialize search query and filters from URL params

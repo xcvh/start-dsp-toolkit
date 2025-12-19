@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import { I18nContext } from "./context";
 import en from "./translations/en";
 import es from "./translations/es";
@@ -60,3 +61,7 @@ export function I18nProvider({ children }) {
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
 }
+
+I18nProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
