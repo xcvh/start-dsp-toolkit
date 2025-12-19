@@ -49,7 +49,22 @@ collections:
           required: true,
         }
       - { label: "Benefits", name: "benefits", widget: "text", required: true }
-      - { label: "Purpose", name: "purpose", widget: "string", required: true }
+      - {
+          label: "Purpose",
+          name: "purpose",
+          widget: "select",
+          required: true,
+          options:
+            [
+              "Entrepreneurial Awareness & Sensitization",
+              "Entrepreneurial Vision & Institutional Commitment",
+              "Staff & Faculty Motivation, Incentives & Recognition",
+              "Fostering an Entrepreneurial Mindset & Culture",
+              "Entrepreneurship Education Planning & Financing",
+              "Sustainable & Impact-Driven Entrepreneurship",
+              "Continuous Innovation in Entrepreneurship Education",
+            ],
+        }
       - {
           label: "Prerequisite Tools",
           name: "prerequisiteTools",
@@ -115,7 +130,22 @@ collections:
           required: true,
         }
       - { label: "Benefits", name: "benefits", widget: "text", required: true }
-      - { label: "Purpose", name: "purpose", widget: "string", required: true }
+      - {
+          label: "Purpose",
+          name: "purpose",
+          widget: "select",
+          required: true,
+          options:
+            [
+              "Entrepreneurial Awareness & Sensitization",
+              "Entrepreneurial Vision & Institutional Commitment",
+              "Staff & Faculty Motivation, Incentives & Recognition",
+              "Fostering an Entrepreneurial Mindset & Culture",
+              "Entrepreneurship Education Planning & Financing",
+              "Sustainable & Impact-Driven Entrepreneurship",
+              "Continuous Innovation in Entrepreneurship Education",
+            ],
+        }
       - {
           label: "Prerequisite Tools",
           name: "prerequisiteTools",
@@ -181,7 +211,22 @@ collections:
           required: true,
         }
       - { label: "Benefits", name: "benefits", widget: "text", required: true }
-      - { label: "Purpose", name: "purpose", widget: "string", required: true }
+      - {
+          label: "Purpose",
+          name: "purpose",
+          widget: "select",
+          required: true,
+          options:
+            [
+              "Entrepreneurial Awareness & Sensitization",
+              "Entrepreneurial Vision & Institutional Commitment",
+              "Staff & Faculty Motivation, Incentives & Recognition",
+              "Fostering an Entrepreneurial Mindset & Culture",
+              "Entrepreneurship Education Planning & Financing",
+              "Sustainable & Impact-Driven Entrepreneurship",
+              "Continuous Innovation in Entrepreneurship Education",
+            ],
+        }
       - {
           label: "Prerequisite Tools",
           name: "prerequisiteTools",
@@ -247,7 +292,22 @@ collections:
           required: true,
         }
       - { label: "Benefits", name: "benefits", widget: "text", required: true }
-      - { label: "Purpose", name: "purpose", widget: "string", required: true }
+      - {
+          label: "Purpose",
+          name: "purpose",
+          widget: "select",
+          required: true,
+          options:
+            [
+              "Entrepreneurial Awareness & Sensitization",
+              "Entrepreneurial Vision & Institutional Commitment",
+              "Staff & Faculty Motivation, Incentives & Recognition",
+              "Fostering an Entrepreneurial Mindset & Culture",
+              "Entrepreneurship Education Planning & Financing",
+              "Sustainable & Impact-Driven Entrepreneurship",
+              "Continuous Innovation in Entrepreneurship Education",
+            ],
+        }
       - {
           label: "Prerequisite Tools",
           name: "prerequisiteTools",
