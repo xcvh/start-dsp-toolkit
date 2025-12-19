@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
         <div className="flex flex-row items-center space-x-4">
           <img
-            src={`/assets/logos/eu-logo-${language}.png`}
+            src={`${import.meta.env.BASE_URL}assets/logos/eu-logo-${language}.png`}
             alt={t("footer.euLogoAlt")}
             className="h-12 w-auto"
           />

@@ -34,7 +34,7 @@ export default function MainNav() {
                 <div className="shrink-0">
                   <img
                     alt="Your Company"
-                    src="/assets/logos/logo-color.png"
+                    src={`${import.meta.env.BASE_URL}assets/logos/logo-color.png`}
                     className="size-8"
                   />
                 </div>

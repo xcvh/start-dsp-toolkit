@@ -18,7 +18,7 @@ export default function ToolImage({ toolNumber, customImage, alt, className }) {
           setImageSrc(customImage);
         } else {
           // Otherwise, fall back to the numbered image
-          const imageUrl = `/assets/images/${toolNumber}.jpg`;
+          const imageUrl = `${import.meta.env.BASE_URL}assets/images/${toolNumber}.jpg`;
           setImageSrc(imageUrl);
         }
       } catch (err) {
@@ -34,15 +34,17 @@ export default function ToolImage({ toolNumber, customImage, alt, className }) {
   const handleImageError = () => {
     // If using custom image, fall back to numbered images
     if (customImage && imageSrc === customImage) {
-      setImageSrc(`/assets/images/${toolNumber}.jpg`);
+      setImageSrc(`${import.meta.env.BASE_URL}assets/images/${toolNumber}.jpg`);
       return;
     }
 
     // If the current extension fails, try the next one or use placeholder
     if (imageSrc && imageSrc.endsWith(".jpg")) {
-      setImageSrc(`/assets/images/${toolNumber}.jpeg`);
+      setImageSrc(
+        `${import.meta.env.BASE_URL}assets/images/${toolNumber}.jpeg`,
+      );
     } else if (imageSrc && imageSrc.endsWith(".jpeg")) {
-      setImageSrc(`/assets/images/${toolNumber}.png`);
+      setImageSrc(`${import.meta.env.BASE_URL}assets/images/${toolNumber}.png`);
     } else {
       // All extensions failed, use placeholder
       setError(true);

@@ -349,7 +349,7 @@ export default function ToolDetail() {
 
                 return logoFile ? (
                   <img
-                    src={`/${logoFile}`}
+                    src={`${import.meta.env.BASE_URL}${logoFile}`}
                     alt={`${tool.partner} logo`}
                     className="w-10 h-10 object-contain"
                     onError={(e) => {
