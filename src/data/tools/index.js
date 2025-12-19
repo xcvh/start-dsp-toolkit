@@ -69,12 +69,13 @@ function parseFrontmatter(content) {
         inList = false;
         currentValue = [valueStart.replace(/^["']|["']$/g, "")];
       } else {
-        // Simple value
-        inMultiline = false;
+        // Simple value (might have continuation lines)
+        inMultiline = true;
         inList = false;
         // Check if it's a number
         if (/^\d+$/.test(valueStart)) {
           currentValue = [Number(valueStart)];
+          inMultiline = false;
         } else {
           currentValue = [valueStart];
         }
@@ -153,6 +154,14 @@ function parseFrontmatter(content) {
           data[currentKey] = joined;
         }
       }
+    }
+  }
+
+  // Ensure summary ends with punctuation
+  if (data.summary && typeof data.summary === "string") {
+    const lastChar = data.summary.slice(-1);
+    if (![".", "!", "?"].includes(lastChar)) {
+      data.summary = data.summary + ".";
     }
   }
 
