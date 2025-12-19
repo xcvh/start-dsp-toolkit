@@ -13,6 +13,9 @@ node_modules/
 # Generated data files (built from markdown at deploy time)
 /public/data/
 
+# Generated translation JS files (built from YAML at deploy time)
+/src/i18n/translations/*.js
+
 # Misc
 .DS_Store
 .env.local
