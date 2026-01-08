@@ -50,7 +50,7 @@
   
   #v(2em)
   
-  #image("public/assets/logos/logo-color.png", width: 40%)
+  #image("../../public/assets/logos/logo-color.png", width: 40%)
   
   #v(2em)
 ]
@@ -517,13 +517,7 @@ When you're happy with your changes, it's time to make them live!
 At the top-right of the editing page, click the *"Publish"* button.
 
 #figure(
-  rect(width: 100%, height: 8cm, stroke: 1pt + gray)[
-    #align(center + horizon)[
-      #text(fill: gray, style: "italic")[
-        [Screenshot: Publish button highlighted in top-right corner]
-      ]
-    ]
-  ],
+  image("screenshots/12-publish-button.png", width: 100%),
   caption: "The Publish button"
 )
 
@@ -640,13 +634,7 @@ The UI translations include all text visible on the website interface:
 3. Changes save automatically
 
 #figure(
-  rect(width: 100%, height: 10cm, stroke: 1pt + gray)[
-    #align(center + horizon)[
-      #text(fill: gray, style: "italic")[
-        [Screenshot: UI translations form with multiple text fields]
-      ]
-    ]
-  ],
+  image("screenshots/14-ui-translations-form.png", width: 100%),
   caption: "Editing UI translations"
 )
 
@@ -1183,7 +1171,7 @@ This section explains all the UI translation fields and where they appear on the
   
   #v(2em)
   
-  #image("public/assets/logos/eu-logo-en.png", width: 60%)
+  #image("../public/assets/logos/eu-logo-en.png", width: 60%)
   
   #v(1em)
   
