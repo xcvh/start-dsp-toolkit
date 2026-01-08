@@ -21,8 +21,8 @@ collections:
       - {
           label: "Tool Number",
           name: "number",
-          widget: "number",
-          value_type: "int",
+          widget: "hidden",
+          default: 0,
         }
       - { label: "Name", name: "name", widget: "string", required: true }
       - {
@@ -102,8 +102,8 @@ collections:
       - {
           label: "Tool Number",
           name: "number",
-          widget: "number",
-          value_type: "int",
+          widget: "hidden",
+          default: 0,
         }
       - { label: "Name", name: "name", widget: "string", required: true }
       - {
@@ -183,8 +183,8 @@ collections:
       - {
           label: "Tool Number",
           name: "number",
-          widget: "number",
-          value_type: "int",
+          widget: "hidden",
+          default: 0,
         }
       - { label: "Name", name: "name", widget: "string", required: true }
       - {
@@ -264,8 +264,8 @@ collections:
       - {
           label: "Tool Number",
           name: "number",
-          widget: "number",
-          value_type: "int",
+          widget: "hidden",
+          default: 0,
         }
       - { label: "Name", name: "name", widget: "string", required: true }
       - {
