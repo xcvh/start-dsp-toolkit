@@ -129,19 +129,6 @@ You'll be asked to provide:
   Choose a professional username, preferably based on your name (e.g., "john.smith" or "jsmith"). This helps us identify you when granting access.
 ]
 
-=== Complete the Verification
-
-GitHub will ask you to:
-1. Verify you're human (solve a puzzle)
-2. Verify your email address (check your inbox for a verification email)
-
-Click the verification link in the email GitHub sends you.
-
-#figure(
-  image("screenshots/02-github-signup-form.png", width: 100%),
-  caption: "GitHub verification email"
-)
-
 === Finish Setup
 
 After verification, GitHub may ask you a few questions about how you'll use GitHub. You can skip these questions or answer them briefly - they won't affect your ability to edit the toolbox.
@@ -242,7 +229,7 @@ Click *"Authorize"* or *"Continue"*.
 After authorization, you'll see the Decap CMS dashboard. This is your editing home base!
 
 #figure(
-  image("screenshots/05-decap-cms-dashboard.png", width: 100%),
+  image("screenshots/09-decap-tool-overview.png", width: 100%),
   caption: "Decap CMS dashboard - your editing workspace"
 )
 
@@ -262,37 +249,6 @@ After authorization, you'll see the Decap CMS dashboard. This is your editing ho
 == Step 4: Find the Tool You Want to Edit
 
 The toolbox contains 24 tools, each available in multiple languages.
-
-=== Navigate to Your Language
-
-On the Decap CMS dashboard, you'll see different collections on the left side:
-
-- *Tools (English)*
-- *Tools (Spanish)*
-- *Tools (German)*
-- *Tools (Greek)*
-- *UI Translations*
-
-Click on the language you want to edit (e.g., "Tools (Spanish)" if you're editing Spanish translations).
-
-#figure(
-  image("screenshots/06-language-collection.png", width: 100%),
-  caption: "Selecting a language collection"
-)
-
-=== Choose a Tool
-
-You'll see a list of all 24 tools. Click on the tool you want to edit.
-
-Each tool shows:
-- Tool number (e.g., "01")
-- Tool name
-- A preview image
-
-#figure(
-  image("screenshots/07-tools-list.png", width: 100%),
-  caption: "List of tools in your selected language"
-)
 
 #pagebreak()
 
@@ -341,7 +297,7 @@ To edit any text field:
 3. The changes are saved automatically as you type
 
 #figure(
-  image("screenshots/08-tool-editing-form.png", width: 100%),
+  image("screenshots/10-decap-tool-edit-page.png", width: 100%),
   caption: "Editing a tool's description"
 )
 
@@ -353,55 +309,6 @@ To edit any text field:
 - *Test readability:* Read your translation out loud to check if it sounds natural
 
 #pagebreak()
-
-=== Editing Images
-
-Each tool has an image. To change it:
-
-1. Click on the image field
-2. You can either:
-   - *Upload a new image:* Click "Upload" and select a file from your computer
-   - *Choose an existing image:* Click "Choose existing" to select from uploaded images
-
-#figure(
-  image("screenshots/09-image-upload-dialog.png", width: 100%),
-  caption: "Uploading or selecting a tool image"
-)
-
-#colorbox(
-  title: "Image Guidelines",
-  color: "blue",
-  radius: 5pt,
-  width: auto
-)[
-  - *Format:* JPG or PNG
-  - *Size:* At least 800×600 pixels
-  - *File size:* Under 2 MB
-  - *Content:* Professional, relevant to the tool
-]
-
-=== Editing Downloads/Files
-
-Each tool can have downloadable files (PDFs, templates, etc.). To manage them:
-
-1. Scroll to the "Downloads" section
-2. Each download has:
-   - *Title:* The link text users will see
-   - *File:* The actual downloadable file
-
-To add a new download:
-1. Click "+ Add Downloads"
-2. Enter a title
-3. Upload the file
-
-To remove a download:
-1. Click the ❌ next to the download
-2. Confirm deletion
-
-#figure(
-  image("screenshots/10-downloads-section.png", width: 100%),
-  caption: "Managing tool downloads"
-)
 
 #pagebreak()
 
@@ -464,7 +371,7 @@ At the top-right of the editing page, click the *"Publish"* button.
 A dialog will appear asking when to publish. Select *"Publish now"*.
 
 #figure(
-  image("screenshots/12-publish-dialog.png", width: 100%),
+  image("screenshots/12-publish-button-pressed.png", width: 100%),
   caption: "Publish confirmation dialog"
 )
 
@@ -512,7 +419,7 @@ UI translations are the interface text that appears throughout the website (butt
 From the Decap CMS dashboard, click on *"UI Translations"* in the left sidebar.
 
 #figure(
-  image("screenshots/13-ui-translations.png", width: 100%),
+  image("screenshots/13-ui-translations-form.png", width: 100%),
   caption: "UI Translations collection"
 )
 
@@ -560,7 +467,7 @@ The UI translations include all text visible on the website interface:
 3. Changes save automatically
 
 #figure(
-  image("screenshots/14-ui-translations-form.png", width: 100%),
+  image("screenshots/13-ui-translations-form.png", width: 100%),
   caption: "Editing UI translations"
 )
 
