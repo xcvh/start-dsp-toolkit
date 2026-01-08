@@ -50,7 +50,7 @@
   
   #v(2em)
   
-  #image("../../public/assets/logos/logo-color.png", width: 40%)
+  #image("assets/logos/logo-color.png", width: 40%)
   
   #v(2em)
 ]
@@ -1165,7 +1165,7 @@ This section explains all the UI translation fields and where they appear on the
   
   #v(2em)
   
-  #image("../../public/assets/logos/eu-logo-en.png", width: 60%)
+  #image("../assets/logos/eu-logo-en.png", width: 60%)
   
   #v(1em)
   

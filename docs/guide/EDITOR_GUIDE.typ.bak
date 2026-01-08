@@ -50,7 +50,7 @@
   
   #v(2em)
   
-  #image("../../public/assets/logos/logo-color.png", width: 40%)
+  #image("assets/logos/logo-color.png", width: 40%)
   
   #v(2em)
 ]
@@ -577,7 +577,7 @@ From the Decap CMS dashboard, click on *"UI Translations"* in the left sidebar.
   rect(width: 100%, height: 10cm, stroke: 1pt + gray)[
     #align(center + horizon)[
       #text(fill: gray, style: "italic")[
-        [Screenshot: Dashboard with "UI Translations" highlighted]
+        13-ui-translations.png
       ]
     ]
   ],
