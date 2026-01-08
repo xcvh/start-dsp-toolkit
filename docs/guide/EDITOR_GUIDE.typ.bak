@@ -138,7 +138,13 @@ GitHub will ask you to:
 Click the verification link in the email GitHub sends you.
 
 #figure(
-  image("screenshots/02-email-verification.png", width: 100%),
+  rect(width: 100%, height: 6cm, stroke: 1pt + gray)[
+    #align(center + horizon)[
+      #text(fill: gray, style: "italic")[
+        [Screenshot: Email verification message]
+      ]
+    ]
+  ],
   caption: "GitHub verification email"
 )
 
@@ -220,7 +226,13 @@ Go to the admin page in your web browser:
 ]
 
 #figure(
-  image("screenshots/03-decap-cms-login.png", width: 100%),
+  rect(width: 100%, height: 10cm, stroke: 1pt + gray)[
+    #align(center + horizon)[
+      #text(fill: gray, style: "italic")[
+        03-decap-cms-login.png
+      ]
+    ]
+  ],
   caption: "Decap CMS login page"
 )
 
@@ -235,8 +247,7 @@ GitHub will ask you to authorize "Decap CMS" to access the Start-DSP Toolbox rep
 Click *"Authorize"* or *"Continue"*.
 
 #figure(
-  #figure(
-  image("screenshots/04-github-authorization.png", width: 100%),
+  rect(width: 100%, height: 8cm, stroke: 1pt + gray)[
     #align(center + horizon)[
       #text(fill: gray, style: "italic")[
         04-github-authorization.png
@@ -254,9 +265,7 @@ After authorization, you'll see the Decap CMS dashboard. This is your editing ho
   rect(width: 100%, height: 10cm, stroke: 1pt + gray)[
     #align(center + horizon)[
       #text(fill: gray, style: "italic")[
-        05-decap-cms-dashboard.png", width: 100%),
-  caption: "Decap CMS dashboard - your editing workspace"
-)
+        05-decap-cms-dashboard.png
       ]
     ]
   ],
@@ -296,9 +305,7 @@ Click on the language you want to edit (e.g., "Tools (Spanish)" if you're editin
   rect(width: 100%, height: 10cm, stroke: 1pt + gray)[
     #align(center + horizon)[
       #text(fill: gray, style: "italic")[
-        06-language-collection.png", width: 100%),
-  caption: "Selecting a language collection"
-)
+        06-language-collection.png
       ]
     ]
   ],
@@ -318,9 +325,7 @@ Each tool shows:
   rect(width: 100%, height: 10cm, stroke: 1pt + gray)[
     #align(center + horizon)[
       #text(fill: gray, style: "italic")[
-        07-tools-list.png", width: 100%),
-  caption: "List of tools in your selected language"
-)
+        07-tools-list.png
       ]
     ]
   ],
@@ -377,9 +382,7 @@ To edit any text field:
   rect(width: 100%, height: 10cm, stroke: 1pt + gray)[
     #align(center + horizon)[
       #text(fill: gray, style: "italic")[
-        08-tool-editing-form.png", width: 100%),
-  caption: "Editing a tool's description"
-)
+        08-tool-editing-form.png
       ]
     ]
   ],
@@ -405,8 +408,7 @@ Each tool has an image. To change it:
    - *Choose an existing image:* Click "Choose existing" to select from uploaded images
 
 #figure(
-  #figure(
-  image("screenshots/04-github-authorization.png", width: 100%),
+  rect(width: 100%, height: 8cm, stroke: 1pt + gray)[
     #align(center + horizon)[
       #text(fill: gray, style: "italic")[
         09-image-upload-dialog.png
@@ -447,8 +449,7 @@ To remove a download:
 2. Confirm deletion
 
 #figure(
-  #figure(
-  image("screenshots/04-github-authorization.png", width: 100%),
+  rect(width: 100%, height: 8cm, stroke: 1pt + gray)[
     #align(center + horizon)[
       #text(fill: gray, style: "italic")[
         10-downloads-section.png
@@ -522,9 +523,7 @@ A dialog will appear asking when to publish. Select *"Publish now"*.
   rect(width: 100%, height: 6cm, stroke: 1pt + gray)[
     #align(center + horizon)[
       #text(fill: gray, style: "italic")[
-        12-publish-dialog.png", width: 100%),
-  caption: "Publish confirmation dialog"
-)
+        12-publish-dialog.png
       ]
     ]
   ],
@@ -578,9 +577,7 @@ From the Decap CMS dashboard, click on *"UI Translations"* in the left sidebar.
   rect(width: 100%, height: 10cm, stroke: 1pt + gray)[
     #align(center + horizon)[
       #text(fill: gray, style: "italic")[
-        13-ui-translations.png", width: 100%),
-  caption: "UI Translations collection"
-)
+        [Screenshot: Dashboard with "UI Translations" highlighted]
       ]
     ]
   ],
@@ -1168,7 +1165,7 @@ This section explains all the UI translation fields and where they appear on the
   
   #v(2em)
   
-  #image("../public/assets/logos/eu-logo-en.png", width: 60%)
+  #image("../../public/assets/logos/eu-logo-en.png", width: 60%)
   
   #v(1em)
   

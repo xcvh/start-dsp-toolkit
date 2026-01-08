@@ -104,13 +104,7 @@ GitHub is the platform that stores our website's content. You need a free accoun
 Open your web browser and go to: #link("https://github.com")[https://github.com]
 
 #figure(
-  rect(width: 100%, height: 8cm, stroke: 1pt + gray)[
-    #align(center + horizon)[
-      #text(fill: gray, style: "italic")[
-        [Screenshot: GitHub homepage with "Sign up" button highlighted]
-      ]
-    ]
-  ],
+  image("screenshots/01-github-homepage.png", width: 100%),
   caption: "GitHub homepage"
 )
 
@@ -235,7 +229,7 @@ Go to the admin page in your web browser:
   rect(width: 100%, height: 10cm, stroke: 1pt + gray)[
     #align(center + horizon)[
       #text(fill: gray, style: "italic")[
-        [Screenshot: Decap CMS login page with "Login with GitHub" button]
+        03-decap-cms-login.png
       ]
     ]
   ],
@@ -256,7 +250,7 @@ Click *"Authorize"* or *"Continue"*.
   rect(width: 100%, height: 8cm, stroke: 1pt + gray)[
     #align(center + horizon)[
       #text(fill: gray, style: "italic")[
-        [Screenshot: GitHub authorization page]
+        04-github-authorization.png
       ]
     ]
   ],
@@ -271,7 +265,7 @@ After authorization, you'll see the Decap CMS dashboard. This is your editing ho
   rect(width: 100%, height: 10cm, stroke: 1pt + gray)[
     #align(center + horizon)[
       #text(fill: gray, style: "italic")[
-        [Screenshot: Decap CMS dashboard showing collections]
+        05-decap-cms-dashboard.png
       ]
     ]
   ],
@@ -311,7 +305,7 @@ Click on the language you want to edit (e.g., "Tools (Spanish)" if you're editin
   rect(width: 100%, height: 10cm, stroke: 1pt + gray)[
     #align(center + horizon)[
       #text(fill: gray, style: "italic")[
-        [Screenshot: Dashboard with "Tools (Spanish)" collection highlighted]
+        06-language-collection.png
       ]
     ]
   ],
@@ -331,7 +325,7 @@ Each tool shows:
   rect(width: 100%, height: 10cm, stroke: 1pt + gray)[
     #align(center + horizon)[
       #text(fill: gray, style: "italic")[
-        [Screenshot: List of tools with tool #5 highlighted]
+        07-tools-list.png
       ]
     ]
   ],
@@ -388,7 +382,7 @@ To edit any text field:
   rect(width: 100%, height: 10cm, stroke: 1pt + gray)[
     #align(center + horizon)[
       #text(fill: gray, style: "italic")[
-        [Screenshot: Tool editing form with "Description" field being edited]
+        08-tool-editing-form.png
       ]
     ]
   ],
@@ -417,7 +411,7 @@ Each tool has an image. To change it:
   rect(width: 100%, height: 8cm, stroke: 1pt + gray)[
     #align(center + horizon)[
       #text(fill: gray, style: "italic")[
-        [Screenshot: Image upload dialog]
+        09-image-upload-dialog.png
       ]
     ]
   ],
@@ -458,7 +452,7 @@ To remove a download:
   rect(width: 100%, height: 8cm, stroke: 1pt + gray)[
     #align(center + horizon)[
       #text(fill: gray, style: "italic")[
-        [Screenshot: Downloads section with "Add Downloads" button]
+        10-downloads-section.png
       ]
     ]
   ],
@@ -529,7 +523,7 @@ A dialog will appear asking when to publish. Select *"Publish now"*.
   rect(width: 100%, height: 6cm, stroke: 1pt + gray)[
     #align(center + horizon)[
       #text(fill: gray, style: "italic")[
-        [Screenshot: Publish dialog with "Publish now" selected]
+        12-publish-dialog.png
       ]
     ]
   ],
@@ -583,7 +577,7 @@ From the Decap CMS dashboard, click on *"UI Translations"* in the left sidebar.
   rect(width: 100%, height: 10cm, stroke: 1pt + gray)[
     #align(center + horizon)[
       #text(fill: gray, style: "italic")[
-        [Screenshot: Dashboard with "UI Translations" highlighted]
+        13-ui-translations.png
       ]
     ]
   ],
@@ -1171,7 +1165,7 @@ This section explains all the UI translation fields and where they appear on the
   
   #v(2em)
   
-  #image("../public/assets/logos/eu-logo-en.png", width: 60%)
+  #image("../../public/assets/logos/eu-logo-en.png", width: 60%)
   
   #v(1em)
   
