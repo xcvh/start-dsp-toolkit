@@ -2,62 +2,42 @@
  * German (DE) UI Translations
  * Start-DSP Entrepreneurial University Toolbox
  *
- * TODO: USER MUST PROVIDE GERMAN TRANSLATIONS
- * Copy the structure from en.js and translate all values
+ * INSTRUCTIONS FOR TRANSLATORS:
+ * - Translate all values (the text after the colon)
+ * - Keep all keys (the text before the colon) unchanged
+ * - Preserve HTML-like formatting if present
+ * - Test that translations fit in the UI
  */
 
 export default {
-  // Header
   "header.title": "Start-DSP Toolbox für unternehmerische Hochschulen",
-
-  // Navigation
   "nav.toolbox": "Toolbox",
   "nav.projectWebsite": "Zurück zur Start-DSP Projekt Website",
-
-  // Search and Filters
-  "search.placeholder":
-    "Suche nach Tools anhand von Namen oder Beschreibung...",
+  "search.placeholder": "Suche nach Tools anhand von Namen oder Beschreibung...",
   "filter.allPurposes": "Alle Zwecke",
-
-  // Tool Detail Page
   "toolDetail.backToToolbox": "Zurück zur Toolbox",
   "toolDetail.purpose": "Zweck",
   "toolDetail.benefits": "Vorteil",
-  "toolDetail.prerequisiteTools": "Erforderliche Tools",
+  "toolDetail.prerequisiteTools": "Vorausgesetzte Tools",
   "toolDetail.description": "Beschreibung",
-  "toolDetail.instructions": "Instruktionen",
+  "toolDetail.instructions": "Anweisungen",
   "toolDetail.outcomes": "Ergebnisse",
   "toolDetail.responsiblePartner": "Verantwortlicher Partner:",
-
-  // Badges
   "badge.fallbackLanguage": "Verfügbar auf Englisch",
-  "badge.externalLink": "Englisch",
-
-  // Translation Disclaimer
-  "disclaimer.translationTitle": "Übersetzungen in Arbeit",
-  "disclaimer.translationMessage":
-    "Wir übersetzen derzeit die Toolbox-Inhalte. Einige Tools und Materialien sind möglicherweise nur auf Englisch verfügbar.",
-
-  // Cookie Consent
+  "badge.externalLink": "Extern - nur auf Englisch",
+  "disclaimer.translationTitle": "Übersetzungen in Bearbeitung",
+  "disclaimer.translationMessage": "Wir übersetzen derzeit den Toolbox-Inhalt. Einige Tools und Materialien sind möglicherweise noch nur auf Englisch verfügbar.",
   "cookie.title": "Cookie-Zustimmung",
-  "cookie.message":
-    "Wir verwenden Google Analytics, um zu verstehen, wie Besucher unsere Website nutzen, und um Ihre Erfahrung zu verbessern. Dies hilft uns zu messen, welche Bildungsinstrumente am nützlichsten sind. Wir anonymisieren IP-Adressen und sammeln keine personenbezogenen Daten. Durch Klicken auf „Akzeptieren“ stimmen Sie der Verwendung von Cookies zu Analysezwecken zu.",
-  "cookie.accept": "Accept",
-  "cookie.decline": "Decline",
-
-  // Footer
-  "footer.euDisclaimer":
-    "Dieses Projekt wurde mit Unterstützung der Europäischen Kommission finanziert. Der Autor ist allein verantwortlich für diese Veröffentlichung (Mitteilung), und die Kommission übernimmt keine Verantwortung für die Verwendung der darin enthaltenen Informationen. In Übereinstimmung mit dem neuen DSGVO-Rahmenwerk weisen wir darauf hin, dass die Partnerschaft Ihre personenbezogenen Daten ausschließlich im Interesse und zum Zweck des Projekts und ohne Beeinträchtigung Ihrer Rechte verarbeitet.",
-  "footer.euLogoAlt": "Kofinanziert durch die Europäische Union",
-
-  // Language Selector
+  "cookie.message": "Wir verwenden Google Analytics, um zu verstehen, wie Besucher unsere Website nutzen, und um Ihre Erfahrung zu verbessern. Dies hilft uns zu messen, welche Bildungstools am nützlichsten sind. Wir anonymisieren IP-Adressen und sammeln keine persönlichen Informationen. Durch Klicken auf \"Akzeptieren\" stimmen Sie unserer Verwendung von Cookies zu Analyse-Zwecken zu.",
+  "cookie.accept": "Akzeptieren",
+  "cookie.decline": "Ablehnen",
+  "footer.euDisclaimer": "Dieses Projekt wurde mit Unterstützung der Europäischen Kommission finanziert. Der Autor ist allein verantwortlich für diese Veröffentlichung (Kommunikation) und die Kommission übernimmt keine Verantwortung für jegliche Nutzung der darin enthaltenen Informationen. In Übereinstimmung mit dem neuen GDPR-Rahmen beachten Sie bitte, dass die Partnerschaft Ihre persönlichen Daten nur im alleinigen Interesse und Zweck des Projekts verarbeiten wird und ohne Ihre Rechte zu beeinträchtigen.",
+  "footer.euLogoAlt": "Gefördert von der Europäischen Union",
   "language.en": "English",
   "language.es": "Español",
   "language.de": "Deutsch",
   "language.el": "Ελληνικά",
-
-  // 404 Page
   "notFound.message": "Seite nicht gefunden",
-  "notFound.description": "Die gesuchte Seite existiert nicht.",
-  "notFound.backToHome": "Zurück zur Toolbox",
+  "notFound.description": "Die Seite, die Sie suchen, existiert nicht.",
+  "notFound.backToHome": "Zurück zur Toolbox"
 };

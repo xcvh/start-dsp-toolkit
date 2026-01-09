@@ -1,17 +1,20 @@
-export default {
-  // Header
-  "header.title":
-    "Caja de Herramientas de la Universidad Emprendedora Start-DSP",
+/**
+ * Spanish (ES) UI Translations
+ * Start-DSP Entrepreneurial University Toolbox
+ *
+ * INSTRUCTIONS FOR TRANSLATORS:
+ * - Translate all values (the text after the colon)
+ * - Keep all keys (the text before the colon) unchanged
+ * - Preserve HTML-like formatting if present
+ * - Test that translations fit in the UI
+ */
 
-  // Navigation
+export default {
+  "header.title": "Start-DSP Caja de herramientas universitarias emprendedoras",
   "nav.toolbox": "Caja de herramientas",
   "nav.projectWebsite": "Volver al sitio web del proyecto Start-DSP",
-
-  // Search and Filters
   "search.placeholder": "Buscar herramientas por nombre o descripción...",
   "filter.allPurposes": "Todos los propósitos",
-
-  // Tool Detail Page
   "toolDetail.backToToolbox": "Volver a la caja de herramientas",
   "toolDetail.purpose": "Propósito",
   "toolDetail.benefits": "Beneficios",
@@ -20,36 +23,21 @@ export default {
   "toolDetail.instructions": "Instrucciones",
   "toolDetail.outcomes": "Resultados",
   "toolDetail.responsiblePartner": "Socio responsable:",
-
-  // Badges
   "badge.fallbackLanguage": "Disponible en inglés",
-  "badge.externalLink": "Externo - Solo en inglés",
-
-  // Translation Disclaimer
+  "badge.externalLink": "Externo - solo en inglés",
   "disclaimer.translationTitle": "Traducciones en progreso",
-  "disclaimer.translationMessage":
-    "Actualmente estamos traduciendo el contenido de la caja de herramientas. Algunas herramientas y materiales pueden estar disponibles solo en inglés.",
-
-  // Cookie Consent
+  "disclaimer.translationMessage": "Estamos traduciendo actualmente el contenido de la caja de herramientas. Algunas herramientas y materiales aún pueden estar disponibles solo en inglés.",
   "cookie.title": "Consentimiento de cookies",
-  "cookie.message":
-    'Utilizamos Google Analytics para entender cómo los visitantes usan nuestro sitio y para mejorar su experiencia. Esto nos ayuda a medir qué herramientas educativas son las más útiles. Anonimizamos las direcciones IP y no recopilamos información personal. Al hacer clic en "Aceptar", usted consiente nuestro uso de cookies para fines analíticos.',
+  "cookie.message": "Utilizamos Google Analytics para comprender cómo los visitantes usan nuestro sitio y para mejorar su experiencia. Esto nos ayuda a medir qué herramientas educativas son más útiles. Anonimizamos las direcciones IP y no recopilamos información personal. Al hacer clic en \"Aceptar\", usted consiente nuestro uso de cookies para fines de análisis.",
   "cookie.accept": "Aceptar",
   "cookie.decline": "Rechazar",
-
-  // Footer
-  "footer.euDisclaimer":
-    "Este proyecto ha sido financiado con el apoyo de la Comisión Europea. El autor es el único responsable de esta publicación (comunicación) y la Comisión no se hace responsable del uso que pueda hacerse de la información contenida en ella. En cumplimiento del nuevo marco RGPD, tenga en cuenta que la Asociación solo procesará sus datos personales en el único interés y propósito del proyecto y sin perjuicio de sus derechos.",
+  "footer.euDisclaimer": "Este proyecto ha sido financiado con el apoyo de la Comisión Europea. El autor es el único responsable de esta publicación (comunicación) y la Comisión no asume ninguna responsabilidad por cualquier uso que pueda hacerse de la información contenida en la misma. En cumplimiento del nuevo marco GDPR, tenga en cuenta que la Asociación solo procesará sus datos personales en el interés y propósito exclusivo del proyecto y sin perjuicio de sus derechos.",
   "footer.euLogoAlt": "Cofinanciado por la Unión Europea",
-
-  // Language Selector
   "language.en": "English",
   "language.es": "Español",
   "language.de": "Deutsch",
   "language.el": "Ελληνικά",
-
-  // 404 Page
   "notFound.message": "Página no encontrada",
   "notFound.description": "La página que buscas no existe.",
-  "notFound.backToHome": "Volver a la caja de herramientas",
+  "notFound.backToHome": "Volver a la caja de herramientas"
 };
